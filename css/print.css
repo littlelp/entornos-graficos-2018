@@ -1,0 +1,16 @@
+body {
+  background-image: none;
+}
+
+a[href^=http]:after {
+	content:" <" attr(href) ">";
+}
+
+header, footer, nav, aside {
+  display: none;
+}
+
+ 
+.oculto {
+	display:none;
+}

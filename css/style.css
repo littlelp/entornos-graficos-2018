@@ -1,0 +1,128 @@
+/* YOUR CUSTOM STYLES */
+
+/*Estructura*/
+
+#cabecera {
+	/* height:150px;
+	
+	background-image: url('../img/cab.jpg');*/
+	
+}
+
+#menu{
+margin-bottom: 1%;
+
+}
+#formulario{
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+#datoscontacto{
+	margin-top: 1%;
+	margin-bottom: 1%;
+
+}
+
+#facebook{
+	margin-top: 1%;
+	margin-bottom: 1%;
+	
+}
+
+#carousel{
+		margin-top: 1%;
+	margin-bottom: 1%;
+}
+/*Fin Estructura*/
+
+#p1{
+	text-align:center;
+}
+
+#p2{
+	text-align:center;
+	font-weight: bold;
+	font-size:15px;
+}
+
+#p3{
+	text-align:center;
+	font-size:13px;
+}
+#botonlogin{
+	margin:1px;
+}
+
+#p11 {
+	font-weight: bold;
+	text-align:center;
+	font-size:18px;
+	
+}
+
+#p12, #p13, #p14, #p15, #p16 {
+	text-align:center;
+	font-size:15px;
+	
+}
+
+#nombreProd{
+	text-align:center;
+	font-size:18px;
+	
+}
+
+#descCorta, #especificaciones, #caracteristicas, #dimensiones{
+	text-align:left;
+	font-size:15px;
+}
+
+#tituloprod{
+	text-align:left;
+	font-weight: bold;
+	font-size:15px;
+}
+/*Google Maps Responsive*/
+
+.google-maps {
+position: relative;
+padding-bottom: 75%; // This is the aspect ratio
+height: 0;
+overflow: hidden;
+}
+.google-maps iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+/*Fin Google Maps Responsive*/
+
+/*Youtube Responsive*/
+.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+/*Fin Youtube Responsive*/
+
+#imgde {
+    width: 400px;
+    height: 200px;
+}
+
+#proddest{
+	height:500px;
+}
