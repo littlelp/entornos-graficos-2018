@@ -766,7 +766,7 @@
   color: #2962FF !important;
 }
 
-.light-blue.lighten-5 {
+/*.light-blue.lighten-5 {
   background-color: #e1f5fe !important;
 }
 
@@ -807,7 +807,7 @@
 }
 
 .light-blue {
-  background-color: #03a9f4 !important;
+  background-color: #03a9f4;
 }
 
 .light-blue-text {
@@ -876,7 +876,7 @@
 
 .light-blue-text.text-accent-4 {
   color: #0091ea !important;
-}
+}*/
 
 .cyan.lighten-5 {
   background-color: #e0f7fa !important;
@@ -2468,6 +2468,10 @@
 
 .rgba-white-slight {
   background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.light-blue {
+  background-color: #CAD7F2 !important;
 }
 
 /*** Colors ***/

@@ -71,7 +71,7 @@ include_once ("includes/cabecera.php");
 					<div class="row">
 						
 						<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-md-offset-1 col-lg-offset-1" style="float:left" id="reseñaizq" >
-							<a href="empresa.php"><img src="img/chef.png" style="width:100%" class ="center-block img-responsive  img-rounded"></a>
+							<a href="empresa.php"><img src="img/cupcake.png" style="width:100%" class ="center-block img-responsive  img-rounded"></a>
 							
 						</div>
 						

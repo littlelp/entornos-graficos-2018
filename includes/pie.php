@@ -1,7 +1,7 @@
 <div id="pie">
 	
 		<!--Footer-->
-		<footer class="page-footer green center-on-small-only">
+		<footer class="page-footer light-blue center-on-small-only">
 
 			<!--Footer Links-->
 			<div class="container-fluid">
@@ -9,10 +9,10 @@
 
 					<!--First column-->
 					<div class="col-md-6">
-						<h5 class="title">NTG Pastas</h5>
-						<p class="m-b-0">NTG. Nueva Técnica Gastrónomica.</p>
-						<p class="m-b-0">Alberdi 475, C.P. 6100, Rufino, Santa Fe, Argentina</p>
-						<p class="m-b-0">Tel: 03382 - 429951 -  <a href="mailto:ventas@ntgpastas.com.ar">ventas@ntgpastas.com.ar</a></p>
+						<h5 class="title">La Chocolateria</h5>
+						<p class="m-b-0">Nueva forma de venta de productos</p>
+						<p class="m-b-0">Avenida Siempre Viva 123, C.P. 2000, Rosario, Santa Fe, Argentina</p>
+						<p class="m-b-0">Tel: 0341 - 3416955800 -  <a href="mailto:makigom@hotmail.com.ar">makigom@hotmail.com.ar</a></p>
 					</div>
 					<!--/.First column-->
 
@@ -35,14 +35,14 @@
 			<!--Copyright-->
 			<div class="footer-copyright">
 				<div class="container-fluid">
-					© 2016 Copyright: <a href="index.php"> NTG Pastas</a>
+					© 2018 Copyright: <a href="index.php"> La Chocolateria</a>
 
 				</div>
 			</div>
 			
 			<div class="footer-copyright">
 				<div class="container-fluid">
-					Desarrollado por: <a href="mailto:moreirodamian@gmail.com"> Damián Moreiro </a>
+					Trabajo Práctico Final Entornos Gráficos
 
 				</div>
 			<!--/.Copyright-->
@@ -50,14 +50,9 @@
 		</footer>
 		<!--/.Footer-->
 
-	
 	</div>
     <!-- /Start your project here-->
     
-
-
-
-
 </body>
 
 </html>

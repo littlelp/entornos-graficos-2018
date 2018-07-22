@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Desarrollado Por: Damian Moreiro: moreirodamian@gmail.com  -->
 <html lang="es">
 
 <head>
@@ -14,7 +13,7 @@
 	<meta name="author" content="Gabriel Rodriguez" lang="es" />
 	<meta name="robots" content="all" />
 
-    <title>NTG Pastas</title>
+    <title>La Chocolateria</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
@@ -30,6 +29,7 @@
 	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
     <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
 	<link href="img/logoempresa.ico" rel="shortcut icon" type="image/x-icon">
 
@@ -138,7 +138,7 @@ $activo = end($url);
 		<div style="clear:both;"></div>
 
 		<div id="menu">
-				<nav class="navbar navbar-dark black">
+				<nav class="navbar navbar-dark light-blue">
 
 
 					<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx2">
@@ -150,7 +150,7 @@ $activo = end($url);
 						<!--Collapse content-->
 						<div class="collapse navbar-toggleable-xs" id="collapseEx2">
 							<!--Navbar Brand-->
-							<a class="navbar-brand" href="index.php">NTG Pastas</a>
+							<a class="navbar-brand" href="index.php">La Chocolateria</a>
 							<!--Links-->
 							<ul class="nav navbar-nav">
 								<li class="nav-item <?php if ($activo == 'empresa.php'){echo 'active';}?>">
