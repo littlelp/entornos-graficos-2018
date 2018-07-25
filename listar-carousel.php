@@ -75,8 +75,16 @@ if($_SESSION['tipous']==1){
 
 
     <script>
-    $(document).ready(function() {
-        $('#dataTables-addControls').dataTable();
+   $(document).ready(function() {
+        $('#dataTables-addControls').dataTable( {
+			language: {
+				"paginate": {
+					"previous": "Anterior",
+					"next": "Siguiente"
+				}
+			},
+			responsive: true
+		} );
     });
 
 	function borrar(id) {
