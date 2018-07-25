@@ -78,7 +78,7 @@ include_once ("includes/cabecera.php");
 					while ($r = mysqli_fetch_array($rs1) ) {
 						
 						?>
-							<a href="empresa.php"><img src="<?php echo $r["imagenindex"];?>" alt ="Imagen de Empresa"style="width:80%" class ="center-block img-responsive  img-rounded"></a>
+							<a href="empresa.php"><img src="<?php echo $r["imagenindex"];?>" alt ="Imagen de Empresa" class ="center-block img-responsive img-rounded img-reseña"></a>
 							
 						</div>
 						
@@ -101,7 +101,7 @@ include_once ("includes/cabecera.php");
 					<div class="fb-page" data-href="https://www.facebook.com/ElBatidortienelaculpa" data-tabs="timeline,messages" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ElBatidortienelaculpa" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ElBatidortienelaculpa">La Chocolateria</a></blockquote></div>
 				</div>
 				
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " style="float:center" id="novedades" >
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " style="float:center" id="novedades" class="novedades" >
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " style="float:left" id="imggg" >
 						<h1 style="background-color: #CAD7F2;padding: 1%;">Novedades</h1>
 						
@@ -120,7 +120,7 @@ include_once ("includes/cabecera.php");
 					
 						<div class="row">
 							<div class="col-xs-7 col-sm-7 col-md-4 col-lg-4 " style="float:left" id="img" >
-								<a href="novedad.php?nov=<?php echo $r9['idNovedades']; ?>"><img src="<?php echo $r9['imagen']; ?>" alt="Imagen de novedades" style="height:auto" class ="center-block img-responsive img-thumbnail img-rounded"></a>
+								<a href="novedad.php?nov=<?php echo $r9['idNovedades']; ?>"><img src="<?php echo $r9['imagen']; ?>" alt="Imagen de novedades" style="height:auto" class ="center-block img-responsive img-thumbnail img-novedades"></a>
 							
 							</div>
 							
@@ -158,7 +158,7 @@ include_once ("includes/cabecera.php");
 							
 										?>
 							<div class="card" display: "flex;">
-								<a href="producto.php?prod=<?php echo $r['idProducto']; ?>"><img class="img-fluid center-block" style="height:auto" alt="Imagen de <?php echo $r['nombre'];?>"  src="<?php echo $r['imagen'] ?>"></a>
+								<a href="producto.php?prod=<?php echo $r['idProducto']; ?>"><img class="img-fluid center-block"  alt="Imagen de <?php echo $r['nombre'];?>"  src="<?php echo $r['imagen'] ?>"></a>
 								<div class="card-block">
 									<a href="producto.php?prod=<?php echo $r['idProducto']; ?>" style="text-decoration:none; color:#99603E"><h4 class="card-title"><?php echo $r["nombre"];?></h4></a>
 									<p class="card-text"><?php echo $r["descripcion"];?></p>
