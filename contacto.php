@@ -16,11 +16,11 @@ include_once ("includes/cabecera.php");
 						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13189.170731666763!2d-62.718989!3d-34.266588!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe2de65a2207ab136!2sNTG+Pastas+--+Panquequeras+-+Tarteleteras+-+Ravioleras!5e0!3m2!1ses!2sus!4v1468245141651" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 					</div>
 					<BR>
-					<p id="p11">NTG Pastas</p>
+					<p id="p11">La Chocolateria</p>
 					<p id="p12">Rufino – Santa Fe – Republica Argentina</p>
 					<p id="p13">Domicilio:  Alberdi 475 – CP: 6100</p>
-					<p id="p14"><a href="mailto:ventas@ntgpastas.com.ar">E-Mail: ventas@ntgpastas.com.ar</a></p>
-					<p id="p16">Telefonos: 03382-429951</p> 
+					<p id="p14"><a href="mailto:lachocolateria00@gmail.com">E-Mail: lachocolateria00@gmail.com</a></p>
+					<p id="p16">Telefonos: 0341-4237960</p> 
 					
 				</div>
 				
