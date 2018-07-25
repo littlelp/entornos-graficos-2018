@@ -52,26 +52,26 @@ $rs1 = mysqli_query($db, $sql1);
 									
 									if($_SESSION['tipous']==2){
 							?>
-							<p id="tituloprod">Precio Revendedor: $ <?php echo $r["precio1"];?></p>
+							<p id="tituloprod">Precio Mano de Obra: $ <?php echo $r["precio1"];?></p>
 							<p id="tituloprod">Precio Lista: $ <?php echo $r["precioLista"];}?></p>
 							<?php
 									
 									if($_SESSION['tipous']==3){
 										?>
-									<p id="tituloprod">Precio Revendedor: $ <?php echo $r["precio2"];?></p>
+									<p id="tituloprod">Precio Mano de Obra: $ <?php echo $r["precio2"];?></p>
 									<p id="tituloprod">Precio Lista: $ <?php echo $r["precioLista"];}?></p>
 							<?php
 									
 									if($_SESSION['tipous']==4){
 										?>
-									<p id="tituloprod">Precio Revendedor: $ <?php echo $r["precio3"];?></p>
+									<p id="tituloprod">Precio Mano de Obra: $ <?php echo $r["precio3"];?></p>
 									<p id="tituloprod">Precio Lista: $ <?php echo $r["precioLista"];}?></p>
 									
 							<?php
 									
 									if($_SESSION['tipous']==5){
 										?>
-									<p id="tituloprod">Precio Revendedor:$ <?php echo $r["precio4"];?></p>
+									<p id="tituloprod">Precio Mano de Obra:$ <?php echo $r["precio4"];?></p>
 							<p id="tituloprod">Precio Lista: $ <?php echo $r["precioLista"];}}?></p>
 							
 							<p style="text-align:right"><a href="producto.php?prod=<?php echo $r['idProducto']; ?>"><button type="button" class="btn btn-info"> + Info</button></a></p>

@@ -36,10 +36,7 @@ if($_SESSION['tipous']==1){
                                             <th>Nombre</th>
 											<th>Categoria</th>
 											<th>Precio Lista</th>
-											<th>Precio Rev 1</th>
-											<th>Precio Rev 2</th>
-											<th>Precio Rev 3</th>
-											<th>Precio Rev 4</th>
+											<th>Precio Mano de Obra</th>
 											<th>Destacado</th>
                                             <th>Borrar</th>
                                         </tr>
@@ -63,9 +60,6 @@ if($_SESSION['tipous']==1){
 											<td><?php  echo $r["categoria"]; ?></td>
 											<td><?php  echo $r["precioLista"]; ?></td>
 											<td><?php  echo $r["precio1"]; ?></td>
-											<td><?php  echo $r["precio2"]; ?></td>
-											<td><?php  echo $r["precio3"]; ?></td>
-											<td><?php  echo $r["precio4"]; ?></td>
 											<td><?php  if($r["destacado"]=='on'){echo'SI';} else{echo 'NO';} ?></td>
 
                                             <td>

@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="45fffdc4-2720-49ae-a4f1-7038191d2970" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/htmls/empresa.html" beforeDir="false" afterPath="$PROJECT_DIR$/htmls/empresa.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/logoempresa.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/logoempresa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/chocolateria.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/chocolateria.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/img/logoprecios.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/cabecera.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/cabecera.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/conexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/conexion.php" afterDir="false" />

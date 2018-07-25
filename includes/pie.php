@@ -12,7 +12,7 @@
 						<h5 class="title">La Chocolateria</h5>
 						<p class="m-b-0">Nueva forma de venta de productos</p>
 						<p class="m-b-0">Avenida Siempre Viva 123, C.P. 2000, Rosario, Santa Fe, Argentina</p>
-						<p class="m-b-0">Tel: 0341 - 3416955800 -  <a href="mailto:makigom@hotmail.com.ar">makigom@hotmail.com.ar</a></p>
+						<p class="m-b-0">Tel: 0341 - 3416955800 -  <a href="mailto:lachocolateria00@gmail.com">lachocolateria00@gmail.com</a></p>
 					</div>
 					<!--/.First column-->
 

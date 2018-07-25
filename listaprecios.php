@@ -16,7 +16,7 @@ if($_SESSION['tipous']>0){
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="float:center" id="cabprecios">
 					
 							
-						<h4 style="text-align:Center"><strong>Lista de Precios:</strong></h4>
+						<h4 style="text-align:Center"><strong>Lista de Precios</strong></h4>
 	
 				</div>	
 				
@@ -25,10 +25,10 @@ if($_SESSION['tipous']>0){
 					<table border="1" align="center" cellspacing="0">
 						<thead>
 						  <tr valign="bottom" align="center">
-								<td><strong>Producto:</strong></th>
-								<td><strong>Descripcion:</strong></th>
-								<td><strong>Precio Revendedor:</strong></th>
-								<td><strong>Precio Lista:</strong></th>
+								<td><strong>Producto</strong></th>
+								<td><strong>Descripcion</strong></th>
+								<td><strong>Precio Mano de Obra</strong></th>
+								<td><strong>Precio Lista</strong></th>
 							</tr>
 						</thead>
 						
