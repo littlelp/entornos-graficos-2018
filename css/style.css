@@ -126,3 +126,35 @@ height: 100%;
 #proddest{
 	height:500px;
 }
+
+.img-reseña {
+	width: 60%;
+}
+
+.novedades {
+	padding-top: 15px;
+}
+
+.img-novedades {
+	border: 1px solid #99603E;
+	padding: 5px;
+	border-radius: 0;
+}
+
+#destacados .card-group {
+	padding: 15px;
+}
+#destacados .card-group .card {
+	padding: 20px 15px 15px 15px;
+}
+#destacados .card-group .card img {
+	max-height: 230px;
+	border: 1px solid #99603E;
+    padding: 5px;
+}
+#destacados .card-group .card .card-block {
+	text-align: center;
+}
+#destacados .card-group .card .card-block .card-text {
+	margin-bottom: 0;
+}

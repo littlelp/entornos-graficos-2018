@@ -7,10 +7,10 @@
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="description" content="ntg, pastas, panquequeras, ventas, tarteletas" lang="es" />
-	<meta name="keywords" content="pastas, panqueques, rufino, panquequera, maquinas, ntv, ventas, tarteleteras, rabioleras, industria" lang="es" />
-	<meta name="copyright" content="2016, ntgpastas.com" lang="es" />
-	<meta name="author" content="Gabriel Rodriguez" lang="es" />
+	<meta name="description" content="postres, tortas, dulce, eventos, chocolateria" lang="es" />
+	<meta name="keywords" content="postres, tortas, dulce, eventos, chocolateria" lang="es" />
+	<meta name="copyright" content="2018, La Chocolatería" lang="es" />
+	<meta name="author" content="La Chocolatería" lang="es" />
 	<meta name="robots" content="all" />
 
     <title>La Chocolateria</title>
@@ -31,7 +31,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
-	<link href="img/logoempresa.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="img/chocolateria.ico" rel="shortcut icon" type="image/x-icon">
 
 </head>
 
@@ -129,7 +129,7 @@ $activo = end($url);
 
 		?>
 
-		<a href="index.php" ><img  src="<?php echo $r["imagencabecera"];?>" style="width:100%" alt="Imagemn Cabecera NTG PASTAS" class ="center-block img-responsive"></a>
+		<a href="index.php" ><img  src="<?php echo $r["imagencabecera"];?>" style="width:100%" alt="Imagen Cabecera La Chocolatería" class ="center-block img-responsive"></a>
 
 					<?php }?>
 
