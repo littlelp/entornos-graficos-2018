@@ -59,52 +59,16 @@ if($_SESSION['tipous']==1){
 							<i class="fa fa-pencil prefix"></i>
 							<textarea type="text" name="Descripcion" class="md-textarea" length="160" maxlength="160" requiered></textarea>
 							<label for="Descripcion">Descripcion</label>
-						</div>
+						</div>					
 						
 						<div class="md-form">
-							<i class="fa fa-pencil prefix"></i>
-							<textarea type="text" name="Especificaciones" class="md-textarea"></textarea>
-							<label for="Especificaciones">Especificaciones</label>
-						</div>
-						
-						<div class="md-form">
-							<i class="fa fa-pencil prefix"></i>
-							<textarea type="text" name="Caracteristicas" class="md-textarea"></textarea>
-							<label for="Caracteristicas">Caracteristicas</label>
-						</div>
-						
-						<div class="md-form">
-							<i class="fa fa-pencil prefix"></i>
-							<textarea type="text" name="Dimensiones" class="md-textarea"></textarea>
-							<label for="Dimensiones">Dimensiones</label>
-						</div>
-						
-						<div class="md-form">
-								<i class="fa  fa-male  prefix"></i>
+								<i class="fa  fa-money  prefix"></i>
 								<input  type="number" name="Precio1" class="form-control validate" maxlength="10">
-								<label for="Precio1">Precio1:</label>
-						</div>
-						
-						<div class="md-form">
-								<i class="fa  fa-male  prefix"></i>
-								<input  type="number" name="Precio2" class="form-control validate" maxlength="10">
-								<label for="Precio1">Precio2:</label>
-						</div>
-						
-						<div class="md-form">
-								<i class="fa  fa-male  prefix"></i>
-								<input  type="number" name="Precio3" class="form-control validate" maxlength="10">
-								<label for="Precio3">Precio3:</label>
-						</div>
-						
-						<div class="md-form">
-								<i class="fa  fa-male  prefix"></i>
-								<input  type="number" name="Precio4" class="form-control validate" maxlength="10">
-								<label for="Precio4">Precio4:</label>
+								<label for="Precio1">Precio Mano de Obra:</label>
 						</div>
 						
 							<div class="md-form">
-								<i class="fa  fa-male  prefix"></i>
+								<i class="fa  fa-money  prefix"></i>
 								<input type="number" name="PrecioLista" class="form-control validate" maxlength="10">
 								<label for="Precio4">Precio Lista:</label>
 						</div>
@@ -120,12 +84,7 @@ if($_SESSION['tipous']==1){
 							</div>
 						
 						<div style="clear:both;"></div>
-						
-							<div class="md-form input-group">
-								<span class="input-group-addon" name="Video">Enlace de Video</span>
-								<input  name="Video" type="text" class="form-control" name="Video" aria-describedby="basic-addon3">
-							</div>
-							
+											
 							<fieldset class="form-group">
 								<input type="checkbox" id="Destacado" name="Destacado">
 								<label for="Destacado">Producto Destacado</label>

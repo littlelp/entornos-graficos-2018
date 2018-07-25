@@ -19,7 +19,7 @@ include_once ("includes/cabecera.php");
 					<p id="p11">La Chocolatería</p>
 					<p id="p12">Rosario, Santa Fe, Argentina</p>
 					<p id="p13">Domicilio:  Avenida Siempre Viva 123</p>
-					<p id="p14"><a href="mailto:lachocolateria@gmail.com">E-Mail: lachocolateria@gmail.com</a></p>
+					<p id="p14"><a href="mailto:lachocolateria00@gmail.com">E-Mail: lachocolateria00@gmail.com</a></p>
 					<p id="p16">Telefonos: 03382-429951</p> 
 					
 				</div>

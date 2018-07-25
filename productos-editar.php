@@ -76,13 +76,13 @@ if(isset($_SESSION['tipous'])){
 						</div>						
 						
 						<div class="md-form">
-								<i class="fa  fa-male  prefix"></i>
+								<i class="fa  fa-money  prefix"></i>
 								<input value="<?php  echo $rp["precio1"]; ?>" type="number" name="Precio1" class="form-control validate" maxlength="10">
 								<label for="Precio1">Precio Mano de Obra:</label>
 						</div>					
 						
 						<div class="md-form">
-								<i class="fa  fa-male  prefix"></i>
+								<i class="fa  fa-money  prefix"></i>
 								<input value="<?php  echo $rp["precioLista"]; ?>" type="number" name="PrecioLista" class="form-control validate" maxlength="10">
 								<label for="Precio4">Precio Lista:</label>
 						</div>
