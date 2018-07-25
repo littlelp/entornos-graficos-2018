@@ -73,49 +73,13 @@ if(isset($_SESSION['tipous'])){
 							<i class="fa fa-pencil prefix"></i>
 							<textarea type="text" name="Descripcion" class="md-textarea" length="160" maxlength="160" required><?php  echo $rp["descripcion"]; ?></textarea>
 							<label for="Descripcion">Descripcion</label>
-						</div>
-						
-						<div class="md-form">
-							<i class="fa fa-pencil prefix"></i>
-							<textarea type="text" name="Especificaciones" class="md-textarea"><?php  echo $rp["especificaciones"]; ?></textarea>
-							<label for="Especificaciones">Especificaciones</label>
-						</div>
-						
-						<div class="md-form">
-							<i class="fa fa-pencil prefix"></i>
-							<textarea type="text" name="Caracteristicas" class="md-textarea"><?php  echo $rp["caracteristicas"]; ?></textarea>
-							<label for="Caracteristicas">Caracteristicas</label>
-						</div>
-						
-						<div class="md-form">
-							<i class="fa fa-pencil prefix"></i>
-							<textarea type="text" name="Dimensiones" class="md-textarea"><?php  echo $rp["dimensiones"]; ?></textarea>
-							<label for="Dimensiones">Dimensiones</label>
-						</div>
+						</div>						
 						
 						<div class="md-form">
 								<i class="fa  fa-male  prefix"></i>
 								<input value="<?php  echo $rp["precio1"]; ?>" type="number" name="Precio1" class="form-control validate" maxlength="10">
-								<label for="Precio1">Precio1:</label>
-						</div>
-						
-						<div class="md-form">
-								<i class="fa  fa-male  prefix"></i>
-								<input value="<?php  echo $rp["precio2"]; ?>" type="number" name="Precio2" class="form-control validate" maxlength="10">
-								<label for="Precio1">Precio2:</label>
-						</div>
-						
-						<div class="md-form">
-								<i class="fa  fa-male  prefix"></i>
-								<input value="<?php  echo $rp["precio3"]; ?>" type="number" name="Precio3" class="form-control validate" maxlength="10">
-								<label for="Precio3">Precio3:</label>
-						</div>
-						
-						<div class="md-form">
-								<i class="fa  fa-male  prefix"></i>
-								<input value="<?php  echo $rp["precio4"]; ?>" type="number" name="Precio4" class="form-control validate" maxlength="10">
-								<label for="Precio4">Precio4:</label>
-						</div>
+								<label for="Precio1">Precio Mano de Obra:</label>
+						</div>					
 						
 						<div class="md-form">
 								<i class="fa  fa-male  prefix"></i>
@@ -133,16 +97,6 @@ if(isset($_SESSION['tipous'])){
 								</div>
 							</div>
 						
-	
-						<div style="clear:both;"></div>
-							<div class="md-form input-group">
-								<span class="input-group-addon" name="Video">Enlace de Video</span>
-								<input value="<?php  echo $rp["video"]; ?>" name="Video" type="text" class="form-control" name="Video" aria-describedby="basic-addon3">
-							</div>
-							
-							
-
-								
 							<fieldset class="form-group">
 								<input type="checkbox" id="Destacado" name="Destacado" <?php if($rp["destacado"]=='on'){echo'checked="checked"';}?>>
 								<label for="Destacado">Producto Destacado</label>
