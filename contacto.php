@@ -13,13 +13,13 @@ include_once ("includes/cabecera.php");
 				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="float:left" id="mapa-datos" >
 					<BR>
 					<div class="google-maps">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13189.170731666763!2d-62.718989!3d-34.266588!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe2de65a2207ab136!2sNTG+Pastas+--+Panquequeras+-+Tarteleteras+-+Ravioleras!5e0!3m2!1ses!2sus!4v1468245141651" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.1045280169164!2d-60.64286638425279!3d-32.94824957930047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab17500d7b83%3A0xebec6f7380b10cf9!2sPje.+Ing.+Araya%2C+Rosario%2C+Santa+Fe!5e0!3m2!1ses-419!2sar!4v1532481853035" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 					</div>
 					<BR>
-					<p id="p11">NTG Pastas</p>
-					<p id="p12">Rufino – Santa Fe – Republica Argentina</p>
-					<p id="p13">Domicilio:  Alberdi 475 – CP: 6100</p>
-					<p id="p14"><a href="mailto:ventas@ntgpastas.com.ar">E-Mail: ventas@ntgpastas.com.ar</a></p>
+					<p id="p11">La Chocolatería</p>
+					<p id="p12">Rosario, Santa Fe, Argentina</p>
+					<p id="p13">Domicilio:  Avenida Siempre Viva 123</p>
+					<p id="p14"><a href="mailto:lachocolateria@gmail.com">E-Mail: lachocolateria@gmail.com</a></p>
 					<p id="p16">Telefonos: 03382-429951</p> 
 					
 				</div>
