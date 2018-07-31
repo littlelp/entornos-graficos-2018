@@ -70,7 +70,7 @@ if($_SESSION['tipous']==1){
 
     <!-- DataTables JavaScript -->
     <script src="js/plugins/dataTables/jquery.dataTables.js"></script>
-    <script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script src="js/plugins/dataTables/dataTables.bootstrap4.js"></script>
 
 
 
@@ -81,7 +81,9 @@ if($_SESSION['tipous']==1){
 				"paginate": {
 					"previous": "Anterior",
 					"next": "Siguiente"
-				}
+				},
+				"search": "Buscar",
+				"lengthMenu": "Mostrar _MENU_ registros"
 			},
 			responsive: true
 		} );
