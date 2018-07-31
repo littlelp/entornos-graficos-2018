@@ -18,7 +18,7 @@ $html= '<html><head><meta http-equiv="Content-Type" content="text/html"; charset
 		<tr><td colspan="2"><br><hr size="1" color="#990100"></td></tr>
 		<tr><td colspan="2"><strong>Si usted lo desea, puede responder la consulta, respondiendo este mismo E-mail.</strong></td></tr>
 		<tr><td colspan="2"><br><hr size="1" color="#990100"></td></tr>
-		<tr><td colspan="2" align="right">Aplicación desarrollada por <a href="mailto:moreirodamian@gmail.com">Damián Moreiro </a> 2016</td></tr>
+		<tr><td colspan="2" align="right">Aplicación desarrollada por <a href="mailto:lachocolateria@gmail.com">La Chocolatería </a> 2018</td></tr>
 	
 		</table>
 		</body></html>';
