@@ -27,7 +27,7 @@ include_once ("includes/cabecera.php");
 				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="float:right" id="formulario">
 				
 					<H4 style="text-align:center">Envianos tu Consulta:</h4>
-							<form name ="formularioContacto" action="consulta.php" method="post">
+							<form name ="formularioContacto" action="consultar.php" method="post">
 							
 							<div class="md-form">
 								<i class="fa fa-user prefix"></i>
@@ -41,8 +41,6 @@ include_once ("includes/cabecera.php");
 								<input type="text" id="apellido" name="Apellido" class="form-control validate" maxlength="10" required>
 								<label for="Apellido">Apellido:</label>
 							</div>
-		
-		
 	
 							
 							<div class="md-form">
