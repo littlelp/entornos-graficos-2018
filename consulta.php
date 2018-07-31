@@ -31,13 +31,13 @@ require_once('phpmailer/class.phpmailer.php');
 $correo = new PHPMailer(); //Creamos una instancia en lugar usar mail()
  
 //Usamos el SetFrom para decirle al script quien envia el correo
-$correo->SetFrom("web@ntgpastas.com");
+$correo->SetFrom("l.peralta717@gmail.com");
  
 //Usamos el AddReplyTo para decirle al script a quien tiene que responder el correo
 $correo->AddReplyTo( $_POST["Email"]);
  
 //Usamos el AddAddress para agregar un destinatario
-$correo->AddAddress("ventas@ntgpastas.com.ar");
+$correo->AddAddress("lachocolateria00@gmail.com");
 //Ponemos el asunto del mensaje
 $correo->Subject = "Contacto WEB";
  
