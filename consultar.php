@@ -40,7 +40,7 @@
 
 
                 mail($destino,$asunto,$comentario,$desde);
-                header ("Location: index.php");
+                header ("Location: consulta_enviada.php");
 
             }
     }
@@ -60,7 +60,7 @@
             Enviado el $fecha a las $hora\n";
         
             mail($destino,$asunto,$comentario,$desde);
-            header ("Location: index.php");}
+            header ("Location: consulta_enviada.php");}
     ?> 
 </body>
 </html>
