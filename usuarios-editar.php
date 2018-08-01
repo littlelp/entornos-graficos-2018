@@ -40,14 +40,14 @@ if($_SESSION['tipous']==1){
 							
 							<div class="md-form">
 								<i class="fa  fa-male  prefix"></i>
-								<input  value="<?php  echo $r["nombre"]; ?>" type="text" name="Nombre" class="form-control validate" maxlength="10" required>
+								<input  value="<?php  echo $r["nombre"]; ?>" type="text" name="Nombre" class="form-control validate" maxlength="30" required>
 								<label for="Nombre">Nombre:</label>
 							</div>
 		
 		
 							<div class="md-form">
 								<i class="fa  fa-male  prefix"></i>
-								<input  value="<?php  echo $r["apellido"]; ?>" type="text" name="Apellido" class="form-control validate" maxlength="10" required>
+								<input  value="<?php  echo $r["apellido"]; ?>" type="text" name="Apellido" class="form-control validate" maxlength="30" required>
 								<label for="Apellido">Apellido:</label>
 							</div>
 		

@@ -1,11 +1,4 @@
 <?php 
-// *****************************************************************************
-// Nombre: personas-borrar.php
-// Descripción: 
-// Autor: 
-// Fecha de creación: 
-// Fecha de modificacion: 99/99/9999 Autor: xxx  Modificación: xxxxxxxx
-//******************************************************************************
 
 include("includes/conexion.php");
 settype($_GET["id"], "integer");

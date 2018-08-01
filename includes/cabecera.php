@@ -4,9 +4,9 @@
 <head>
 
 
-    <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="description" content="postres, tortas, dulce, eventos, chocolateria" lang="es" />
 	<meta name="keywords" content="postres, tortas, dulce, eventos, chocolateria" lang="es" />
 	<meta name="copyright" content="2018, La Chocolatería" lang="es" />

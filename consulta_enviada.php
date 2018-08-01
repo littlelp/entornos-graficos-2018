@@ -11,6 +11,7 @@ include_once ("includes/cabecera.php");
 					
 					
 					<h5 style="text-align:center" >Muchas gracias.</h5>
+
 					<h5 style="text-align:center" ><strong>La Chocolatería</strong></h5>
 					<br>
 					<br>

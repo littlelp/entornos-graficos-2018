@@ -19,7 +19,7 @@ include_once ("includes/cabecera.php");
 					<p id="p11">La Chocolatería</p>
 					<p id="p12">Rosario, Santa Fe, Argentina</p>
 					<p id="p13">Domicilio:  Avenida Siempre Viva 123</p>
-					<p id="p14"><a href="mailto:lachocolateria@gmail.com">E-Mail: lachocolateria@gmail.com</a></p>
+					<p id="p14"><a href="mailto:lachocolateria00@gmail.com">E-Mail: lachocolateria00@gmail.com</a></p>
 					<p id="p16">Telefonos: 03382-429951</p> 
 					
 				</div>
@@ -27,7 +27,7 @@ include_once ("includes/cabecera.php");
 				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="float:right" id="formulario">
 				
 					<H4 style="text-align:center">Envianos tu Consulta:</h4>
-							<form name ="formularioContacto" action="consulta.php" method="post">
+							<form name ="formularioContacto" action="consultar.php" method="post">
 							
 							<div class="md-form">
 								<i class="fa fa-user prefix"></i>
@@ -41,8 +41,6 @@ include_once ("includes/cabecera.php");
 								<input type="text" id="apellido" name="Apellido" class="form-control validate" maxlength="10" required>
 								<label for="Apellido">Apellido:</label>
 							</div>
-		
-		
 	
 							
 							<div class="md-form">
