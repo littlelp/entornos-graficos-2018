@@ -86,12 +86,19 @@ if($_SESSION['tipous']==1){
 
     <script>
     $(document).ready(function() {
-        $('#dataTables-addControls').dataTable();
+        $('#dataTables-addControls').dataTable( {
+			language: {
+				"paginate": {
+					"previous": "Anterior",
+					"next": "Siguiente"
+				},
+				"search": "Buscar",
+				"lengthMenu": "Mostrar _MENU_ registros"
+			},
+			responsive: true
+		} );
     });
 
-	$('#dataTables-addControls').dataTable( {
-   responsive: true
-} );
 	function borrarp(id) {
 		location.href = "productos-borrar.php?id=" + id;
 	}
