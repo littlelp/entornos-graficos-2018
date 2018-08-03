@@ -1,4 +1,6 @@
-<?php session_start();?>
+<?php session_start();
+
+header("Location: consulta_enviada.php");?>
 <!DOCTYPE html>
 
   <head>
@@ -48,19 +50,18 @@
     {
         $destino= "lachocolateria00@gmail.com";
         $asunto="Nueva consulta de un usuario - La Chocolateria.";
-        $desde=$_POST[email];
+        $desde=$_POST['Email'];
 
         $comentario= "
             \n
             $asunto\n\n
-            Apellido y nombre: $_POST[nombre]\n
-            Email: $_POST[email]\n
-            Teléfono de Contacto: $_POST[tel]\n
-            Mensaje: $_POST[consulta]\n
+            Apellido y nombre: $_POST[Nombre]\n
+            Email: $_POST[Email]\n
+            Teléfono de Contacto: $_POST[Tel]\n
+            Mensaje: $_POST[Consulta]\n
             Enviado el $fecha a las $hora\n";
         
-            mail($destino,$asunto,$comentario,$desde);
-            header ("Location: consulta_enviada.php");}
+            mail($destino,$asunto,$comentario,$desde);}
     ?> 
 </body>
 </html>

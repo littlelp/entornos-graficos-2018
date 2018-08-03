@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -37,7 +40,6 @@
 
 <body>
 	<?php
-session_start();
 include("includes/conexion.php");
 
 $url = explode("/",$_SERVER["REQUEST_URI"]);
