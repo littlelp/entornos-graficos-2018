@@ -1,14 +1,4 @@
 <?php 
-// *****************************************************************************
-// Nombre: personas-nueva.php
-// Descripción: Agrega Personas
-// Autor: Damian Moreiro
-// Fecha de creación: 27/06/16
-// Fecha de modificacion:
-//******************************************************************************
-//if(isset($_SESSION['tipous'])){
-									
-//if($_SESSION['tipous']==1){
 									
 								
 include("includes/conexion.php");
