@@ -46,8 +46,7 @@ header("Location: consulta_enviada.php");?>
 
             }
     }
-    else
-    {
+    else {
         $destino= "lachocolateria00@gmail.com";
         $asunto="Nueva consulta de un usuario - La Chocolateria.";
         $desde=$_POST['Email'];
@@ -61,7 +60,26 @@ header("Location: consulta_enviada.php");?>
             Mensaje: $_POST[Consulta]\n
             Enviado el $fecha a las $hora\n";
         
-            mail($destino,$asunto,$comentario,$desde);}
+            mail($destino,$asunto,$comentario,$desde);
+
+
+    }
+
+    $destinoRespuestaAutomatica= $desde;
+    $asuntoRespuestaAutomatica="Recibimos su consulta";
+    $desdeRespuestaAutomatica="lachocolateria00@gmail.com";
+
+    $comentarioRespuestaAutomatica= "
+        Muchas gracias por su consulta\n
+        Le responderemos a la brevedad\n\n
+        La Chocolatería";
+    
+    mail(
+        $destinoRespuestaAutomatica,
+        $asuntoRespuestaAutomatica,
+        $comentarioRespuestaAutomatica,
+        $desdeRespuestaAutomatica
+    );
     ?> 
 </body>
 </html>
