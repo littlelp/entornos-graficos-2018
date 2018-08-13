@@ -35,7 +35,8 @@ session_start();
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
 	<link href="img/chocolateria.ico" rel="shortcut icon" type="image/x-icon">
-
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script>
+	<script src="js/validaciones.js"></script>
 </head>
 
 <body>
