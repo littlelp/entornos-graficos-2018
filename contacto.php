@@ -58,13 +58,13 @@ include_once ("includes/cabecera.php");
 		
 							<div class="md-form">
 								<i class="fa fa-home prefix"></i>
-								<input type="text" id="ciudad" name="Ciudad" class="form-control validate" maxlength="10" required>
+								<input type="text" id="ciudad" name="Ciudad" class="form-control validate" maxlength="30" required>
 								<label for="Ciudad">Ciudad:</label>
 							</div>                                 
 		
 							<div class="md-form">
 								<i class="fa fa-globe prefix"></i>
-								<input type="text" id="provincia" name="Provincia" class="form-control validate" maxlength="15" required>
+								<input type="text" id="provincia" name="Provincia" class="form-control validate" maxlength="30" required>
 								<label for="Provincia">Provincia:</label>
 							</div>
 			
@@ -75,7 +75,7 @@ include_once ("includes/cabecera.php");
 								<label for="Consulta">Consulta:</label>
 							</div>
 				
-							<button type="submit" class="btn btn-default">Enviar</button>
+							<button id = "btnFormContacto" type="submit" class="btn btn-default">Enviar</button>
 		
 				</div>
 		</div>
