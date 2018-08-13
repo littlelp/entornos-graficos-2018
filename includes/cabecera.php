@@ -93,21 +93,21 @@ $activo = end($url);
             </div>
 
             <!--Body-->
-			<form action="login.php" method="post">
+			<form id="formLogin" action="login.php" method="post">
 				<div class="modal-body">
 					<div class="md-form">
 						<i class="fa fa-user prefix"></i>
-						<input type="text" name="user" class="form-control">
+						<input type="text" name="user" id= "user" class="form-control">
 						<label for="user">Usuario</label>
 					</div>
 
 					<div class="md-form">
 						<i class="fa fa-lock prefix"></i>
-						<input type="password" name="pass" class="form-control">
+						<input type="password" name="pass" id="pass" class="form-control">
 						<label for="pass">Contraseña</label>
 					</div>
 					<div class="text-xs-center">
-						<button type="submit" class="btn btn-primary btn-lg">Acceder</button>
+						<button type="submit" id="btnFormLogin" class="btn btn-primary btn-lg">Acceder</button>
 					</div>
 				</div>
             </form>

@@ -1,8 +1,8 @@
 $(document).ready(function() {
+
 	var namePattern = "^[a-z A-Z]{2,30}$";
 	var emailPattern = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$";
 	var telPattern = "^[0-9]{7,10}";
-
 
 	function checkInput(idInput, pattern) {
 		return $(idInput).val().match(pattern) ? true : false;
@@ -13,7 +13,7 @@ $(document).ready(function() {
 	}
 		 
 	function disableSubmit() {
-			$('#btnFormContacto').prop("disabled", true);
+		$('#btnFormContacto').prop("disabled", true);
 	}
 
 	function checkTextarea(idText) {
@@ -33,4 +33,45 @@ $(document).ready(function() {
 	$(function() {
 		checkForm("#formularioContacto");
 	});
+
 });
+
+	
+/*
+
+function validarLogin() {
+
+	var usuarioPattern = "^[a-z]([A-Za-z0-9]{5,14})+$";
+	var clavePattern = "^\w{6,12}$";
+
+	checkForm("#formLogin");
+
+	function checkInput(idInput, pattern) {
+		return $(idInput).val().match(pattern) ? true : false;
+	}
+
+	function enableSubmit() {
+		$('#btnFormLogin').prop("disabled",false);
+	}
+		 
+	function disableSubmit() {
+			$('#btnFormLogin').prop("disabled", true);
+	}
+
+	function checkForm (idForm) {
+		alert('heckando');
+		$(idForm).on("change keydown", function() {
+			if (checkInput("#usuario", usuarioPattern) && checkInput("#pass", clavePattern)) {
+				enableSubmit();
+			} else {
+				disableSubmit();
+			}
+		});
+	}
+
+	$(function() {
+		checkForm("#formLogin");
+	});
+}
+
+*/
