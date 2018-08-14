@@ -162,15 +162,15 @@ function validarNuevoProd() {
 		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 160 caracteres.";
 	}
 
-	if(!$(inputPrecio1).val().match(precioPattern)) {
-		bandera=0;
-		errores[errores.length] = "Precio incorrecto. Revise el formato. Separador decimal ',' unicamente.";
-	}
+	// if(!$(inputPrecio1).val().match(precioPattern)) {
+	// 	bandera=0;
+	// 	errores[errores.length] = "Precio incorrecto. Revise el formato. Separador decimal ',' unicamente.";
+	// }
 
-	if(!$(inputPrecioLista).val().match(precioPattern)) {
-		bandera=0;
-		errores[errores.length] = "Precio incorrecto. Revise formato. Separador decimal ',' unicamente.";
-	}
+	// if(!$(inputPrecioLista).val().match(precioPattern)) {
+	// 	bandera=0;
+	// 	errores[errores.length] = "Precio incorrecto. Revise formato. Separador decimal ',' unicamente.";
+	// }
 
 
 	if($(inputImagen).val() == '') {
@@ -180,7 +180,6 @@ function validarNuevoProd() {
 
 
 	if (bandera == 0) {
-
 		mostrarErrores(form,errores);
 
 	} else {
