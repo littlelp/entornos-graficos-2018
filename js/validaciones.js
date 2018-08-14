@@ -258,9 +258,10 @@ function validarNuevoUsuario() {
 		errores[errores.length] = "Usuario incorrecto. No puede estar vacio y debe tener un maximo de 15 caracteres";
 	}
 
-	if(!$(inputClave).val().match(clavePattern)) {
+	if(!$(inputClave).val().match(clavePattern) || $(inputClave).length() < 6) {
+		event.preventDefault();
 		bandera=0;
-		errores[errores.length] = "Contraseña incorrecta: Mínimo 6 caracteres y máximo 15. Al menos una letra mayúscula, una letra minúscula, un dígito y un carac6ter especial. No espacios en blanco.";
+		errores[errores.length] = "Contraseña incorrecta: Mínimo 6 caracteres y máximo 20. Solo letras y números.";
 	 }
 
 
