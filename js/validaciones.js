@@ -8,6 +8,10 @@ $('#btnFormNuevoProd').on('click', function() {
 	validarNuevoProd();
 })
 
+$('#btnFormNuevaCat').on('click', function() {
+	validarNuevaCat();
+})
+
 function borrarErrores() {
 	$('div.alert-danger').remove();
 }
@@ -164,60 +168,45 @@ function validarNuevoProd() {
 		form.submit();
 	}
 
-	//<div class="alert alert-danger" role="alert">
+}
+
+
+function validarNuevaCat() {
+
+	var form = $('#formNuevaCat');
+	
+	var inputCategoria = $('input[name=Nombre]');
+	var inputDescripcion = $('input[name=Descripcion]');
+	
+
+	var bandera = 1 ;
+
+	borrarErrores();
+
+	var errores=[];
+
+
+	if(!$(inputCategoria).val().match(namePattern)) {
+		bandera=0;
+		errores[errores.length] = "Nombre de Categoria incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+	}
+
+
+	if(!$(inputDescripcion).val().match(descripcionPattern)) {
+		bandera=0;
+		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 30 caracteres y no puede estar vacia.";
+	}
+
+
+	if (bandera == 0) {
+		mostrarErrores(form,errores);
+
+	} else {
+		form.submit();
+	}
+
 }
 
 });
-
-// var namePattern = "^[a-z A-Z]{2,30}$";
-// var emailPattern = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$";
-// var telPattern = "^[0-9]{7,10}";
-// var usuarioPattern = "/^[a-zA-Z0-9]+([a-zA-Z0-9](_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$/";
-// var clavePattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$^+=!*()@%&]).{6,20}$";
-
-// function checkInput(idInput, pattern) {
-// 	return $(idInput).val().match(pattern) ? true : false;
-// }
-
-// function enableSubmit(idBtn) {
-// 	$(idBtn).prop("disabled",false);
-// }
-	 
-// function disableSubmit(idBtn) {
-// 	$(idBtn).prop("disabled", true);
-// }
-
-// function checkTextarea(idText) {
-// 	return $(idText).val().length > 8 ? true : false;	
-// }
-
-// function checkFormContacto(idForm) {
-// 	$(idForm).on("change keydown", function() {
-
-// 		if (checkInput("#nombre", namePattern) && checkInput("#apellido", namePattern) && checkInput("#email", emailPattern) && checkInput("#tel", telPattern) && checkInput("#ciudad",namePattern) && checkInput("#provincia", namePattern) && checkTextarea("#consulta")) {
-// 			enableSubmit('#btnFormContacto');
-// 		} else {
-// 			disableSubmit('#btnFormContacto');
-// 		}
-// 	});
-// }
-
-// function checkFormLogin (idForm) {
-// 	disableSubmit('#btnFormLogin');
-// 	$(idForm).on("click change keydown", function() {
-
-// 		if (checkInput("#user", usuarioPattern) && checkInput("#pass", clavePattern)) {
-// 			enableSubmit('#btnFormLogin');
-// 		} else {
-// 			disableSubmit('#btnFormLogin');
-// 		}
-// 	});
-// }
-
-// $(function() {
-// 	checkFormContacto("#formContacto");
-// 	checkFormLogin("#formLogin");
-	
-// });
 
 	
