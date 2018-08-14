@@ -27,7 +27,7 @@ include_once ("includes/cabecera.php");
 				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="float:right" id="formulario">
 				
 					<H4 style="text-align:center">Envianos tu Consulta:</h4>
-							<form id = "formularioContacto" name ="formularioContacto" action="consultar.php" method="post">
+							<form id = "formContacto" name ="formContacto" action="consultar.php" method="post">
 							
 							<div class="md-form">
 								<i class="fa fa-user prefix"></i>

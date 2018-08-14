@@ -93,7 +93,7 @@ $activo = end($url);
             </div>
 
             <!--Body-->
-			<form id="formLogin" action="login.php" method="post">
+			<form id="formLogin" name= "formLogin" action="login.php" method="post">
 				<div class="modal-body">
 					<div class="md-form">
 						<i class="fa fa-user prefix"></i>

@@ -3,75 +3,54 @@ $(document).ready(function() {
 	var namePattern = "^[a-z A-Z]{2,30}$";
 	var emailPattern = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$";
 	var telPattern = "^[0-9]{7,10}";
+	var usuarioPattern = "/^[a-zA-Z0-9]+([a-zA-Z0-9](_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$/";
+	var clavePattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$^+=!*()@%&]).{6,20}$";
 
 	function checkInput(idInput, pattern) {
 		return $(idInput).val().match(pattern) ? true : false;
 	}
 
-	function enableSubmit() {
-		$('#btnFormContacto').prop("disabled",false);
+	function enableSubmit(idBtn) {
+		$(idBtn).prop("disabled",false);
 	}
 		 
-	function disableSubmit() {
-		$('#btnFormContacto').prop("disabled", true);
+	function disableSubmit(idBtn) {
+		$(idBtn).prop("disabled", true);
 	}
 
 	function checkTextarea(idText) {
 		return $(idText).val().length > 8 ? true : false;	
 	}
 
-	function checkForm (idForm) {
+	function checkFormContacto(idForm) {
 		$(idForm).on("change keydown", function() {
+
 			if (checkInput("#nombre", namePattern) && checkInput("#apellido", namePattern) && checkInput("#email", emailPattern) && checkInput("#tel", telPattern) && checkInput("#ciudad",namePattern) && checkInput("#provincia", namePattern) && checkTextarea("#consulta")) {
-				enableSubmit();
+				enableSubmit('#btnFormContacto');
 			} else {
-				disableSubmit();
+				disableSubmit('#btnFormContacto');
+			}
+		});
+	}
+
+	function checkFormLogin (idForm) {
+		disableSubmit('#btnFormLogin');
+		$(idForm).on("click change keydown", function() {
+
+			if (checkInput("#user", usuarioPattern) && checkInput("#pass", clavePattern)) {
+				enableSubmit('#btnFormLogin');
+			} else {
+				disableSubmit('#btnFormLogin');
 			}
 		});
 	}
 
 	$(function() {
-		checkForm("#formularioContacto");
+		checkFormContacto("#formContacto");
+		checkFormLogin("#formLogin");
+		
 	});
 
 });
 
 	
-/*
-
-function validarLogin() {
-
-	var usuarioPattern = "^[a-z]([A-Za-z0-9]{5,14})+$";
-	var clavePattern = "^\w{6,12}$";
-
-	checkForm("#formLogin");
-
-	function checkInput(idInput, pattern) {
-		return $(idInput).val().match(pattern) ? true : false;
-	}
-
-	function enableSubmit() {
-		$('#btnFormLogin').prop("disabled",false);
-	}
-		 
-	function disableSubmit() {
-			$('#btnFormLogin').prop("disabled", true);
-	}
-
-	function checkForm (idForm) {
-		alert('heckando');
-		$(idForm).on("change keydown", function() {
-			if (checkInput("#usuario", usuarioPattern) && checkInput("#pass", clavePattern)) {
-				enableSubmit();
-			} else {
-				disableSubmit();
-			}
-		});
-	}
-
-	$(function() {
-		checkForm("#formLogin");
-	});
-}
-
-*/
