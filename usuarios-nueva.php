@@ -24,7 +24,7 @@ if($_SESSION['tipous']==1){
 				
 					<div class="col-xs-10 col-sm-10 col-md-10 col-md-offset-1">
 
-						<form action="nuevo-user.php" method="post">
+						<form id="formNuevoUsuario" action="nuevo-user.php" method="post">
 							
 							<div class="md-form">
 								<i class="fa  fa-male  prefix"></i>
@@ -41,8 +41,8 @@ if($_SESSION['tipous']==1){
 		
 						
 						<label>Tipo de Usuario</label>
-						<select name="tipouser" class="mdb-select" required >
-						<option value="" disabled selected required >Seleccione:</option>	
+						<select id= "selTipoUsu" name="tipouser" class="mdb-select" required >
+						"						<option value="" disabled selected required >Seleccione:</option>	
 							
 									<?php	
 										
@@ -84,7 +84,7 @@ if($_SESSION['tipous']==1){
 		
 																								
 				
-							<button type="submit" class="btn btn-default">Agregar</button>																		
+							<button id= "btnFormNuevoUsuario" type="submit" class="btn btn-default">Agregar</button>																		
                                    
 					</div>
 				

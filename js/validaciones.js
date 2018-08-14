@@ -12,6 +12,10 @@ $('#btnFormNuevaCat').on('click', function() {
 	validarNuevaCat();
 })
 
+$('#btnFormNuevoUsuario').on('click', function() {
+	validarNuevoUsuario();
+})
+
 function borrarErrores() {
 	$('div.alert-danger').remove();
 }
@@ -36,11 +40,12 @@ function mostrarErrores(selector, errores) {
 var namePattern = "^[a-z A-Z]{2,30}$";
 var emailPattern = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$";
 var telPattern = "^[0-9]{7,10}";
-var usuarioPattern = "/^[a-zA-Z0-9]+([a-zA-Z0-9](_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$/";
-var clavePattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$^+=!*()@%&]).{6,20}$";
-var consultaPattern = "^[a-zA-Z0-9]+([a-zA-Z0-9](_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$";
+var usuarioPattern = "([a-zA-Z0-9](_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$";
+//var clavePattern = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,20}/";
+var clavePattern = "^[a-zA-Z0-9]{6,20}$";
+var consultaPattern = "([a-zA-Z0-9](_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$";
 var productoPattern = "^[a-z A-Z]{2,25}$";
-var descripcionPattern = "^[a-zA-Z0-9]+([a-zA-Z0-9](_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$";
+var descripcionPattern = "([a-zA-Z0-9](_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$";
 var precioPattern  = "^[0-9]+([,][0-9]+)?$";
 
 function validarContacto() {
@@ -162,9 +167,12 @@ function validarNuevoProd() {
 
 
 	if (bandera == 0) {
+
 		mostrarErrores(form,errores);
+		alert("true " + bandera);
 
 	} else {
+		alert("false " + bandera);
 		form.submit();
 	}
 
@@ -206,6 +214,64 @@ function validarNuevaCat() {
 	}
 
 }
+
+function validarNuevoUsuario() {
+
+	var form = $('#formNuevoUsuario');
+	
+	var inputNombre = $('input[name=Nombre]');
+	var inputApellido = $('input[name=Apellido]');
+	var selTipoUsu = $('#selTipoUsu');
+	var inputEmail = $('input[name=Email]');
+	var inputUsuario = $('input[name=usuario]');
+	var inputClave = $('input[name=contrasena]');
+
+	var bandera = 1 ;
+
+	borrarErrores();
+
+	var errores=[];
+
+	if(!$(inputNombre).val().match(namePattern)) {
+		bandera=0;
+		errores[errores.length] = "Nombre incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+	}
+
+	if(!$(inputApellido).val().match(namePattern)) {
+		bandera=0;
+		errores[errores.length] = "Apellido incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+	}
+
+	if($(selTipoUsu).val() == null) {
+		bandera=0;
+		errores[errores.length] = "Debe seleccionar un Tipo de Usuario";
+	}
+
+	if(!$(inputEmail).val().match(emailPattern)) {
+		bandera=0;
+		errores[errores.length] = "Email incorrecto. Revise el formato";
+	}
+
+
+	if(!$(inputUsuario).val().match(usuarioPattern)) {
+		bandera=0;
+		errores[errores.length] = "Usuario incorrecto. No puede estar vacio y debe tener un maximo de 15 caracteres";
+	}
+
+	if(!$(inputClave).val().match(clavePattern)) {
+		bandera=0;
+		errores[errores.length] = "Contraseña incorrecta: Mínimo 6 caracteres y máximo 15. Al menos una letra mayúscula, una letra minúscula, un dígito y un carac6ter especial. No espacios en blanco.";
+	 }
+
+
+
+	if(bandera==0) {
+		mostrarErrores(form,errores);
+	} else {
+		form.submit();
+	}
+}
+
 
 });
 
