@@ -4,12 +4,16 @@ $('#btnFormContacto').on('click', function() {
 	validarContacto();
 })
 
+$('#btnFormNuevoProd').on('click', function() {
+	validarNuevoProd();
+})
 
 function borrarErrores() {
 	$('div.alert-danger').remove();
 }
 
 function mostrarErrores(selector, errores) {
+	
 	var divError = document.createElement("div");
 	$(divError).attr("class","");
 	$(divError).addClass('alert alert-danger');
@@ -31,6 +35,9 @@ var telPattern = "^[0-9]{7,10}";
 var usuarioPattern = "/^[a-zA-Z0-9]+([a-zA-Z0-9](_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$/";
 var clavePattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$^+=!*()@%&]).{6,20}$";
 var consultaPattern = "^[a-zA-Z0-9]+([a-zA-Z0-9](_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$";
+var productoPattern = "^[a-z A-Z]{2,25}$";
+var descripcionPattern = "^[a-zA-Z0-9]+([a-zA-Z0-9](_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$";
+var precioPattern  = "^[0-9]+([,][0-9]+)?$";
 
 function validarContacto() {
 
@@ -97,6 +104,68 @@ function validarContacto() {
 	//<div class="alert alert-danger" role="alert">
 }
 
+
+function validarNuevoProd() {
+
+	var form = $('#formNuevoProd');
+	
+	var inputProducto = $('input[name=Nombre]');
+	var selCategoria = $('#selCat');
+	var inputDescripcion = $('#descripcion');
+	var inputPrecio1 = $('input[name=Precio1]');
+	var inputPrecioLista = $('input[name=PrecioLista]');
+	var inputImagen = $('input[name=Imagen]');
+
+	
+
+	var bandera = 1 ;
+
+	borrarErrores();
+
+	var errores=[];
+
+
+	if(!$(inputProducto).val().match(productoPattern)) {
+		bandera=0;
+		errores[errores.length] = "Nombre de Producto incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+	}
+
+	if($(selCategoria).val() == null) {
+		bandera=0;
+		errores[errores.length] = "Debe seleccionar una categoria";
+	}
+
+	if(!$(inputDescripcion).val().match(descripcionPattern)) {
+		bandera=0;
+		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 160 caracteres.";
+	}
+
+	if(!$(inputPrecio1).val().match(precioPattern)) {
+		bandera=0;
+		errores[errores.length] = "Precio incorrecto. Revise el formato. Separador decimal ',' unicamente.";
+	}
+
+	if(!$(inputPrecioLista).val().match(precioPattern)) {
+		bandera=0;
+		errores[errores.length] = "Precio incorrecto. Revise formato. Separador decimal ',' unicamente.";
+	}
+
+
+	if($(inputImagen).val() == '') {
+		bandera=0;
+		errores[errores.length] = "Debe subir una imagen del producto";
+	}
+
+
+	if (bandera == 0) {
+		mostrarErrores(form,errores);
+
+	} else {
+		form.submit();
+	}
+
+	//<div class="alert alert-danger" role="alert">
+}
 
 });
 
