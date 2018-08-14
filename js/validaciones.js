@@ -8,8 +8,16 @@ $('#btnFormNuevoProd').on('click', function() {
 	validarNuevoProd();
 })
 
+$('#btnFormModificarProd').on('click', function() {
+	validarModificarProd();
+})
+
 $('#btnFormNuevaCat').on('click', function() {
 	validarNuevaCat();
+})
+
+$('#btnFormModificarCat').on('click', function() {
+	validarModificarCat();
 })
 
 $('#btnFormNuevoUsuario').on('click', function() {
@@ -174,10 +182,69 @@ function validarNuevoProd() {
 	if (bandera == 0) {
 
 		mostrarErrores(form,errores);
-		alert("true " + bandera);
 
 	} else {
-		alert("false " + bandera);
+		form.submit();
+	}
+
+}
+
+
+function validarModificarProd() {
+
+	var form = $('#formModificarProd');
+	
+	var inputProducto = $('input[name=Nombre]');
+	var selCategoria = $('#selCat');
+	var inputDescripcion = $('#descripcion');
+	var inputPrecio1 = $('input[name=Precio1]');
+	var inputPrecioLista = $('input[name=PrecioLista]');
+	var inputImagen = $('input[name=Imagen]');
+
+	
+
+	var bandera = 1 ;
+
+	borrarErrores();
+
+	var errores=[];
+
+
+	if(!$(inputProducto).val().match(productoPattern)) {
+		bandera=0;
+		errores[errores.length] = "Nombre de Producto incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+	}
+
+	if($(selCategoria).val() == null) {
+		bandera=0;
+		errores[errores.length] = "Debe seleccionar una categoria";
+	}
+
+	if(!$(inputDescripcion).val().match(descripcionPattern)) {
+		bandera=0;
+		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 160 caracteres.";
+	}
+
+	if(!$(inputPrecio1).val().match(precioPattern)) {
+		bandera=0;
+		errores[errores.length] = "Precio incorrecto. Revise el formato. Separador decimal ',' unicamente.";
+	}
+
+	if(!$(inputPrecioLista).val().match(precioPattern)) {
+		bandera=0;
+		errores[errores.length] = "Precio incorrecto. Revise formato. Separador decimal ',' unicamente.";
+	}
+
+
+	if($(inputImagen).val() == '') {
+		bandera=0;
+		errores[errores.length] = "Debe subir una imagen del producto";
+	}
+
+
+	if (bandera == 0) {
+		mostrarErrores(form,errores);
+	} else {
 		form.submit();
 	}
 
@@ -220,6 +287,44 @@ function validarNuevaCat() {
 
 }
 
+function validarModificarCat() {
+
+	var form = $('#formModificarCat');
+	
+	var inputCategoria = $('input[name=Nombre]');
+	var inputDescripcion = $('input[name=Descripcion]');
+	
+
+	var bandera = 1 ;
+
+	borrarErrores();
+
+	var errores=[];
+
+
+	if(!$(inputCategoria).val().match(namePattern)) {
+		event.preventDefault();
+		bandera=0;
+		errores[errores.length] = "Nombre de Categoria incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+	}
+
+
+	if(!$(inputDescripcion).val().match(descripcionPattern)) {
+		event.preventDefault();
+		bandera=0;
+		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 30 caracteres y no puede estar vacia.";
+	}
+
+
+	if (bandera == 0) {
+		mostrarErrores(form,errores);
+
+	} else {
+		form.submit();
+	}
+
+}
+
 function validarNuevoUsuario() {
 
 	var form = $('#formNuevoUsuario');
@@ -238,27 +343,32 @@ function validarNuevoUsuario() {
 	var errores=[];
 
 	if(!$(inputNombre).val().match(namePattern)) {
+		event.preventDefault();
 		bandera=0;
 		errores[errores.length] = "Nombre incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
 	}
 
 	if(!$(inputApellido).val().match(namePattern)) {
+		event.preventDefault();
 		bandera=0;
 		errores[errores.length] = "Apellido incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
 	}
 
 	if($(selTipoUsu).val() == null) {
+		event.preventDefault();
 		bandera=0;
 		errores[errores.length] = "Debe seleccionar un Tipo de Usuario";
 	}
 
 	if(!$(inputEmail).val().match(emailPattern)) {
+		event.preventDefault();
 		bandera=0;
 		errores[errores.length] = "Email incorrecto. Revise el formato";
 	}
 
 
 	if(!$(inputUsuario).val().match(usuarioPattern)) {
+		event.preventDefault();
 		bandera=0;
 		errores[errores.length] = "Usuario incorrecto. No puede estar vacio y debe tener un maximo de 15 caracteres";
 	}
