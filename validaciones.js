@@ -74,7 +74,7 @@ var clavePattern = "^[a-zA-Z0-9]{6,20}$";
 var consultaPattern = "([a-zA-Z0-9]*(_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$";
 var productoPattern = "^[a-z A-Z]{2,25}$";
 var descripcionPattern = "^[a-zA-Z0-9]{4,160}$";
-var precioPattern  = "^[0-9]+([,][0-9]+)?$";
+var precioPattern  = "^[0-9]$";
 
 
 function enableSubmit (idForm) {
@@ -206,18 +206,18 @@ function validarNuevoProd() {
 
 	if (!$(inputDescripcion).val().length > 0) {
 		bandera=0;
-		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 160 caracteresy no puede estar vacía.";
+		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 160 caracteres y no puede estar vacía.";
 	}
 
-	// if(!$(inputPrecio1).val().match(precioPattern)) {
-	// 	bandera=0;
-	// 	errores[errores.length] = "Precio incorrecto. Revise el formato. Separador decimal ',' unicamente.";
-	// }
+	if(!$(inputPrecio1).val().match(precioPattern)) {
+		bandera=0;
+		errores[errores.length] = "Precio incorrecto. Revise el formato. Separador decimal ',' unicamente.";
+	}
 
-	// if(!$(inputPrecioLista).val().match(precioPattern)) {
-	// 	bandera=0;
-	// 	errores[errores.length] = "Precio incorrecto. Revise formato. Separador decimal ',' unicamente.";
-	// }
+	if(!$(inputPrecioLista).val().match(precioPattern)) {
+		bandera=0;
+		errores[errores.length] = "Precio incorrecto. Revise formato. Separador decimal ',' unicamente.";
+	}
 
 
 	if($(inputImagen).val() == '') {
@@ -266,9 +266,9 @@ function validarModificarProd() {
 		errores[errores.length] = "Debe seleccionar una categoria";
 	}
 
-	if(!$(inputDescripcion).val().match(descripcionPattern)) {
+	if(!$(inputDescripcion).val().length > 0) {
 		bandera=0;
-		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 160 caracteres.";
+		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 160 caracteres y no puede estar vacía.";
 	}
 
 	if(!$(inputPrecio1).val().match(precioPattern)) {
@@ -318,9 +318,9 @@ function validarNuevaCat() {
 	}
 
 
-	if(!$(inputDescripcion).val().match(descripcionPattern)) {
+	if (!$(inputDescripcion).val().length > 0) {
 		bandera=0;
-		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 30 caracteres y no puede estar vacia.";
+		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 160 caracteres y no puede estar vacía.";
 	}
 
 
@@ -355,10 +355,9 @@ function validarModificarCat() {
 	}
 
 
-	if(!$(inputDescripcion).val().match(descripcionPattern)) {
-		event.preventDefault();
+	if (!$(inputDescripcion).val().length > 0) {
 		bandera=0;
-		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 30 caracteres y no puede estar vacia.";
+		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 160 caracteres y no puede estar vacía.";
 	}
 
 
@@ -548,18 +547,21 @@ function validarNuevaNovedad() {
 
 
 	if(!$(inputTitulo).val().match(namePattern)) {
+		event.preventDefault();
 		bandera=0;
 		errores[errores.length] = "Titulo de Novedad incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
 	}
 
-	if(!$(inputDescripcion).val().match(descripcionPattern)) {
-			bandera=0;
-			errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 160 caracteres y no puede estar vacia.";
-		}
+	if (!$(inputDescripcion).val().length > 0) {
+		event.preventDefault();
+		bandera=0;
+		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 160 caracteres y no puede estar vacía.";
+	}
 
 	if($(inputImagen).val() == '') {
+		event.preventDefault();
 		bandera=0;
-		errores[errores.length] = "Debe subir una imagen de la Novedad";
+		errores[errores.length] = "Debe subir una imagen de la Novedad.";
 	}
 
 	if (bandera == 0) {
@@ -589,26 +591,26 @@ function validarModificarNovedad() {
 
 
 	if(!$(inputTitulo).val().match(namePattern)) {
-		alert('jeje');
+		event.preventDefault();
 		bandera=0;
 		errores[errores.length] = "Titulo de Novedad incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
 	}
 
-	// if(!$(inputDescripcion).val().match(descripcionPattern)) {
-	// 		event.preventDefault();
-	// 		bandera=0;
-	// 		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 160 caracteres y no puede estar vacia.";
-	// 	}
+	if (!$(inputDescripcion).val().length > 0) {
+		event.preventDefault();
+		bandera=0;
+		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 160 caracteres y no puede estar vacía.";
+	}
 
-	// if($(inputImagen).val() == '') {
-	// 	bandera=0;
-	// 	errores[errores.length] = "Debe subir una imagen de la Novedad";
-	// }
+	if($(inputImagen).val() == '') {
+		event.preventDefault();
+		bandera=0;
+		errores[errores.length] = "Debe subir una imagen de la Novedad.";
+	}
 
 
 	if (bandera == 0) {
 		mostrarErrores(form,errores);
-
 	} else {
 		form.submit();
 	}
