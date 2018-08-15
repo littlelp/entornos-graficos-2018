@@ -26,7 +26,7 @@ $rs = mysqli_query($db, $sql);
 
 
 //}}
-//else {echo'<script language="javascript">window.location="index.php"</script>;';}
+//else {echo'<script>window.location="index.php"</script>;';}
 
 
 header('Location:empresa.php');

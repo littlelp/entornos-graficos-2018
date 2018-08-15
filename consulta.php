@@ -56,7 +56,7 @@ $correo->MsgHTML($html);
 //Enviamos el correo
 if(!$correo->Send()) {
   echo "Hubo un error: " . $correo->ErrorInfo;}
-  else {echo'<script language="javascript">window.location="consulta_enviada.php"</script>;';}
+  else {echo'<script>window.location="consulta_enviada.php"</script>;';}
  
 ?>
 

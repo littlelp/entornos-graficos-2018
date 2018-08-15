@@ -41,12 +41,12 @@ $rs1 = mysqli_query($db, $sql1);
 					
 					
 					<div class="row">				
-						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="float:left" id="foto">
+						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="float:left" id="foto-<?php echo $r['idProducto'] ?>">
 							<a href="producto.php?prod=<?php echo $r['idProducto'] ?>"><img src="<?php echo $r['imagen'] ?>" alt="imagen de <?php echo $r['descripcion'];?> " class ="center-block img-responsive img-thumbnail img-rounded"></a>
 						</div>						
-						<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5" style="float:center" id="nombreproducto">
-							<p id="nombreProd"><?php echo $r["nombre"];?></p>
-							<p id="descCorta"><?php echo $r["descripcion"];?></p>
+						<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+							<p class="nombreProd" id="nombreProd-<?php echo $r['idProducto'] ?>"><?php echo $r["nombre"];?></p>
+							<p class="descCorta" id="descCorta-<?php echo $r['idProducto'] ?>"><?php echo $r["descripcion"];?>
 								<?php
 							if(isset($_SESSION['tipous'])){
 									
@@ -74,7 +74,7 @@ $rs1 = mysqli_query($db, $sql1);
 									<p id="tituloprod">Precio Mano de Obra:$ <?php echo $r["precio4"];?></p>
 							<p id="tituloprod">Precio Lista: $ <?php echo $r["precioLista"];}}?></p>
 							
-							<p style="text-align:right"><a href="producto.php?prod=<?php echo $r['idProducto']; ?>"><button type="button" class="btn btn-info"> + Info</button></a></p>
+							<p style="text-align:right"><a class="btn btn-primary" href="producto.php?prod=<?php echo $r['idProducto']; ?>">+ Info</a></p>
 						</div>				
 					</div>
 					<hr/>

@@ -29,13 +29,13 @@ include_once ("includes/cabecera.php");
 							
 
 						</div>						
-						<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8" style="float:center" id="titulonov">
+						<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8" id="titulonov">
 							<p id="titulonov"><?php echo $r["titulo"];?></p>
-							<p id="descCorta"><?php echo $r["parrafo1"];?></p>
+							<p class="descCorta" id="descCorta"><?php echo $r["parrafo1"];?></p>
 							<br>
-							<p id="descCorta"><?php echo $r["parrafo2"];?></p>
+							<p class="descCorta" id="descCorta"><?php echo $r["parrafo2"];?></p>
 							<br>
-							<p id="descCorta"><?php echo $r["parrafo3"];?></p>
+							<p class="descCorta" id="descCorta"><?php echo $r["parrafo3"];?></p>
 							<br>
 							<p style="text-align:right"><a href="novedades.php"><button type="button" class="btn btn-default"> Volver</button></a></p>
 							

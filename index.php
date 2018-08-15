@@ -7,7 +7,7 @@ include_once ("includes/cabecera.php");
 		<div class="row">
 
 					
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="float:center"   id="carousel">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"  id="carousel">
 				
 					<!--Carousel Wrapper-->
 					<div id="carousel-example-1" class="carousel slide carousel-fade" data-ride="carousel">
@@ -101,8 +101,8 @@ include_once ("includes/cabecera.php");
 					<div class="fb-page" data-href="https://www.facebook.com/ElBatidortienelaculpa" data-tabs="timeline,messages" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ElBatidortienelaculpa" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ElBatidortienelaculpa">La Chocolateria</a></blockquote></div>
 				</div>
 				
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " style="float:center" id="novedades" class="novedades" >
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " style="float:left" id="imggg" >
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 novedades" id="novedades">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " style="float:left" >
 						<h1 style="background-color: #CAD7F2;padding: 1%;">Novedades</h1>
 						
 					</div>
@@ -116,7 +116,7 @@ include_once ("includes/cabecera.php");
 							
 										?>
 					
-					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 " style="float:center" id="novedad" >
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 " id="novedad" >
 					
 						<div class="row">
 							<div class="col-xs-7 col-sm-7 col-md-4 col-lg-4 " style="float:left" id="img" >
@@ -127,7 +127,7 @@ include_once ("includes/cabecera.php");
 							<div class="col-xs-5 col-sm-5 col-md-8 col-lg-8 " style="float:left" id="cont" >
 								
 								<a href="novedad.php?nov=<?php echo $r9['idNovedades']; ?>" style="text-decoration:none; color:#212121" ><p id="TitNov"><strong><?php echo $r9["titulo"];?></strong></p></a>
-								<p id="descCorta"><?php echo $r9["parrafo1"];?></p>
+								<p class="descCorta" id="descCorta"><?php echo $r9["parrafo1"];?></p>
 								
 							
 							</div>
@@ -140,8 +140,8 @@ include_once ("includes/cabecera.php");
 					<p style="text-align:right" ><a href="novedades.php" class="btn btn-info btn-rounded">Ver Todas</a></p>
 				</div>
 				
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " style="float:center" id="destacados" >
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " style="float:left" id="imggg" >
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " id="destacados" >
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " style="float:left" >
 					
 					
 						<h1 style="background-color: #CAD7F2;padding: 1%;">Productos Destacados</h1>
@@ -157,7 +157,7 @@ include_once ("includes/cabecera.php");
 								while ($r=mysqli_fetch_array($rs2)) {
 							
 										?>
-							<div class="card" display: "flex;">
+							<div class="card">
 								<a href="producto.php?prod=<?php echo $r['idProducto']; ?>"><img class="img-fluid center-block"  alt="Imagen de <?php echo $r['nombre'];?>"  src="<?php echo $r['imagen'] ?>"></a>
 								<div class="card-block">
 									<a href="producto.php?prod=<?php echo $r['idProducto']; ?>" style="text-decoration:none; color:#99603E"><h4 class="card-title"><?php echo $r["nombre"];?></h4></a>

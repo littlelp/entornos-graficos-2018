@@ -32,10 +32,10 @@ include_once ("includes/cabecera.php");
 						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="float:left" id="foto">
 							<a href="novedad.php?nov=<?php echo $r['idNovedades'] ?>"><img src="<?php echo $r['imagen'] ?>" alt ="Imagen de Novedad" class ="center-block img-responsive img-thumbnail img-rounded"></a>
 						</div>						
-						<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5" style="float:center" id="nombreproducto">
-							<p id="nombreProd"><strong><?php echo $r["titulo"];?></strong></p>
-							<p id="descCorta"><?php echo $r["parrafo1"];?></p>
-							<p style="text-align:right"><a href="novedad.php?nov=<?php echo $r['idNovedades'] ?>"><button type="button" class="btn btn-info"> + Info</button></a></p>
+						<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5" id="nombreproducto">
+							<p class="nombreProd" id="nombreProd"><strong><?php echo $r["titulo"];?></strong></p>
+							<p class="descCorta" id="descCorta"><?php echo $r["parrafo1"];?></p>
+							<p style="text-align:right"><a class="btn btn-primary" href="novedad.php?nov=<?php echo $r['idNovedades'] ?>">+ Info</a></p>
 						</div>				
 					</div>
 					<hr/>

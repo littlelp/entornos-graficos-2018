@@ -45,6 +45,7 @@
 					Trabajo Práctico Final Entornos Gráficos
 
 				</div>
+			</div>
 			<!--/.Copyright-->
 
 		</footer>

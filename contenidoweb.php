@@ -38,16 +38,16 @@ if($_SESSION['tipous']==1){
 
 	</div>
 
+<script src="tinymce/js/tinymce/tinymce.min.js"></script> 
+  <!-- Just be careful that you give correct path to your tinymce.min.js file, above is the default example -->
+  <script>
+	  tinymce.init({selector:'textarea'});
+  </script>
 <?php 
 }}
-else {echo'<script language="javascript">window.location="index.php"</script>;';}
+else {echo'<script>window.location="index.php"</script>;';}
 
 include_once ("includes/pie.php");
 ?>
-  <script src="tinymce/js/tinymce/tinymce.min.js"></script> 
-    <!-- Just be careful that you give correct path to your tinymce.min.js file, above is the default example -->
-    <script>
-        tinymce.init({selector:'textarea'});
-    </script>
 
   

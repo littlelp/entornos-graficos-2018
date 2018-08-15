@@ -9,7 +9,7 @@ if($_SESSION['tipous']==1){
 ?>
                                 
 <!-- Modal Subscription -->
-<div class="modal fade modal-ext" id="modal-subscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade modal-ext" id="modal-subscription" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <!--Content-->
         <div class="modal-content">
@@ -165,6 +165,6 @@ if($_SESSION['tipous']==1){
 
 <?php 
 }}
-else {echo'<script language="javascript">window.location="index.php"</script>;';}
+else {echo'<script>window.location="index.php"</script>;';}
 include_once ("includes/pie.php");
 ?>

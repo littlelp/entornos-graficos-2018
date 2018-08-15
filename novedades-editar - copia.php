@@ -47,19 +47,19 @@ if(isset($_SESSION['tipous'])){
 						
 						<div class="md-form">
 							<i class="fa fa-pencil prefix"></i>
-							<textarea type="text" name="Parrafo1" class="md-textarea" length="160" maxlength="160" required><?php  echo $rp["parrafo1"]; ?></textarea>
+							<textarea  name="Parrafo1" class="md-textarea" length="160" maxlength="160" required><?php  echo $rp["parrafo1"]; ?></textarea>
 							<label for="Parrafo1">Parrafo 1:</label>
 						</div>
 						
 						<div class="md-form">
 							<i class="fa fa-pencil prefix"></i>
-							<textarea type="text" name="Parrafo2" class="md-textarea"><?php  echo $rp["parrafo2"]; ?></textarea>
+							<textarea  name="Parrafo2" class="md-textarea"><?php  echo $rp["parrafo2"]; ?></textarea>
 							<label for="Parrafo2">Parrafo 2:</label>
 						</div>
 						
 						<div class="md-form">
 							<i class="fa fa-pencil prefix"></i>
-							<textarea type="text" name="Parrafo3" class="md-textarea"><?php  echo $rp["parrafo3"]; ?></textarea>
+							<textarea  name="Parrafo3" class="md-textarea"><?php  echo $rp["parrafo3"]; ?></textarea>
 							<label for="Parrafo3">Parrafo 3</label>
 						</div>
 
@@ -93,6 +93,6 @@ if(isset($_SESSION['tipous'])){
 </script>
 <?php 
 }}
-else {echo'<script language="javascript">window.location="index.php"</script>;';}
+else {echo'<script>window.location="index.php"</script>;';}
 include_once ("includes/pie.php");
 ?>
