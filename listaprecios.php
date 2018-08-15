@@ -44,10 +44,7 @@ if($_SESSION['tipous']>0){
 							<td><?php echo $r["nombre"];?></td>
 							<td><?php echo $r["descripcion"];?></td>
 							<td><?php if(isset($_SESSION['tipous'])){
-										if($_SESSION["tipous"]==2){ echo '$'.$r["precio1"];}
-										if($_SESSION["tipous"]==3){ echo '$'.$r["precio2"];}
-										if($_SESSION["tipous"]==4){ echo '$'.$r["precio3"];}
-										if($_SESSION["tipous"]==5){ echo '$'.$r["precio4"];}?></td>
+										 echo '$'.$r["precio1"];?></td>
 							<td><?php if($_SESSION["tipous"]>0){ echo '$'.$r["precioLista"];}}?></td>
 						</tr>
 									<?php }?>

@@ -35,7 +35,7 @@ if(isset($_SESSION['tipous'])){
 					while ($rp = mysqli_fetch_array($rsp1) ) {
 				
 									?>
-						<form action="modificar-producto.php?id=<?php  echo $rp["idProducto"]; ?>" method="post" enctype="multipart/form-data">
+						<form id="formModificarProd" action="modificar-producto.php?id=<?php  echo $rp["idProducto"]; ?>" method="post" enctype="multipart/form-data">
 							
 							<div class="md-form">
 								<i class="fa  fa-male"></i>
@@ -104,7 +104,7 @@ if(isset($_SESSION['tipous'])){
 							
 							<?php }?>						
 				
-							<button type="submit" class="btn btn-default">Modificar</button>																		
+							<button id="btnFormModificarProd" type="submit" class="btn btn-default">Modificar</button>																		
                                    
 					</div>
 				

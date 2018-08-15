@@ -24,7 +24,7 @@ if($_SESSION['tipous']==1){
 				
 					<div class="col-xs-10 col-sm-10 col-md-10 col-md-offset-1">
 
-						<form action="nuevo-producto.php" method="post" enctype="multipart/form-data">
+						<form id="formNuevoProd" name = "formNuevoProd" action="nuevo-producto.php" method="post" enctype="multipart/form-data">
 							
 							<div class="md-form">
 								<i class="fa  fa-male  prefix"></i>
@@ -34,7 +34,7 @@ if($_SESSION['tipous']==1){
 		
 		
 						<label>Categoria</label>
-						<select name="cat" class="mdb-select" required>
+						<select name="selCat" id="selCat" class="mdb-select" required>
 						<option value="" disabled selected>Seleccione:</option>	
 							
 									<?php	
@@ -57,7 +57,7 @@ if($_SESSION['tipous']==1){
 						
 						<div class="md-form">
 							<i class="fa fa-pencil prefix"></i>
-							<textarea type="text" name="Descripcion" class="md-textarea" length="160" maxlength="160" requiered></textarea>
+							<textarea type="text" id="descripcion" name="Descripcion" class="md-textarea" length="160" maxlength="160" requiered></textarea>
 							<label for="Descripcion">Descripcion</label>
 						</div>					
 						
@@ -90,7 +90,7 @@ if($_SESSION['tipous']==1){
 								<label for="Destacado">Producto Destacado</label>
 							</fieldset>																	
 				
-							<button type="submit" class="btn btn-default">Agregar</button>																		
+							<button id = "btnFormNuevoProd" type="submit" class="btn btn-default">Agregar</button>																		
                                    
 					</div>
 				

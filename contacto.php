@@ -27,7 +27,7 @@ include_once ("includes/cabecera.php");
 				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="float:right" id="formulario">
 				
 					<H4 style="text-align:center">Envianos tu Consulta:</h4>
-							<form name ="formularioContacto" action="consultar.php" method="post">
+							<form id = "formContacto" name ="formContacto" action="consultar.php" method="post">
 							
 							<div class="md-form">
 								<i class="fa fa-user prefix"></i>
@@ -58,13 +58,13 @@ include_once ("includes/cabecera.php");
 		
 							<div class="md-form">
 								<i class="fa fa-home prefix"></i>
-								<input type="text" id="ciudad" name="Ciudad" class="form-control validate" maxlength="10" required>
+								<input type="text" id="ciudad" name="Ciudad" class="form-control validate" maxlength="30" required>
 								<label for="Ciudad">Ciudad:</label>
 							</div>                                 
 		
 							<div class="md-form">
 								<i class="fa fa-globe prefix"></i>
-								<input type="text" id="provincia" name="Provincia" class="form-control validate" maxlength="15" required>
+								<input type="text" id="provincia" name="Provincia" class="form-control validate" maxlength="30" required>
 								<label for="Provincia">Provincia:</label>
 							</div>
 			
@@ -75,7 +75,7 @@ include_once ("includes/cabecera.php");
 								<label for="Consulta">Consulta:</label>
 							</div>
 				
-							<button type="submit" class="btn btn-default">Enviar</button>
+							<button id = "btnFormContacto" type="submit" class="btn btn-default">Enviar</button>
 		
 				</div>
 		</div>
