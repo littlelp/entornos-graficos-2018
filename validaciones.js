@@ -68,12 +68,12 @@ function mostrarErrores(selector, errores) {
 var namePattern = "^[a-z A-Z]{2,30}$";
 var emailPattern = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$";
 var telPattern = "^[0-9]{7,10}";
-var usuarioPattern = "([a-zA-Z0-9](_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$";
+var usuarioPattern = "([a-zA-Z0-9]*(_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$";
 //var clavePattern = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,20}/";
 var clavePattern = "^[a-zA-Z0-9]{6,20}$";
-var consultaPattern = "([a-zA-Z0-9](_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$";
+var consultaPattern = "([a-zA-Z0-9]*(_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$";
 var productoPattern = "^[a-z A-Z]{2,25}$";
-var descripcionPattern = "([a-zA-Z0-9](_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$";
+var descripcionPattern = "^[a-zA-Z0-9]{4,160}$";
 var precioPattern  = "^[0-9]+([,][0-9]+)?$";
 
 
@@ -204,9 +204,9 @@ function validarNuevoProd() {
 		errores[errores.length] = "Debe seleccionar una categoria";
 	}
 
-	if(!$(inputDescripcion).val().match(descripcionPattern)) {
+	if (!$(inputDescripcion).val().length > 0) {
 		bandera=0;
-		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 160 caracteres.";
+		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 160 caracteresy no puede estar vacía.";
 	}
 
 	// if(!$(inputPrecio1).val().match(precioPattern)) {
