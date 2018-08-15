@@ -32,6 +32,14 @@ $('#btnFormNuevoCarousel').on('click', function() {
 	validarNuevoCarousel();
 })
 
+$('#btnFormNuevaNovedad').on('click', function() {
+	validarNuevaNovedad();
+})
+
+$('#btnFormModificarNovedad').on('click', function() {
+	validarModificarNovedad();
+})
+
 $('#botonlogin').on('click', function() {
 	checkForm();
 });
@@ -521,6 +529,91 @@ function validarNuevoCarousel() {
 
 }
 
+
+function validarNuevaNovedad() {
+
+
+	var form = $('#formNuevaNovedad');
+	
+	var inputTitulo = $('input[name=titulo]');
+	var inputDescripcion = $('#parrafo1');
+	var inputImagen = $('input[name=imagen]');
+
+
+	var bandera = 1 ;
+
+	borrarErrores();
+
+	var errores=[];
+
+
+	if(!$(inputTitulo).val().match(namePattern)) {
+		bandera=0;
+		errores[errores.length] = "Titulo de Novedad incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+	}
+
+	if(!$(inputDescripcion).val().match(descripcionPattern)) {
+			bandera=0;
+			errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 160 caracteres y no puede estar vacia.";
+		}
+
+	if($(inputImagen).val() == '') {
+		bandera=0;
+		errores[errores.length] = "Debe subir una imagen de la Novedad";
+	}
+
+	if (bandera == 0) {
+		mostrarErrores(form,errores);
+
+	} else {
+		form.submit();
+	}
+
+}
+
+
+function validarModificarNovedad() {
+
+	var form = $('#formModificarNovedad');
+	
+	var inputTitulo = $('input[name=Titulo]');
+	var inputDescripcion = $('#Parrafo1');
+	var inputImagen = $('input[name=Imagen]');
+
+
+	var bandera = 1 ;
+
+	borrarErrores();
+
+	var errores=[];
+
+
+	if(!$(inputTitulo).val().match(namePattern)) {
+		alert('jeje');
+		bandera=0;
+		errores[errores.length] = "Titulo de Novedad incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+	}
+
+	// if(!$(inputDescripcion).val().match(descripcionPattern)) {
+	// 		event.preventDefault();
+	// 		bandera=0;
+	// 		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 160 caracteres y no puede estar vacia.";
+	// 	}
+
+	// if($(inputImagen).val() == '') {
+	// 	bandera=0;
+	// 	errores[errores.length] = "Debe subir una imagen de la Novedad";
+	// }
+
+
+	if (bandera == 0) {
+		mostrarErrores(form,errores);
+
+	} else {
+		form.submit();
+	}
+
+}
 });
 
 	

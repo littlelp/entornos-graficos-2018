@@ -35,7 +35,7 @@ if(isset($_SESSION['tipous'])){
 					$rp = mysqli_fetch_array($rsp1);
 					
 					?>
-						<form action="modificar-novedad.php?id=<?php  echo $rp["idNovedades"]; ?>" method="post" enctype="multipart/form-data">
+						<form id="formModificarNovedad" action="modificar-novedad.php?id=<?php  echo $rp["idNovedades"]; ?>" method="post" enctype="multipart/form-data">
 							
 							<div class="md-form">
 								<i class="fa  fa-male  prefix"></i>
@@ -67,12 +67,9 @@ if(isset($_SESSION['tipous'])){
 								   <input class="file-path validate" type="text" placeholder="Subir Imagen">
 								</div>
 							</div>
-						
-	
-							
-							<?php //}?>						
+											
 				
-							<button type="submit" class="btn btn-default">Modificar</button>																		
+							<button id="btnModificarNovedad" type="submit" class="btn btn-default">Modificar</button>																		
                                    
 					</div>
 				
