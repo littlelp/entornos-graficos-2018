@@ -282,12 +282,6 @@ function validarModificarProd() {
 	}
 
 
-	if($(inputImagen).val() == '') {
-		bandera=0;
-		errores[errores.length] = "Debe subir una imagen del producto";
-	}
-
-
 	if (bandera == 0) {
 		mostrarErrores(form,errores);
 	} else {
@@ -600,12 +594,6 @@ function validarModificarNovedad() {
 		event.preventDefault();
 		bandera=0;
 		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 160 caracteres y no puede estar vacía.";
-	}
-
-	if($(inputImagen).val() == '') {
-		event.preventDefault();
-		bandera=0;
-		errores[errores.length] = "Debe subir una imagen de la Novedad.";
 	}
 
 
