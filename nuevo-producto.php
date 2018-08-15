@@ -1,7 +1,6 @@
 <?php 
 
 include("includes/conexion.php");
-header('Location:listar-productos.php');
 
 //(isset($_SESSION['tipous'])){
 									
@@ -15,21 +14,22 @@ if ($_FILES) {
 	
 if(isset($_POST["Destacado"])){		
 $sql = "INSERT INTO producto (destacado, nombre, descripcion, idCategoria, precioLista, precio1, imagen)
-		VALUES ('". $_POST["Destacado"]. "','". $_POST["Nombre"]. "','". $_POST["Descripcion"]. "','". $_POST["cat"]. "','". $_POST["PrecioLista"]. "','". $_POST["Precio1"]. "',
+		VALUES ('". $_POST["Destacado"]. "','". $_POST["Nombre"]. "','". $_POST["Descripcion"]. "','". $_POST["selCat"]. "','". $_POST["PrecioLista"]. "','". $_POST["Precio1"]. "',
 		'".$destino."')";
 }
 else{
 	$sql = "INSERT INTO producto (nombre, descripcion, idCategoria, precioLista, precio1, imagen)
-		VALUES ('". $_POST["Nombre"]. "','". $_POST["Descripcion"]. "','". $_POST["cat"]. "','". $_POST["PrecioLista"]. "','". $_POST["Precio1"]. "',
+		VALUES ('". $_POST["Nombre"]. "','". $_POST["Descripcion"]. "','". $_POST["selCat"]. "','". $_POST["PrecioLista"]. "','". $_POST["Precio1"]. "',
 		'".$destino."')";
 }
-
 $rs = mysqli_query($db, $sql);
+
+header('Location:listar-productos.php');
 
 
 
 //}}
-//else {echo'<script language="javascript">window.location="index.php"</script>;';}
+//else {echo'<script>window.location="index.php"</script>;';}
 ?>
 
 

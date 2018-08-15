@@ -71,7 +71,7 @@ if(isset($_SESSION['tipous'])){
 						
 						<div class="md-form">
 							<i class="fa fa-pencil prefix"></i>
-							<textarea type="text" name="Descripcion" class="md-textarea" length="160" maxlength="160" required><?php  echo $rp["descripcion"]; ?></textarea>
+							<textarea  name="Descripcion" class="md-textarea" length="160" maxlength="160" required><?php  echo $rp["descripcion"]; ?></textarea>
 							<label for="Descripcion">Descripcion</label>
 						</div>						
 						
@@ -121,6 +121,6 @@ if(isset($_SESSION['tipous'])){
 </script>
 <?php 
 }}
-else {echo'<script language="javascript">window.location="index.php"</script>;';}
+else {echo'<script>window.location="index.php"</script>;';}
 include_once ("includes/pie.php");
 ?>

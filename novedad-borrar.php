@@ -19,6 +19,6 @@ $rs = mysqli_query($db, $sql);
 
 header('Location: listar-novedades.php');
 //}}
-//else {echo'<script language="javascript">window.location="index.php"</script>;';}
+//else {echo'<script>window.location="index.php"</script>;';}
 
 ?>

@@ -21,7 +21,7 @@ $rs = mysqli_query($db, $sql);
 
 header('Location:listar-carousel.php');
 //}}
-//else {echo'<script language="javascript">window.location="index.php"</script>;';}
+//else {echo'<script>window.location="index.php"</script>;';}
 ?>
 
 

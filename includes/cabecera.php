@@ -7,7 +7,7 @@ session_start();
 <head>
 
 
-  <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="description" content="postres, tortas, dulce, eventos, chocolateria" lang="es" />
@@ -35,8 +35,9 @@ session_start();
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
 	<link href="img/chocolateria.ico" rel="shortcut icon" type="image/x-icon">
-	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script>
-	<script src="js/validaciones.js"></script>
+	 <!-- JQuery -->
+	 <script  src="js/jquery-2.2.3.min.js"></script>
+	<script src="validaciones.js" ></script>
 </head>
 
 <body>
@@ -53,17 +54,16 @@ $activo = end($url);
 
     <!-- SCRIPTS -->
 
-    <!-- JQuery -->
-    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+   
 
     <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="js/tether.min.js"></script>
+    <script  src="js/tether.min.js"></script>
 
     <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script  src="js/bootstrap.min.js"></script>
 
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script  src="js/mdb.min.js"></script>
 
 
     <div id="fb-root"></div>
@@ -79,7 +79,7 @@ $activo = end($url);
 
 
 <!-- Modal Login -->
-<div class="modal fade modal-ext" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade modal-ext" id="modal-login" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <!--Content-->
         <div class="modal-content">
@@ -163,7 +163,7 @@ $activo = end($url);
 									<a class="nav-link" href="novedades.php">Novedades</a>
 								</li>
 								<li class="nav-item <?php if ($activo == 'productos.php'){echo 'active';} ?> dropdown">
-									<a class="nav-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</a>
+									<a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Productos</a>
 									<div class="dropdown-menu" aria-labelledby="dropdownMenu1">
 									<?php
 									$sqlmenu = "Select idCategoria, nombre FROM categoria";
@@ -205,7 +205,7 @@ $activo = end($url);
 
 									?>
 								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administracion</a>
+									<a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administracion</a>
 									<div class="dropdown-menu" aria-labelledby="dropdownMenu1">
 										<a class="dropdown-item" href="listar-productos.php">Productos</a>
 										<a class="dropdown-item" href="listar-categorias.php">Categorias</a>
@@ -227,32 +227,28 @@ $activo = end($url);
 									if($_SESSION['tipous']>0){
 
 									?>
-								<form class="form-inline">
-									<li class="nav-item dropdown">
-										<a class="nav-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hola, <?php echo $_SESSION['nombre'];?> </a>
+									<li class="nav-item dropdown cerrar-sesion">
+										<a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hola, <?php echo $_SESSION['nombre'];?> </a>
 										<div class="dropdown-menu" aria-labelledby="dropdownMenu1">
 											<a class="dropdown-item" href="cerrar-sesion.php">Cerrar Sesion</a>
 
 										</div>
 									</li>
-								</form>
 							</ul>
 									<?php
 									}}
 									else {
 									?>
-							<form class="form-inline">
+							</ul>
+
 								<button type="button" class="btn btn-success" id="botonlogin" data-toggle="modal" data-target="#modal-login">Acceder</button>
-							</form>
 							<?php
 									}
 
 									?>
-						</div>
 						<!--/.Collapse content-->
-
+								</div>
 					</div>
-
 				</nav>
 
 		</div>

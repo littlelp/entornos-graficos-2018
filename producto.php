@@ -49,7 +49,7 @@ $rs1 = mysqli_query($db, $sql1);
 						if($r["video"]!=''){
 						$u = explode("?v=", $r["video"]);
 						$cod = $u[1];
-						$enlace= '<iframe width="420" height="315" src="https://www.youtube.com/embed/'.$cod.'?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>';}
+						$enlace= '<iframe width="420" height="315" src="https://www.youtube.com/embed/'.$cod.'?rel=0&amp;showinfo=0" allowfullscreen></iframe>';}
 						else {$enlace= '';}
 						
 						
@@ -62,9 +62,9 @@ $rs1 = mysqli_query($db, $sql1);
 							
 								<div class="video-container"><?php echo $enlace; ?></div>
 						</div>						
-						<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5" style="float:center" id="nombreproducto">
-							<p id="nombreProd"><?php echo $r["nombre"];?></p>
-							<p id="descCorta"><?php echo $r["descripcion"];?></p>
+						<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5" id="nombreproducto">
+							<p class="nombreProd" id="nombreProd"><?php echo $r["nombre"];?></p>
+							<p class="descCorta" id="descCorta"><?php echo $r["descripcion"];?></p>
 							<br>
 							<?php if($r["especificaciones"]!=""){?>
 							<p id="tituloprod">Especificaciones:</p>

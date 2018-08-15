@@ -13,14 +13,14 @@ if($_SESSION['tipous']>0){
 
 					
 				
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="float:center" id="cabprecios">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="cabprecios">
 					
 							
 						<h4 style="text-align:Center"><strong>Lista de Precios</strong></h4>
 	
 				</div>	
 				
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="float:center" id="bodyprecios">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="bodyprecios">
 				
 					<table border="1" align="center" cellspacing="0">
 						<thead>
@@ -63,7 +63,7 @@ if($_SESSION['tipous']>0){
 	
 <?php 
 }}
-else {echo'<script language="javascript">window.location="index.php"</script>;';}
+else {echo'<script>window.location="index.php"</script>;';}
 include_once ("includes/pie.php");
 ?>
 

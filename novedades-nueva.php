@@ -36,7 +36,7 @@ if($_SESSION['tipous']==1){
 										
 										<div class="md-form">
 											<i class="fa fa-pencil prefix"></i>
-											<textarea type="text" name="parrafo1" class="md-textarea" length="160" maxlength="160" required></textarea>
+											<textarea  name="parrafo1" class="md-textarea" length="160" maxlength="160" required></textarea>
 											<label for="parrafo1">Descripcion Corta:</label>
 										</div>
 										
@@ -105,6 +105,6 @@ if($_SESSION['tipous']==1){
 </script>
 <?php 
 }}
-else {echo'<script language="javascript">window.location="index.php"</script>;';}
+else {echo'<script>window.location="index.php"</script>;';}
 include_once ("includes/pie.php");
 ?>

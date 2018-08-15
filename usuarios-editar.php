@@ -110,6 +110,6 @@ if($_SESSION['tipous']==1){
 </script>
 <?php 
 }}
-else {echo'<script language="javascript">window.location="index.php"</script>;';}
+else {echo'<script>window.location="index.php"</script>;';}
 include_once ("includes/pie.php");
 ?>
