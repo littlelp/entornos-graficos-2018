@@ -118,7 +118,7 @@ function validarContacto() {
 	var inputProvincia = $('input[name=Provincia]');
 	var inputEmail = $('input[name=Email]');
 	var inputTelefono = $('input[name=Tel]');
-	var inputConsulta = $('#consulta');
+	var inputConsulta = $('#Consulta');
 
 	var bandera = 1 ;
 
@@ -157,10 +157,10 @@ function validarContacto() {
 		errores[errores.length] = "Telefono incorrecto. Debe contener solo números, entre 7 y 10 dígitos.";
 	}
 
-	if(!$(inputConsulta).val().match(consultaPattern)) {
+	if(!$(inputConsulta).val().length > 0) {
 		bandera=0;
-		errores[errores.length] = "Consulta incorrecta. Debe tener un maximo de 500 caracteres y no puede estar vacía.";
-	 }
+		errores[errores.length] = "Consulta incorrecta. Debe tener un máximo de 160 caracteres y no puede estar vacía.";
+	}
 
 
 
@@ -206,17 +206,17 @@ function validarNuevoProd() {
 
 	if (!$(inputDescripcion).val().length > 0) {
 		bandera=0;
-		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 160 caracteres y no puede estar vacía.";
+		errores[errores.length] = "Descripción incorrecta. Debe tener un máximo de 160 caracteres y no puede estar vacía.";
 	}
 
 	if(!$(inputPrecio1).val().match(precioPattern)) {
 		bandera=0;
-		errores[errores.length] = "Precio incorrecto. Revise el formato. Separador decimal ',' unicamente.";
+		errores[errores.length] = "Precio incorrecto. Revise el formato.";
 	}
 
 	if(!$(inputPrecioLista).val().match(precioPattern)) {
 		bandera=0;
-		errores[errores.length] = "Precio incorrecto. Revise formato. Separador decimal ',' unicamente.";
+		errores[errores.length] = "Precio incorrecto. Revise formato.";
 	}
 
 
@@ -268,17 +268,17 @@ function validarModificarProd() {
 
 	if(!$(inputDescripcion).val().length > 0) {
 		bandera=0;
-		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 160 caracteres y no puede estar vacía.";
+		errores[errores.length] = "Descripción incorrecta. Debe tener un máximo de 160 caracteres y no puede estar vacía.";
 	}
 
 	if(!$(inputPrecio1).val().match(precioPattern)) {
 		bandera=0;
-		errores[errores.length] = "Precio incorrecto. Revise el formato. Separador decimal ',' unicamente.";
+		errores[errores.length] = "Precio incorrecto. Revise el formato.";
 	}
 
 	if(!$(inputPrecioLista).val().match(precioPattern)) {
 		bandera=0;
-		errores[errores.length] = "Precio incorrecto. Revise formato. Separador decimal ',' unicamente.";
+		errores[errores.length] = "Precio incorrecto. Revise formato.";
 	}
 
 
@@ -314,7 +314,7 @@ function validarNuevaCat() {
 
 	if (!$(inputDescripcion).val().length > 0) {
 		bandera=0;
-		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 160 caracteres y no puede estar vacía.";
+		errores[errores.length] = "Descripción incorrecta. Debe tener un máximo de 160 caracteres y no puede estar vacía.";
 	}
 
 
@@ -351,7 +351,7 @@ function validarModificarCat() {
 
 	if (!$(inputDescripcion).val().length > 0) {
 		bandera=0;
-		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 160 caracteres y no puede estar vacía.";
+		errores[errores.length] = "Descripción incorrecta. Debe tener un máximo de 160 caracteres y no puede estar vacía.";
 	}
 
 
@@ -549,7 +549,7 @@ function validarNuevaNovedad() {
 	if (!$(inputDescripcion).val().length > 0) {
 		event.preventDefault();
 		bandera=0;
-		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 160 caracteres y no puede estar vacía.";
+		errores[errores.length] = "Descripción incorrecta. Debe tener un maximo de 160 caracteres y no puede estar vacía.";
 	}
 
 	if($(inputImagen).val() == '') {
@@ -593,7 +593,7 @@ function validarModificarNovedad() {
 	if (!$(inputDescripcion).val().length > 0) {
 		event.preventDefault();
 		bandera=0;
-		errores[errores.length] = "Descripcion incorrecta. Debe tener un maximo de 160 caracteres y no puede estar vacía.";
+		errores[errores.length] = "Descripción incorrecta. Debe tener un maximo de 160 caracteres y no puede estar vacía.";
 	}
 
 
