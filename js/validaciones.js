@@ -28,6 +28,9 @@ $('#btnFormModificarUsuario').on('click', function() {
 	validarModificarUsuario();
 })
 
+$('#botonlogin').on('click', function() {
+	checkForm();
+});
 
 function borrarErrores() {
 	$('div.alert-danger').remove();
@@ -60,6 +63,38 @@ var consultaPattern = "([a-zA-Z0-9](_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$";
 var productoPattern = "^[a-z A-Z]{2,25}$";
 var descripcionPattern = "([a-zA-Z0-9](_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$";
 var precioPattern  = "^[0-9]+([,][0-9]+)?$";
+
+
+function enableSubmit (idForm) {
+
+	$('#btnFormLogin').prop("disabled",false);
+}
+ 
+function disableSubmit (idForm) {
+	$('#btnFormLogin').prop("disabled",true);
+}
+
+function checkInput(idInput) {
+	return $(idInput).val() != '' ? true : false;
+}
+
+function checkForm () {
+
+	$('#btnFormLogin').prop("disabled",true);
+
+	$('#formLogin').on("change keydown", function() {
+
+		if (checkInput("#user") && checkInput("#pass")) {
+
+			enableSubmit();
+
+		} else {
+
+			disableSubmit();
+		}
+	});
+}
+
 
 function validarContacto() {
 
