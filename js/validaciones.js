@@ -28,6 +28,10 @@ $('#btnFormModificarUsuario').on('click', function() {
 	validarModificarUsuario();
 })
 
+$('#btnFormNuevoCarousel').on('click', function() {
+	validarNuevoCarousel();
+})
+
 $('#botonlogin').on('click', function() {
 	checkForm();
 });
@@ -480,6 +484,42 @@ function validarModificarUsuario() {
 	}
 }
 
+
+function validarNuevoCarousel() {
+
+	var form = $('#formNuevoCarousel');
+	
+	var inputNombre = $('input[name=Nombre]');
+	var inputImagen = $('input[name=Imagen]');
+
+
+	var bandera = 1 ;
+
+	borrarErrores();
+
+	var errores=[];
+
+
+	if(!$(inputNombre).val().match(namePattern)) {
+		bandera=0;
+		errores[errores.length] = "Nombre de Carousel incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+	}
+
+
+	if($(inputImagen).val() == '') {
+		bandera=0;
+		errores[errores.length] = "Debe subir una imagen del Carousel";
+	}
+
+
+	if (bandera == 0) {
+		mostrarErrores(form,errores);
+
+	} else {
+		form.submit();
+	}
+
+}
 
 });
 

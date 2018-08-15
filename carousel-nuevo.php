@@ -24,7 +24,7 @@ if($_SESSION['tipous']==1){
 				
 					<div class="col-xs-10 col-sm-10 col-md-10 col-md-offset-1">
 
-						<form action="nuevo-carousel.php" method="post" enctype="multipart/form-data">
+						<form id="formNuevoCarousel" action="nuevo-carousel.php" method="post" enctype="multipart/form-data">
 							
 							<div class="md-form">
 								<i class="fa  fa-male  prefix"></i>
@@ -47,7 +47,7 @@ if($_SESSION['tipous']==1){
 							</div>
 							<div style="clear:both;"></div>														
 				
-							<button type="submit" class="btn btn-default">Agregar</button>																		
+							<button id="btnFormNuevoCarousel" type="submit" class="btn btn-default">Agregar</button>																		
                                    
 					</div>
 				
