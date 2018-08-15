@@ -396,20 +396,20 @@ function validarNuevoUsuario() {
 	if($(selTipoUsu).val() == null) {
 		event.preventDefault();
 		bandera=0;
-		errores[errores.length] = "Debe seleccionar un Tipo de Usuario";
+		errores[errores.length] = "Debe seleccionar un Tipo de Usuario.";
 	}
 
 	if(!$(inputEmail).val().match(emailPattern)) {
 		event.preventDefault();
 		bandera=0;
-		errores[errores.length] = "Email incorrecto. Revise el formato";
+		errores[errores.length] = "Email incorrecto. Revise el formato.";
 	}
 
 
 	if(!$(inputUsuario).val().match(usuarioPattern)) {
 		event.preventDefault();
 		bandera=0;
-		errores[errores.length] = "Usuario incorrecto. No puede estar vacio y debe tener un maximo de 15 caracteres";
+		errores[errores.length] = "Usuario incorrecto. No puede estar vacio y debe tener un maximo de 15 caracteres.";
 	}
 
 	if(!$(inputClave).val().match(clavePattern) || $(inputClave).length() < 6) {
