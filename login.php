@@ -16,7 +16,7 @@ if($cant==1){
 	session_start();
 	$_SESSION['nombre']=$r['nombre'];
 	$_SESSION['tipous']=$r['tipous'];
-	
+	$_SESSION['idUsuario']=$r['idUsuario'];
 	header('Location:index.php');
 	}
 else{ header('Location:login-error.php');}
