@@ -16,6 +16,10 @@ if($cant==1){
 	session_start();
 	$_SESSION['nombre']=$r['nombre'];
 	$_SESSION['tipous']=$r['tipous'];
+	$_SESSION['apellido']=$r['apellido'];
+	$_SESSION['mail']=$r['email'];
+	$_SESSION['idUsuario']=$r['idUsuario'];
+	
 	$_SESSION['idUsuario']=$r['idUsuario'];
 	header('Location:index.php');
 	}

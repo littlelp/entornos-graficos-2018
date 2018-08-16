@@ -187,17 +187,21 @@ $activo = end($url);
 								<?php
 									if(isset($_SESSION['tipous'])){
 
-									if($_SESSION['tipous']>0){
+									if($_SESSION['tipous']>1){
 
 									?>
-								<li class="nav-item <?php if ($activo == 'listaprecios.php'){echo 'active';} ?>">
-									<a class="nav-link" href="listaprecios.php">Lista de Precios</a>
-								</li>
+									<li class="nav-item <?php if ($activo == 'listaprecios.php'){echo 'active';} ?>">
+										<a class="nav-link" href="listaprecios.php">Lista de Precios</a>
+									</li>
 
+									<li class="nav-item <?php if ($activo == 'precios-mayoristas.php'){echo 'active';} ?>">
+										<a class="nav-link" href="precios-mayoristas.php">Consulta Precio Mayorista</a>
+									</li>
 
 										<?php
 
-									}}
+									}
+								}
 
 								if(isset($_SESSION['tipous'])){
 
@@ -210,6 +214,7 @@ $activo = end($url);
 										<a class="dropdown-item" href="listar-productos.php">Productos</a>
 										<a class="dropdown-item" href="listar-categorias.php">Categorias</a>
 										<a class="dropdown-item" href="listar-usuarios.php">Usuarios</a>
+										<a class="dropdown-item" href="listar-consultas-mayoristas.php">Consultas Mayoristas</a>
 										<a class="dropdown-item" href="contenidoweb.php">Contenido Web</a>
 
 									</div>
