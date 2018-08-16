@@ -20,6 +20,7 @@ if($cant==1){
 	$_SESSION['mail']=$r['email'];
 	$_SESSION['idUsuario']=$r['idUsuario'];
 	
+	$_SESSION['idUsuario']=$r['idUsuario'];
 	header('Location:index.php');
 	}
 else{ header('Location:login-error.php');}

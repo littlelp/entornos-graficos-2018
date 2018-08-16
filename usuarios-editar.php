@@ -68,7 +68,7 @@ if($_SESSION['tipous']==1){
 											
 											else {$sel='"> ';}?>
 											
-											<option value="<?php  echo $tipou["idTipoUsuario"].$sel.$tipou['descripcion'];?></option>;
+											<option value="<?php  echo $tipou["idTipoUsuario"].$sel.$tipou['descripcion'];?>"</option>;
 												
 																						<?php	}}?>
 									
