@@ -20,7 +20,7 @@ if($_SESSION['tipous']==1){
 						<br>
 						
 	
-				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3" style="float:center">
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3" >
 
 						<form action="contra.php?id=<?php  echo $r; ?>" method="post">
 							

@@ -230,10 +230,11 @@ $activo = end($url);
 									<li class="nav-item dropdown cerrar-sesion">
 										<a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hola, <?php echo $_SESSION['nombre'];?> </a>
 										<div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+											<a class="dropdown-item" href="mi-perfil.php">Mi Perfil</a>
 											<a class="dropdown-item" href="cerrar-sesion.php">Cerrar Sesion</a>
-
 										</div>
 									</li>
+									
 							</ul>
 									<?php
 									}}
