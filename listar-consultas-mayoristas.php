@@ -7,7 +7,7 @@ ini_set('display_errors', true);
 
 if(isset($_SESSION['tipous'])){
 
-if($_SESSION['tipous']==1){
+if($_SESSION['tipous']>0){
 
 
 ?>
@@ -32,11 +32,20 @@ if($_SESSION['tipous']==1){
 											</tr>
 									</thead>
 									<tbody>
-															<?php
-														$sql = "select *
-																from consulta_mayorista cm
-																left join usuario u on u.idUsuario = cm.idUsuario
-																order by cm.idConsulta";
+														<?php
+														$sql = "";
+														if($_SESSION['tipous']>1){
+															$sql = "select *
+															from consulta_mayorista cm
+															left join usuario u on u.idUsuario = cm.idUsuario
+															where cm.idUsuario = " . $_SESSION["idUsuario"] ."
+															order by cm.idConsulta";
+														} else {
+															$sql = "select *
+															from consulta_mayorista cm
+															left join usuario u on u.idUsuario = cm.idUsuario
+															order by cm.idConsulta";
+														}
 
 														$rs = mysqli_query($db, $sql);
 														if ( $rs ) {
