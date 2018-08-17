@@ -121,6 +121,63 @@ $activo = end($url);
     </div>
 </div>
 
+<!-- Modal Registro -->
+<div class="modal fade modal-ext" id="modal-registarse" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <!--Content-->
+        <div class="modal-content">
+
+            <!--Header-->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h3><i class="fa fa-user"></i> Registrarse</h3>
+            </div>
+
+            <!--Body-->
+			<form id="formRegistrarse" name= "formRegistrarse" action="registrarse.php" method="post">
+				<div class="modal-body">
+				<div class="md-form">
+                        <i class="fa  fa-male  prefix"></i>
+                        <input  type="text" name="Nombre" class="form-control validate" maxlength="20" required>
+                        <label for="Nombre">Nombre:</label>
+                    </div>
+                    <div class="md-form">
+                        <i class="fa  fa-male  prefix"></i>
+                        <input type="text" name="Apellido" class="form-control validate" maxlength="10" required>
+                        <label for="Apellido">Apellido:</label>
+                    </div>
+                    <div class="md-form">
+                        <i class="fa fa-envelope prefix"></i>
+                        <input type="email" name="Email" class="form-control validate" maxlength="40" required>
+                        <label for="Email">E-Mail:</label>
+                    </div>
+                    <div class="md-form">
+                        <i class="fa fa-user prefix"></i>
+                        <input type="text" name="usuario" class="form-control validate" maxlength="15" required>
+                        <label for="Usuario">Usuario:</label>
+                    </div>
+                    <div class="md-form">
+                        <i class="fa fa-key prefix"></i>
+                        <input type="password" name="contrasena" class="form-control validate" maxlength="20" required>
+                        <label for="contrasena">Contraseña:</label>
+                    </div>
+					<div class="text-xs-center">
+						<button type="submit" id="btnFormRegistrarse" class="btn btn-primary btn-lg">Registarse</button>
+					</div>
+				</div>
+            </form>
+            <!--Footer-->
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+
 
 	<div class= "container-fluid" id="cabecera">
 		<?php
@@ -187,17 +244,21 @@ $activo = end($url);
 								<?php
 									if(isset($_SESSION['tipous'])){
 
-									if($_SESSION['tipous']>0){
+									if($_SESSION['tipous']>1){
 
 									?>
-								<li class="nav-item <?php if ($activo == 'listaprecios.php'){echo 'active';} ?>">
-									<a class="nav-link" href="listaprecios.php">Lista de Precios</a>
-								</li>
+									<li class="nav-item <?php if ($activo == 'listaprecios.php'){echo 'active';} ?>">
+										<a class="nav-link" href="listaprecios.php">Lista de Precios</a>
+									</li>
 
+									<li class="nav-item <?php if ($activo == 'precios-mayoristas.php'){echo 'active';} ?>">
+										<a class="nav-link" href="precios-mayoristas.php">Consulta Precio Mayorista</a>
+									</li>
 
 										<?php
 
-									}}
+									}
+								}
 
 								if(isset($_SESSION['tipous'])){
 
@@ -210,6 +271,7 @@ $activo = end($url);
 										<a class="dropdown-item" href="listar-productos.php">Productos</a>
 										<a class="dropdown-item" href="listar-categorias.php">Categorias</a>
 										<a class="dropdown-item" href="listar-usuarios.php">Usuarios</a>
+										<a class="dropdown-item" href="listar-consultas-mayoristas.php">Consultas Mayoristas</a>
 										<a class="dropdown-item" href="contenidoweb.php">Contenido Web</a>
 
 									</div>
@@ -230,10 +292,14 @@ $activo = end($url);
 									<li class="nav-item dropdown cerrar-sesion">
 										<a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hola, <?php echo $_SESSION['nombre'];?> </a>
 										<div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+											<?php if($_SESSION['tipous']>1){ ?>
+											<a class="dropdown-item" href="listar-consultas-mayoristas.php">Mis Consultas</a>
+											<?php } ?>
+											<a class="dropdown-item" href="mi-perfil.php">Mi Perfil</a>
 											<a class="dropdown-item" href="cerrar-sesion.php">Cerrar Sesion</a>
-
 										</div>
 									</li>
+									
 							</ul>
 									<?php
 									}}
@@ -242,6 +308,7 @@ $activo = end($url);
 							</ul>
 
 								<button type="button" class="btn btn-success" id="botonlogin" data-toggle="modal" data-target="#modal-login">Acceder</button>
+								<button type="button" class="btn btn-success" id="botonregistro" data-toggle="modal" data-target="#modal-registarse">Registarse</button>
 							<?php
 									}
 
