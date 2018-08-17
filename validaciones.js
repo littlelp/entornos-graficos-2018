@@ -178,7 +178,7 @@ function validarNuevoProd() {
 
 	var form = $('#formNuevoProd');
 	
-	var inputProducto = $('input[name=Nombre]');
+	var inputProducto = $('#txtProducto');
 	var selCategoria = $('#selCat');
 	var inputDescripcion = $('#descripcion');
 	var inputPrecio1 = $('input[name=Precio1]');
@@ -194,9 +194,15 @@ function validarNuevoProd() {
 	var errores=[];
 
 
+	// if(!$(inputProducto).val().length > 0) {
+	// 	bandera=0;
+	// 	errores[errores.length] = "Nombre de Producto incorrecto. Debe tener una longitud entre 2 y 25 caracteres.";
+	// }
+
+
 	if(!$(inputProducto).val().match(productoPattern)) {
 		bandera=0;
-		errores[errores.length] = "Nombre de Producto incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+		errores[errores.length] = "Nombre de Producto incorrecto. Debe tener una longitud entre 2 y 25 caracteres.";
 	}
 
 	if($(selCategoria).val() == null) {
@@ -225,7 +231,6 @@ function validarNuevoProd() {
 		errores[errores.length] = "Debe subir una imagen del producto";
 	}
 
-
 	if (bandera == 0) {
 		mostrarErrores(form,errores);
 
@@ -240,7 +245,7 @@ function validarModificarProd() {
 
 	var form = $('#formModificarProd');
 	
-	var inputProducto = $('input[name=Nombre]');
+	var inputProducto = $('#txtProducto');
 	var selCategoria = $('#selCat');
 	var inputDescripcion = $('#descripcion');
 	var inputPrecio1 = $('input[name=Precio1]');
@@ -258,7 +263,7 @@ function validarModificarProd() {
 
 	if(!$(inputProducto).val().match(productoPattern)) {
 		bandera=0;
-		errores[errores.length] = "Nombre de Producto incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+		errores[errores.length] = "Nombre de Producto incorrecto. Debe tener una longitud entre 2 y 25 caracteres.";
 	}
 
 	if($(selCategoria).val() == null) {
@@ -319,6 +324,7 @@ function validarNuevaCat() {
 
 
 	if (bandera == 0) {
+		
 		mostrarErrores(form,errores);
 
 	} else {
