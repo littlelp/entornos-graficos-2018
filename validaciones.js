@@ -2,46 +2,54 @@ $(document).ready(function() {
 
 $('#btnFormContacto').on('click', function() {
 	validarContacto();
-})
+});
 
 $('#btnFormNuevoProd').on('click', function() {
 	validarNuevoProd();
-})
+});
 
 $('#btnFormModificarProd').on('click', function() {
 	validarModificarProd();
-})
+});
 
 $('#btnFormNuevaCat').on('click', function() {
 	validarNuevaCat();
-})
+});
 
 $('#btnFormModificarCat').on('click', function() {
 	validarModificarCat();
-})
+});
 
 $('#btnFormNuevoUsuario').on('click', function() {
 	validarNuevoUsuario();
-})
+});
 
 $('#btnFormModificarUsuario').on('click', function() {
 	validarModificarUsuario();
-})
+});
 
 $('#btnFormNuevoCarousel').on('click', function() {
 	validarNuevoCarousel();
-})
+});
 
 $('#btnFormNuevaNovedad').on('click', function() {
 	validarNuevaNovedad();
-})
+});
 
 $('#btnFormModificarNovedad').on('click', function() {
 	validarModificarNovedad();
-})
+});
 
 $('#botonlogin').on('click', function() {
 	checkForm();
+});
+
+$('#btnFormRegistrarse').on('click', function() {
+	checkFormRegistro();
+});
+
+$('#btnModificarPerfil').on('click', function() {
+	validarModificarPerfil();
 });
 
 function borrarErrores() {
@@ -105,6 +113,113 @@ function checkForm () {
 			disableSubmit();
 		}
 	});
+}
+
+function checkFormRegistro() {
+
+	var form = $('#formRegistrarse');
+
+	var inputNombre = $('input[name=Nombre]');
+	var inputApellido = $('input[name=Apellido]');
+	var inputEmail = $('input[name=Email]');
+	var inputUsuario = $('input[name=usuario]');
+	var inputClave = $('input[name=contrasena]');
+
+	var bandera = 1 ;
+
+	borrarErrores();
+
+	var errores=[];
+
+	if(!$(inputNombre).val().match(namePattern)) {
+		bandera=0;
+		errores[errores.length] = "Nombre incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+	}
+
+	if(!$(inputApellido).val().match(namePattern)) {
+		bandera=0;
+		errores[errores.length] = "Apellido incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+	}
+
+	if(!$(inputEmail).val().match(emailPattern)) {
+		bandera=0;
+		errores[errores.length] = "Email incorrecto. Revise el formato";
+	}
+
+	if(!$(inputUsuario).val().match(usuarioPattern)) {
+		event.preventDefault();
+		bandera=0;
+		errores[errores.length] = "Usuario incorrecto. No puede estar vacio y debe tener un maximo de 15 caracteres.";
+	}
+
+	if(!$(inputClave).val().match(clavePattern) || $(inputClave).length() < 6) {
+		event.preventDefault();
+		bandera=0;
+		errores[errores.length] = "Contraseña incorrecta: Mínimo 6 caracteres y máximo 20. Solo letras y números.";
+	 }
+
+
+	if(bandera==0) {
+		mostrarErrores(form,errores);
+	} else {
+		form.submit();
+	}
+
+
+}
+
+
+function validarModificarPerfil() {
+
+	var form = $('#formModificarPerfil');
+	
+	var inputNombre = $('input[name=Nombre]');
+	var inputApellido = $('input[name=Apellido]');
+	var inputEmail = $('input[name=Email]');
+	var inputUsuario = $('input[name=usuario]');
+	var inputClave = $('input[name=contrasena]');
+
+	var bandera = 1 ;
+
+	borrarErrores();
+
+	var errores=[];
+
+	if(!$(inputNombre).val().match(namePattern)) {
+		bandera=0;
+		errores[errores.length] = "Nombre incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+	}
+
+	if(!$(inputApellido).val().match(namePattern)) {
+		bandera=0;
+		errores[errores.length] = "Apellido incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+	}
+
+	if(!$(inputEmail).val().match(emailPattern)) {
+		bandera=0;
+		errores[errores.length] = "Email incorrecto. Revise el formato";
+	}
+
+	if(!$(inputUsuario).val().match(usuarioPattern)) {
+		event.preventDefault();
+		bandera=0;
+		errores[errores.length] = "Usuario incorrecto. No puede estar vacio y debe tener un maximo de 15 caracteres.";
+	}
+
+	if(!$(inputClave).val().match(clavePattern) || $(inputClave).length() < 6) {
+		event.preventDefault();
+		bandera=0;
+		errores[errores.length] = "Contraseña incorrecta: Mínimo 6 caracteres y máximo 20. Solo letras y números.";
+	 }
+
+
+	if(bandera==0) {
+		mostrarErrores(form,errores);
+	} else {
+		form.submit();
+	}
+
+
 }
 
 
@@ -178,7 +293,7 @@ function validarNuevoProd() {
 
 	var form = $('#formNuevoProd');
 	
-	var inputProducto = $('input[name=Nombre]');
+	var inputProducto = $('#txtProducto');
 	var selCategoria = $('#selCat');
 	var inputDescripcion = $('#descripcion');
 	var inputPrecio1 = $('input[name=Precio1]');
@@ -194,9 +309,15 @@ function validarNuevoProd() {
 	var errores=[];
 
 
+	// if(!$(inputProducto).val().length > 0) {
+	// 	bandera=0;
+	// 	errores[errores.length] = "Nombre de Producto incorrecto. Debe tener una longitud entre 2 y 25 caracteres.";
+	// }
+
+
 	if(!$(inputProducto).val().match(productoPattern)) {
 		bandera=0;
-		errores[errores.length] = "Nombre de Producto incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+		errores[errores.length] = "Nombre de Producto incorrecto. Debe tener una longitud entre 2 y 25 caracteres.";
 	}
 
 	if($(selCategoria).val() == null) {
@@ -225,7 +346,6 @@ function validarNuevoProd() {
 		errores[errores.length] = "Debe subir una imagen del producto";
 	}
 
-
 	if (bandera == 0) {
 		mostrarErrores(form,errores);
 
@@ -240,7 +360,7 @@ function validarModificarProd() {
 
 	var form = $('#formModificarProd');
 	
-	var inputProducto = $('input[name=Nombre]');
+	var inputProducto = $('#txtProducto');
 	var selCategoria = $('#selCat');
 	var inputDescripcion = $('#descripcion');
 	var inputPrecio1 = $('input[name=Precio1]');
@@ -258,7 +378,7 @@ function validarModificarProd() {
 
 	if(!$(inputProducto).val().match(productoPattern)) {
 		bandera=0;
-		errores[errores.length] = "Nombre de Producto incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+		errores[errores.length] = "Nombre de Producto incorrecto. Debe tener una longitud entre 2 y 25 caracteres.";
 	}
 
 	if($(selCategoria).val() == null) {
@@ -319,6 +439,7 @@ function validarNuevaCat() {
 
 
 	if (bandera == 0) {
+		
 		mostrarErrores(form,errores);
 
 	} else {
