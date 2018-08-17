@@ -121,6 +121,63 @@ $activo = end($url);
     </div>
 </div>
 
+<!-- Modal Registro -->
+<div class="modal fade modal-ext" id="modal-registarse" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <!--Content-->
+        <div class="modal-content">
+
+            <!--Header-->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h3><i class="fa fa-user"></i> Registrarse</h3>
+            </div>
+
+            <!--Body-->
+			<form id="formRegistrarse" name= "formRegistrarse" action="registrarse.php" method="post">
+				<div class="modal-body">
+				<div class="md-form">
+                        <i class="fa  fa-male  prefix"></i>
+                        <input  type="text" name="Nombre" class="form-control validate" maxlength="20" required>
+                        <label for="Nombre">Nombre:</label>
+                    </div>
+                    <div class="md-form">
+                        <i class="fa  fa-male  prefix"></i>
+                        <input type="text" name="Apellido" class="form-control validate" maxlength="10" required>
+                        <label for="Apellido">Apellido:</label>
+                    </div>
+                    <div class="md-form">
+                        <i class="fa fa-envelope prefix"></i>
+                        <input type="email" name="Email" class="form-control validate" maxlength="40" required>
+                        <label for="Email">E-Mail:</label>
+                    </div>
+                    <div class="md-form">
+                        <i class="fa fa-user prefix"></i>
+                        <input type="text" name="usuario" class="form-control validate" maxlength="15" required>
+                        <label for="Usuario">Usuario:</label>
+                    </div>
+                    <div class="md-form">
+                        <i class="fa fa-key prefix"></i>
+                        <input type="password" name="contrasena" class="form-control validate" maxlength="20" required>
+                        <label for="contrasena">Contraseña:</label>
+                    </div>
+					<div class="text-xs-center">
+						<button type="submit" id="btnFormRegistrarse" class="btn btn-primary btn-lg">Registarse</button>
+					</div>
+				</div>
+            </form>
+            <!--Footer-->
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+
 
 	<div class= "container-fluid" id="cabecera">
 		<?php
@@ -251,6 +308,7 @@ $activo = end($url);
 							</ul>
 
 								<button type="button" class="btn btn-success" id="botonlogin" data-toggle="modal" data-target="#modal-login">Acceder</button>
+								<button type="button" class="btn btn-success" id="botonregistro" data-toggle="modal" data-target="#modal-registarse">Registarse</button>
 							<?php
 									}
 
