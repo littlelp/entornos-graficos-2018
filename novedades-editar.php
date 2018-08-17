@@ -47,7 +47,7 @@ if(isset($_SESSION['tipous'])){
 						
 						<div class="md-form">
 							<i class="fa fa-pencil prefix"></i>
-							<textarea  name="Parrafo1" class="md-textarea" length="160" maxlength="160" required><?php  echo $rp["parrafo1"]; ?></textarea>
+							<textarea  id="Parrafo1" name="Parrafo1" class="md-textarea" length="160" maxlength="160" required><?php  echo $rp["parrafo1"]; ?></textarea>
 							<label for="Parrafo1">Parrafo 1:</label>
 						</div>
 						
@@ -69,7 +69,7 @@ if(isset($_SESSION['tipous'])){
 							</div>
 											
 				
-							<button id="btnModificarNovedad" type="submit" class="btn btn-default">Modificar</button>																		
+							<button id="btnFormModificarNovedad" type="submit" class="btn btn-default">Modificar</button>																		
                                    
 					</div>
 				
