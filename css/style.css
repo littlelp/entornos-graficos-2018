@@ -49,9 +49,6 @@ margin-bottom: 1%;
 	text-align:center;
 	font-size:13px;
 }
-#botonlogin{
-	margin:1px;
-}
 
 #p11 {
 	font-weight: bold;
@@ -159,6 +156,6 @@ height: 100%;
 	margin-bottom: 0;
 }
 
-#botonlogin, .nav-item.dropdown.cerrar-sesion {
+#botonlogin, .nav-item.dropdown.cerrar-sesion, #botonregistro {
 	float: right;
 }
