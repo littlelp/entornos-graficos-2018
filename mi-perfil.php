@@ -14,7 +14,7 @@ $r = mysqli_fetch_array($rs1);
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <h1 style="text-align:center" >Mi Perfil</h1>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3">
-                <form action="editar-perfil.php" method="post">
+                <form id = "formModificarPerfil" action="editar-perfil.php" method="post">
                     <div class="md-form">
                         <i class="fa  fa-male  prefix"></i>
                         <input  type="text" name="Nombre" value="<?php  echo $r["nombre"]; ?>" class="form-control validate" maxlength="20" required>
@@ -40,7 +40,7 @@ $r = mysqli_fetch_array($rs1);
                         <input type="password" name="contrasena" value="<?php  echo $r["contrasena"]; ?>" class="form-control validate" maxlength="20" required>
                         <label for="contrasena">Contraseña:</label>
                     </div>
-                    <p style="text-align:center" ><button type="submit" class="btn btn-default btn-rounded">Modificar</button></p>																	
+                    <p style="text-align:center" ><button type="submit" id="btnModificarPerfil"class="btn btn-default btn-rounded">Modificar</button></p>																	
                 </form>            
             </div>
         </div>
