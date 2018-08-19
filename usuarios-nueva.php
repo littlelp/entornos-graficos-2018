@@ -24,18 +24,18 @@ if($_SESSION['tipous']==1){
 				
 					<div class="col-xs-10 col-sm-10 col-md-10 col-md-offset-1">
 
-						<form id="formNuevoUsuario" action="nuevo-user.php" method="post">
+						<form id="formNuevoUsu" action="nuevo-user.php" method="post">
 							
 							<div class="md-form">
 								<i class="fa  fa-male  prefix"></i>
-								<input  type="text" name="Nombre" class="form-control validate" maxlength="20" required>
+								<input  type="text" id="Nombre" name="Nombre" class="form-control validate" maxlength="30" required>
 								<label for="Nombre">Nombre:</label>
 							</div>
 		
 		
 							<div class="md-form">
 								<i class="fa  fa-male  prefix"></i>
-								<input type="text" name="Apellido" class="form-control validate" maxlength="10" required>
+								<input type="text" id="Apellido" name="Apellido" class="form-control validate" maxlength="30" required>
 								<label for="Apellido">Apellido:</label>
 							</div>
 		
@@ -65,7 +65,7 @@ if($_SESSION['tipous']==1){
 						
 								<div class="md-form">
 								<i class="fa fa-envelope prefix"></i>
-								<input type="email" name="Email" class="form-control validate" maxlength="40" required>
+								<input type="email" id= "Email" name="Email" class="form-control validate" maxlength="40" required>
 								<label for="Email">E-Mail:</label>
 							</div>
 
@@ -84,7 +84,7 @@ if($_SESSION['tipous']==1){
 		
 																								
 				
-							<button id= "btnFormNuevoUsuario" type="submit" class="btn btn-default">Agregar</button>																		
+							<button id= "btnFormNuevoUsu" type="submit" class="btn btn-default">Agregar</button>																		
                                    
 					</div>
 				

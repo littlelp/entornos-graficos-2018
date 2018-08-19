@@ -35,7 +35,7 @@ if($_SESSION['tipous']==1){
 		
 							<div class="md-form">
 								<i class="fa  fa-male  prefix"></i>
-								<input type="text" name="Descripcion" class="form-control validate" maxlength="30" required>
+								<input type="text" name="Descripcion" class="form-control validate" maxlength="50" required>
 								<label for="Descripcion">Descripcion:</label>
 							</div>
 					

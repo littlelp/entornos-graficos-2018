@@ -20,8 +20,9 @@ $('#btnFormModificarCat').on('click', function() {
 	validarModificarCat();
 });
 
-$('#btnFormNuevoUsuario').on('click', function() {
-	validarNuevoUsuario();
+$('#btnFormNuevoUsu').on('click', function() {
+	alert('metodo');
+	validarNuevoUsu();
 });
 
 $('#btnFormModificarUsuario').on('click', function() {
@@ -41,7 +42,7 @@ $('#btnFormModificarNovedad').on('click', function() {
 });
 
 $('#botonlogin').on('click', function() {
-	checkForm();
+	checkFormLogin();
 });
 
 $('#btnFormRegistrarse').on('click', function() {
@@ -85,20 +86,28 @@ var descripcionPattern = "^[a-zA-Z0-9]{4,160}$";
 var precioPattern  = "^[0-9]$";
 
 
-function enableSubmit (idForm) {
+function enableSubmit (btnForm) {
 
-	$('#btnFormLogin').prop("disabled",false);
+	$(btnForm).prop("disabled",false);
 }
  
-function disableSubmit (idForm) {
-	$('#btnFormLogin').prop("disabled",true);
+function disableSubmit (btnForm) {
+	$(btnForm).prop("disabled",true);
 }
 
 function checkInput(idInput) {
 	return $(idInput).val() != '' ? true : false;
 }
 
-function checkForm () {
+function checkPattern(idInput) {
+
+	return $(idInput).val().match(emailPattern) ? true : false;
+		
+}
+
+function checkFormLogin () {
+
+	var btnForm = $('#btnFormLogin');
 
 	$('#btnFormLogin').prop("disabled",true);
 
@@ -106,14 +115,37 @@ function checkForm () {
 
 		if (checkInput("#user") && checkInput("#pass")) {
 
-			enableSubmit();
+			enableSubmit(btnForm);
 
 		} else {
 
-			disableSubmit();
+			disableSubmit(btnForm);
 		}
 	});
 }
+
+function validarNuevoUsu () {
+
+	alert('toy probando');
+
+	var btnForm = $('#btnFormNuevoUsu');
+
+	$('#btnFormNuevoUsu').prop("disabled",true);
+
+	$('#formNuevoUsu').on("change keydown", function() {
+
+		if (checkInput("#Nombre") && checkInput("#Apellido") && checkPattern("#Email") && checkInput("#user") && checkInput("#pass")) {
+
+			enableSubmit(btnForm);
+
+		} else {
+
+			disableSubmit(btnForm);
+		}
+	});
+}
+
+
 
 function checkFormRegistro() {
 
@@ -279,7 +311,7 @@ function validarContacto() {
 
 	if(!$(inputProvincia).val().match(namePattern)) {
 		bandera=0;
-		errores[errores.length] = "Provincia incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+		errores[errores.length] = "Provincia incorrecta. Debe tener una longitud entre 2 y 30 caracteres.";
 	}
 
 	if(!$(inputTelefono).val().match(telPattern)) {
@@ -471,7 +503,7 @@ function validarNuevaCat() {
 
 	if (!$(inputDescripcion).val().length > 0) {
 		bandera=0;
-		errores[errores.length] = "Descripción incorrecta. Debe tener un máximo de 160 caracteres y no puede estar vacía.";
+		errores[errores.length] = "Descripción incorrecta. Debe tener un máximo de 50 caracteres y no puede estar vacía.";
 	}
 
 
@@ -518,8 +550,6 @@ function validarModificarCat() {
 
 	});
 	
-
-
 	if (bandera == 0) {
 		
 		mostrarErrores(form,errores);
@@ -531,68 +561,63 @@ function validarModificarCat() {
 
 }
 
-function validarNuevoUsuario() {
+//function validarNuevoUsuario() {
 
-	var form = $('#formNuevoUsuario');
+	// var form = $('#formNuevoUsuario');
 	
-	var inputNombre = $('input[name=Nombre]');
-	var inputApellido = $('input[name=Apellido]');
-	var selTipoUsu = $('#selTipoUsu');
-	var inputEmail = $('input[name=Email]');
-	var inputUsuario = $('input[name=usuario]');
-	var inputClave = $('input[name=contrasena]');
+	// var inputNombre = $('#Nombre');
+	// var inputApellido = $('#Apellido');
+	// var selTipoUsu = $('#selTipoUsu');
+	// var inputEmail = $('input[name=Email]');
+	// var inputUsuario = $('input[name=usuario]');
+	// var inputClave = $('input[name=contrasena]');
 
-	var bandera = 1 ;
+	// var bandera = 1 ;
 
-	borrarErrores();
+	// borrarErrores();
 
-	var errores=[];
-
-	if(!$(inputNombre).val().match(namePattern)) {
-		event.preventDefault();
-		bandera=0;
-		errores[errores.length] = "Nombre incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
-	}
-
-	if(!$(inputApellido).val().match(namePattern)) {
-		event.preventDefault();
-		bandera=0;
-		errores[errores.length] = "Apellido incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
-	}
-
-	if($(selTipoUsu).val() == null) {
-		event.preventDefault();
-		bandera=0;
-		errores[errores.length] = "Debe seleccionar un Tipo de Usuario.";
-	}
-
-	if(!$(inputEmail).val().match(emailPattern)) {
-		event.preventDefault();
-		bandera=0;
-		errores[errores.length] = "Email incorrecto. Revise el formato.";
-	}
+	// var errores=[];
 
 
-	if(!$(inputUsuario).val().match(usuarioPattern)) {
-		event.preventDefault();
-		bandera=0;
-		errores[errores.length] = "Usuario incorrecto. No puede estar vacio y debe tener un maximo de 15 caracteres.";
-	}
+	// if(!$(inputNombre).val().match(namePattern)) {
+	// 	bandera=0;
+	// 	errores[errores.length] = "Nombre incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+	// }
 
-	if(!$(inputClave).val().match(clavePattern) || $(inputClave).length() < 6) {
-		event.preventDefault();
-		bandera=0;
-		errores[errores.length] = "Contraseña incorrecta: Mínimo 6 caracteres y máximo 20. Solo letras y números.";
-	 }
+	// if(!$(inputApellido).val().match(namePattern)) {
+	// 	bandera=0;
+	// 	errores[errores.length] = "Apellido incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+	// }
+
+	// if($(selTipoUsu).val() == null) {
+	// 	bandera=0;
+	// 	errores[errores.length] = "Debe seleccionar un Tipo de Usuario.";
+	// }
+
+	// if(!$(inputEmail).val().match(emailPattern)) {
+	// 	bandera=0;
+	// 	errores[errores.length] = "Email incorrecto. Revise el formato.";
+	// }
 
 
+	// if(!$(inputUsuario).val().match(usuarioPattern)) {
+	// 	bandera=0;
+	// 	errores[errores.length] = "Usuario incorrecto. No puede estar vacio y debe tener un maximo de 15 caracteres.";
+	// }
 
-	if(bandera==0) {
-		mostrarErrores(form,errores);
-	} else {
-		form.submit();
-	}
-}
+	// if(!$(inputClave).val().match(clavePattern) || $(inputClave).length() < 6) {
+	// 	bandera=0;
+	// 	errores[errores.length] = "Contraseña incorrecta: Mínimo 6 caracteres y máximo 20. Solo letras y números.";
+	//  }
+
+	//  alert($(inputNombre).val());
+
+	// if(bandera==0) {
+	// 	mostrarErrores(form,errores);
+	// } else {
+	// 	form.submit();
+	// }
+//}
 
 
 function validarModificarUsuario() {
