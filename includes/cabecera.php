@@ -140,12 +140,12 @@ $activo = end($url);
 				<div class="modal-body">
 				<div class="md-form">
                         <i class="fa  fa-male  prefix"></i>
-                        <input  type="text" name="Nombre" class="form-control validate" maxlength="20" required>
+                        <input  type="text" name="Nombre" class="form-control validate" maxlength="30" required>
                         <label for="Nombre">Nombre:</label>
                     </div>
                     <div class="md-form">
                         <i class="fa  fa-male  prefix"></i>
-                        <input type="text" name="Apellido" class="form-control validate" maxlength="10" required>
+                        <input type="text" name="Apellido" class="form-control validate" maxlength="30" required>
                         <label for="Apellido">Apellido:</label>
                     </div>
                     <div class="md-form">

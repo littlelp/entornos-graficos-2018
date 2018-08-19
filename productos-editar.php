@@ -45,7 +45,7 @@ if(isset($_SESSION['tipous'])){
 		
 		
 						<label>Categoria</label>
-						<select name="cat" class="mdb-select" required>
+						<select name="cat" id="Cat" class="mdb-select" required>
 						<option value="" disabled selected>Seleccione:</option>	
 							
 									<?php	
@@ -77,13 +77,13 @@ if(isset($_SESSION['tipous'])){
 						
 						<div class="md-form">
 								<i class="fa  fa-money  prefix"></i>
-								<input value="<?php  echo $rp["precio1"]; ?>" type="number" id = "Precio1" name="Precio1" class="form-control validate" maxlength="10">
+								<input value="<?php  echo $rp["precio1"]; ?>" type="number" id="Precio1" name="Precio1" class="form-control validate" maxlength="10">
 								<label for="Precio1">Precio Mano de Obra:</label>
 						</div>					
 						
 						<div class="md-form">
 								<i class="fa  fa-money  prefix"></i>
-								<input value="<?php  echo $rp["precioLista"]; ?>" type="number" id = "PrecioLista" name="PrecioLista" class="form-control validate" maxlength="10">
+								<input value="<?php  echo $rp["precioLista"]; ?>" type="number" id="PrecioLista" name="PrecioLista" class="form-control validate" maxlength="10">
 								<label for="Precio4">Precio Lista:</label>
 						</div>
 					
@@ -93,7 +93,7 @@ if(isset($_SESSION['tipous'])){
 									<input name="Imagen" type="file">
 								</div>
 								<div class="file-path-wrapper">
-								   <input class="file-path validate" type="text" id = "txtImagen" placeholder="Subir Imagen">
+								   <input class="file-path validate" type="text" id="txtImagen" placeholder="Subir Imagen">
 								</div>
 							</div>
 						

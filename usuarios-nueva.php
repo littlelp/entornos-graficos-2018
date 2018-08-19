@@ -72,13 +72,13 @@ if($_SESSION['tipous']==1){
 
 							<div class="md-form">
 								<i class="fa fa-user prefix"></i>
-								<input type="text" name="usuario" class="form-control validate" maxlength="15" required>
+								<input type="text" id="Usuario" name="usuario" class="form-control validate" maxlength="15" required>
 								<label for="Usuario">Usuario:</label>
 							</div>		
 		
 							<div class="md-form">
 								<i class="fa fa-key prefix"></i>
-								<input type="password" name="contrasena" class="form-control validate" maxlength="20" required>
+								<input type="password" name="contrasena" id="Contrasena" class="form-control validate" maxlength="20" required>
 								<label for="contrasena">Contraseña:</label>
 							</div>                                 
 		
@@ -94,7 +94,8 @@ if($_SESSION['tipous']==1){
 <script>
 	
 	$(document).ready(function() {
-		$('.mdb-select').material_select();
+			$('.mdb-select').material_select();
+			// $('#btnFormNuevoUsu').prop("disabled",true);
 		});
 
 </script>
