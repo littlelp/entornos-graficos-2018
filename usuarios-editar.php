@@ -40,14 +40,14 @@ if($_SESSION['tipous']==1){
 							
 							<div class="md-form">
 								<i class="fa  fa-male  prefix"></i>
-								<input  value="<?php  echo $r["nombre"]; ?>" type="text" name="Nombre" class="form-control validate" maxlength="30" required>
+								<input  value="<?php  echo $r["nombre"]; ?>" type="text" id = "txtNombre" name="Nombre" class="form-control validate" maxlength="30" required>
 								<label for="Nombre">Nombre:</label>
 							</div>
 		
 		
 							<div class="md-form">
 								<i class="fa  fa-male  prefix"></i>
-								<input  value="<?php  echo $r["apellido"]; ?>" type="text" name="Apellido" class="form-control validate" maxlength="30" required>
+								<input  value="<?php  echo $r["apellido"]; ?>" type="text" id = "txtApellido" name="Apellido" class="form-control validate" maxlength="30" required>
 								<label for="Apellido">Apellido:</label>
 							</div>
 		
@@ -79,14 +79,14 @@ if($_SESSION['tipous']==1){
 						
 								<div class="md-form">
 								<i class="fa fa-envelope prefix"></i>
-								<input value="<?php  echo $r["email"]; ?>" type="email" name="Email" class="form-control validate" maxlength="40" required>
+								<input value="<?php  echo $r["email"]; ?>" type="email" id = "txtEmail" name="Email" class="form-control validate" maxlength="40" required>
 								<label for="Email">E-Mail:</label>
 							</div>
 
 
 							<div class="md-form">
 								<i class="fa fa-user prefix"></i>
-								<input  value="<?php  echo $r["user"]; ?>" type="text" name="usuario" class="form-control validate" maxlength="15" required>
+								<input  value="<?php  echo $r["user"]; ?>" type="text" id = "txtUsuario" name="usuario" class="form-control validate" maxlength="15" required>
 								<label for="Usuario">Usuario:</label>
 							</div>		
 		
