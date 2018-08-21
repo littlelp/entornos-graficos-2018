@@ -77,8 +77,8 @@ var namePattern = "^[a-z A-Z]{2,30}$";
 var emailPattern = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$";
 var telPattern = "^[0-9]{7,10}";
 var usuarioPattern = "([a-zA-Z0-9]*(_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$";
-//var clavePattern = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,20}/";
-var clavePattern = "/^[a-zA-Z0-9]{6,20}$/g";
+//var clavePattern = "/^[a-zA-Z0-9]{6,20}$/g";
+var clavePattern = "[a-zA-Z0-9]{6,20}$";
 var consultaPattern = "([a-zA-Z0-9]*(_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$";
 var productoPattern = "^[a-z A-Z]{2,25}$";
 var descripcionPattern = "/^[a-zA-Z0-9]{4,160}$/g";
@@ -181,7 +181,7 @@ function checkFormRegistro() {
 		errores[errores.length] = "Usuario incorrecto. No puede estar vacio y debe tener un maximo de 15 caracteres.";
 	}
 
-	if(!$(inputClave).val().match(clavePattern) || $(inputClave).length() < 6) {
+	if(!$(inputClave).val().match(clavePattern)){
 		event.preventDefault();
 		bandera=0;
 		errores[errores.length] = "Contraseña incorrecta: Mínimo 6 caracteres y máximo 20. Solo letras y números.";
