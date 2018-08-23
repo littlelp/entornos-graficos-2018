@@ -695,7 +695,7 @@ function validarNuevaNovedad() {
 
 	var form = $('#formNuevaNovedad');
 	
-	var inputTitulo = $('input[name=titulo]');
+	var inputTitulo = $('#titulo');
 	var inputDescripcion = $('#parrafo1');
 	var inputImagen = $('input[name=imagen]');
 
@@ -739,7 +739,7 @@ function validarModificarNovedad() {
 
 	var form = $('#formModificarNovedad');
 	
-	var inputTitulo = $('input[name=Titulo]');
+	var inputTitulo = $('#Titulo');
 	var inputDescripcion = $('#Parrafo1');
 	var inputImagen = $('input[name=Imagen]');
 

@@ -39,7 +39,7 @@ if(isset($_SESSION['tipous'])){
 							
 							<div class="md-form">
 								<i class="fa  fa-male  prefix"></i>
-								<input value="<?php  echo $rp["titulo"]; ?>"  type="text" name="Titulo" class="form-control validate" maxlength="30" required>
+								<input value="<?php  echo $rp["titulo"]; ?>"  type="text" id="Titulo" name="Titulo" class="form-control validate" maxlength="30" required>
 								<label for="Titulo">Titulo:</label>
 							</div>
 		
