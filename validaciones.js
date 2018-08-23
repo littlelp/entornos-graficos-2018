@@ -201,11 +201,11 @@ function checkFormRegistro() {
 function validarModificarPerfil() {
 
 	var form = $('#formModificarPerfil');
-	var inputNombre = $('input[name=Nombre]');
-	var inputApellido = $('input[name=Apellido]');
-	var inputEmail = $('input[name=Email]');
-	var inputUsuario = $('input[name=usuario]');
-	var inputClave = $('input[name=contrasena]');
+	var inputNombre = $('#Nombre');
+	var inputApellido = $('#Apellido');
+	var inputEmail = $('#Email');
+	var inputUsuario = $('#usuario');
+	var inputClave = $('#contrasena');
 
 	var bandera = 1 ;
 
