@@ -657,7 +657,7 @@ function validarNuevoCarousel() {
 
 	var form = $('#formNuevoCarousel');
 	
-	var inputNombre = $('input[name=Nombre]');
+	var inputNombre = $('#Nombre');
 	var inputImagen = $('input[name=Imagen]');
 
 
