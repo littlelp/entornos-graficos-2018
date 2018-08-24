@@ -14,20 +14,20 @@ settype($_GET["id"], "integer");
 
 
 	if($_FILES['Imagen']['name']!='' && isset($_POST["Destacado"])){	
-		$sql = "UPDATE producto set nombre = '". $_POST["Nombre"]."', idCategoria = '". $_POST["cat"]. "', descripcion = '". $_POST["Descripcion"]. "', imagen = '".$destino."',video = '".$_POST["Video"]. "',precioLista = '". $_POST["PrecioLista"]. "',precio1 = '". $_POST["Precio1"]. "',destacado = '". $_POST["Destacado"]. "'
+		$sql = "UPDATE producto set nombre = '". $_POST["Nombre"]."', idCategoria = '". $_POST["cat"]. "', descripcion = '". $_POST["Descripcion"]. "', imagen = '".$destino."',video = '".$_POST["Video"]. "',precioLista = '". $_POST["PrecioLista"]. "',precio1 = '". $_POST["Precio1"]. "',destacado = '". $_POST["Destacado"]. "', stock = '". $_POST["Stock"]. "'
 		WHERE idProducto = " . $_GET["id"];	}
 	elseif($_FILES['Imagen']['name']!='' ){	
-$sql = "UPDATE producto set nombre = '". $_POST["Nombre"]."', idCategoria = '". $_POST["cat"]. "', descripcion = '". $_POST["Descripcion"]. "', imagen = '".$destino."',video = '".$_POST["Video"]. "',precioLista = '". $_POST["PrecioLista"]. "',precio1 = '". $_POST["Precio1"]. "',destacado = ''
+$sql = "UPDATE producto set nombre = '". $_POST["Nombre"]."', idCategoria = '". $_POST["cat"]. "', descripcion = '". $_POST["Descripcion"]. "', imagen = '".$destino."',video = '".$_POST["Video"]. "',precioLista = '". $_POST["PrecioLista"]. "',precio1 = '". $_POST["Precio1"]. "',destacado = '', stock = '". $_POST["Stock"]. "'
 WHERE idProducto = " . $_GET["id"];}
  
  //Hasta aca hace si hay imagen...
 	
 	elseif(isset($_POST["Destacado"])){
 	 
-$sql = "UPDATE producto set nombre = '". $_POST["Nombre"]."', idCategoria = '". $_POST["cat"]. "', descripcion = '". $_POST["Descripcion"]. "', precioLista = '". $_POST["PrecioLista"]. "',precio1 = '". $_POST["Precio1"]. "',destacado = '". $_POST["Destacado"]. "'
+$sql = "UPDATE producto set nombre = '". $_POST["Nombre"]."', idCategoria = '". $_POST["cat"]. "', descripcion = '". $_POST["Descripcion"]. "', precioLista = '". $_POST["PrecioLista"]. "',precio1 = '". $_POST["Precio1"]. "',destacado = '". $_POST["Destacado"]. "', stock = '". $_POST["Stock"]. "'
 		WHERE idProducto = " . $_GET["id"];}
 		
-	else{ $sql = "UPDATE producto set nombre = '". $_POST["Nombre"]."', idCategoria = '". $_POST["cat"]. "', descripcion = '". $_POST["Descripcion"]. "', precioLista = '". $_POST["PrecioLista"]. "',precio1 = '". $_POST["Precio1"]. "' ,destacado = ''
+	else{ $sql = "UPDATE producto set nombre = '". $_POST["Nombre"]."', idCategoria = '". $_POST["cat"]. "', descripcion = '". $_POST["Descripcion"]. "', precioLista = '". $_POST["PrecioLista"]. "',precio1 = '". $_POST["Precio1"]. "' , destacado = '', stock = '". $_POST["Stock"]. "'
  WHERE idProducto = " . $_GET["id"];}
 
 $rs = mysqli_query($db, $sql);
