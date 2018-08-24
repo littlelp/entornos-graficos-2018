@@ -63,13 +63,13 @@ if($_SESSION['tipous']==1){
 						
 						<div class="md-form">
 								<i class="fa  fa-money  prefix"></i>
-								<input  type="number" id = "Precio1" name="Precio1" class="form-control validate" maxlength="10">
+								<input  type="number" id="Precio1" name="Precio1" class="form-control validate" maxlength="10">
 								<label for="Precio1">Precio Mano de Obra:</label>
 						</div>
 						
 							<div class="md-form">
 								<i class="fa  fa-money  prefix"></i>
-								<input type="number" id = "PrecioLista" name="PrecioLista" class="form-control validate" maxlength="10">
+								<input type="number" id="PrecioLista" name="PrecioLista" class="form-control validate" maxlength="10">
 								<label for="Precio4">Precio Lista:</label>
 						</div>
 					

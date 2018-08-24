@@ -82,7 +82,7 @@ var clavePattern = "[a-zA-Z0-9]{6,20}$";
 var consultaPattern = "([a-zA-Z0-9]*(_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$";
 var productoPattern = "^[a-z A-Z]{2,25}$";
 var descripcionPattern = "/^[a-zA-Z0-9]{4,160}$/g";
-var precioPattern  = "^[0-9]$";
+var precioPattern  = "^[0-9]{1,4}";
 
 
 function enableSubmit (btnForm) {
@@ -325,8 +325,8 @@ function validarNuevoProd() {
 	var inputProducto = $('#txtProducto');
 	var selCategoria = $('#selCat');
 	var inputDescripcion = $('#descripcion');
-	var inputPrecio1 = $('input[name=Precio1]');
-	var inputPrecioLista = $('input[name=PrecioLista]');
+	var inputPrecio1 = $('#Precio1');
+	var inputPrecioLista = $('#PrecioLista');
 	var inputImagen = $('input[name=Imagen]');
 
 	
