@@ -28,7 +28,7 @@ if($_SESSION['tipous']==1){
 							
 										<div class="md-form">
 												<i class="fa  fa-male  prefix"></i>
-												<input type="text" name="titulo" class="form-control validate" maxlength="30" required>
+												<input type="text" id="titulo" name="titulo" class="form-control validate" maxlength="30" required>
 												<label for="titulo">Titulo:</label>
 										</div>
 						
@@ -36,7 +36,7 @@ if($_SESSION['tipous']==1){
 										
 										<div class="md-form">
 											<i class="fa fa-pencil prefix"></i>
-											<textarea id="parrafo1" name="parrafo1" class="md-textarea" length="160" maxlength="160" required></textarea>
+											<textarea id="parrafo1" id="parrafo1" name="parrafo1" class="md-textarea" length="160" maxlength="160" required></textarea>
 											<label for="parrafo1">Descripcion Corta:</label>
 										</div>
 										

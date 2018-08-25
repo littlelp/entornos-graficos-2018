@@ -82,7 +82,7 @@ var clavePattern = "[a-zA-Z0-9]{6,20}$";
 var consultaPattern = "([a-zA-Z0-9]*(_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$";
 var productoPattern = "^[a-z A-Z]{2,25}$";
 var descripcionPattern = "/^[a-zA-Z0-9]{4,160}$/g";
-var precioPattern  = "^[0-9]$";
+var precioPattern  = "^[0-9]{1,4}";
 
 
 function enableSubmit (btnForm) {
@@ -256,12 +256,12 @@ function validarContacto() {
 
 	var form = $('#formContacto');
 	
-	var inputNombre = $('input[name=Nombre]');
-	var inputApellido = $('input[name=Apellido]');
-	var inputCiudad = $('input[name=Ciudad]');
-	var inputProvincia = $('input[name=Provincia]');
-	var inputEmail = $('input[name=Email]');
-	var inputTelefono = $('input[name=Tel]');
+	var inputNombre = $('#Nombre');
+	var inputApellido = $('#Apellido');
+	var inputCiudad = $('#Ciudad');
+	var inputProvincia = $('#Provincia');
+	var inputEmail = $('#Email');
+	var inputTelefono = $('#Tel');
 	var inputConsulta = $('#Consulta');
 
 	var bandera = 1 ;
@@ -272,12 +272,12 @@ function validarContacto() {
 
 	if(!$(inputNombre).val().match(namePattern)) {
 		bandera=0;
-		errores[errores.length] = "Nombre incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+		errores[errores.length] = "Nombre incorrecto. Debe tener una longitud entre 2 y 30 caracteres. No se admiten números";
 	}
 
 	if(!$(inputApellido).val().match(namePattern)) {
 		bandera=0;
-		errores[errores.length] = "Apellido incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+		errores[errores.length] = "Apellido incorrecto. Debe tener una longitud entre 2 y 30 caracteres. No se admiten números";
 	}
 
 	if(!$(inputEmail).val().match(emailPattern)) {
@@ -287,13 +287,13 @@ function validarContacto() {
 
 	if(!$(inputCiudad).val().match(namePattern)) {
 		bandera=0;
-		errores[errores.length] = "Ciudad incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+		errores[errores.length] = "Ciudad incorrecto. Debe tener una longitud entre 2 y 30 caracteres. No se admiten números";
 	}
 
 
 	if(!$(inputProvincia).val().match(namePattern)) {
 		bandera=0;
-		errores[errores.length] = "Provincia incorrecta. Debe tener una longitud entre 2 y 30 caracteres.";
+		errores[errores.length] = "Provincia incorrecta. Debe tener una longitud entre 2 y 30 caracteres. No se admiten números";
 	}
 
 	if(!$(inputTelefono).val().match(telPattern)) {
@@ -325,8 +325,8 @@ function validarNuevoProd() {
 	var inputProducto = $('#txtProducto');
 	var selCategoria = $('#selCat');
 	var inputDescripcion = $('#descripcion');
-	var inputPrecio1 = $('input[name=Precio1]');
-	var inputPrecioLista = $('input[name=PrecioLista]');
+	var inputPrecio1 = $('#Precio1');
+	var inputPrecioLista = $('#PrecioLista');
 	var inputImagen = $('input[name=Imagen]');
 
 	
@@ -477,7 +477,7 @@ function validarNuevaCat() {
 	if(!$(inputCategoria).val().match(namePattern)) {
 		event.preventDefault();
 		bandera=0;
-		errores[errores.length] = "Nombre de Categoria incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+		errores[errores.length] = "Nombre de Categoria incorrecto. Debe tener una longitud entre 2 y 30 caracteres. No se admiten números";
 	}
 
 
@@ -515,7 +515,7 @@ function validarModificarCat() {
 	if(!$(inputCategoria).val().match(namePattern)) {
 		event.preventDefault();
 		bandera=0;
-		errores[errores.length] = "Nombre de Categoria incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+		errores[errores.length] = "Nombre de Categoria incorrecto. Debe tener una longitud entre 2 y 30 caracteres. No se admiten números";
 	}
 
 
@@ -558,12 +558,12 @@ function validarNuevoUsu() {
 
 	if(!$(inputNombre).val().match(namePattern)) {
 		bandera=0;
-		errores[errores.length] = "Nombre incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+		errores[errores.length] = "Nombre incorrecto. Debe tener una longitud entre 2 y 30 caracteres. No se admiten números";
 	}
 
 	if(!$(inputApellido).val().match(namePattern)) {
 		bandera=0;
-		errores[errores.length] = "Apellido incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+		errores[errores.length] = "Apellido incorrecto. Debe tener una longitud entre 2 y 30 caracteres. No se admiten números";
 	}
 
 	if($(selTipoUsu).val() == null) {
@@ -615,13 +615,13 @@ function validarModificarUsuario() {
 	if(!$(inputNombre).val().match(namePattern)) {
 		event.preventDefault();
 		bandera=0;
-		errores[errores.length] = "Nombre incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+		errores[errores.length] = "Nombre incorrecto. Debe tener una longitud entre 2 y 30 caracteres. No se admiten números";
 	}
 
 	if(!$(inputApellido).val().match(namePattern)) {
 		event.preventDefault();
 		bandera=0;
-		errores[errores.length] = "Apellido incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+		errores[errores.length] = "Apellido incorrecto. Debe tener una longitud entre 2 y 30 caracteres. No se admiten números";
 	}
 
 
@@ -657,7 +657,7 @@ function validarNuevoCarousel() {
 
 	var form = $('#formNuevoCarousel');
 	
-	var inputNombre = $('input[name=Nombre]');
+	var inputNombre = $('#Nombre');
 	var inputImagen = $('input[name=Imagen]');
 
 
@@ -670,7 +670,7 @@ function validarNuevoCarousel() {
 
 	if(!$(inputNombre).val().match(namePattern)) {
 		bandera=0;
-		errores[errores.length] = "Nombre de Carousel incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+		errores[errores.length] = "Nombre de Carousel incorrecto. Debe tener una longitud entre 2 y 30 caracteres. No se admiten números";
 	}
 
 
@@ -695,7 +695,7 @@ function validarNuevaNovedad() {
 
 	var form = $('#formNuevaNovedad');
 	
-	var inputTitulo = $('input[name=titulo]');
+	var inputTitulo = $('#titulo');
 	var inputDescripcion = $('#parrafo1');
 	var inputImagen = $('input[name=imagen]');
 
@@ -710,7 +710,7 @@ function validarNuevaNovedad() {
 	if(!$(inputTitulo).val().match(namePattern)) {
 		event.preventDefault();
 		bandera=0;
-		errores[errores.length] = "Titulo de Novedad incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+		errores[errores.length] = "Titulo de Novedad incorrecto. Debe tener una longitud entre 2 y 30 caracteres. No se admiten números";
 	}
 
 	if (!$(inputDescripcion).val().length > 0) {
@@ -739,7 +739,7 @@ function validarModificarNovedad() {
 
 	var form = $('#formModificarNovedad');
 	
-	var inputTitulo = $('input[name=Titulo]');
+	var inputTitulo = $('#Titulo');
 	var inputDescripcion = $('#Parrafo1');
 	var inputImagen = $('input[name=Imagen]');
 
@@ -754,7 +754,7 @@ function validarModificarNovedad() {
 	if(!$(inputTitulo).val().match(namePattern)) {
 		event.preventDefault();
 		bandera=0;
-		errores[errores.length] = "Titulo de Novedad incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+		errores[errores.length] = "Titulo de Novedad incorrecto. Debe tener una longitud entre 2 y 30 caracteres. No se admiten números";
 	}
 
 	if (!$(inputDescripcion).val().length > 0) {
