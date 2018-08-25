@@ -23,7 +23,7 @@ if(isset($_SESSION['tipous'])){
 		<br /><br />
 		<div class="row">
 		<div class="col-xs-10 col-sm-10 col-md-10 col-md-offset-1">
-		<table class="table table-striped table-bordered table-hover" id="dataTables-addControls">
+		<table class="table table-striped table-bordered table-hover lista-carrito" id="dataTables-addControls">
 		<thead>
 		<tr>
 		<th>ID Producto</th>
@@ -35,16 +35,28 @@ if(isset($_SESSION['tipous'])){
 		</thead>
 		<tbody>
 		<?php
-	
-		foreach ($_SESSION['carrito'] as $i => $producto) {						
+		$total = 0;
+		foreach ($_SESSION['carrito'] as $i => $producto) {	
+			$total = $total + ($producto["precioLista"] * $producto["cantidad"]);					
 			?>
 			<tr>
 			<td><?php  echo $producto["idProducto"]; ?></td>
 			<td><?php  echo $producto["nombre"]; ?></td>
 			<td><?php  echo $producto["precioLista"]; ?></td>			
-			<td><?php  echo $producto["cantidad"]; ?></td>			
+			<td class="cantidad">
+				<?php  echo $producto["cantidad"]; ?>
+				<div class="cambiar-cantidad">
+					<button type="button" class="btn btn-primary" onClick="cambiarCantidad('sumar', <?php echo $producto["idProducto"]; ?>)">
+						<i class="fa fa-plus"></i>
+					</button>
+					<button type="button" class="btn btn-primary" onClick="cambiarCantidad('restar', <?php echo $producto["idProducto"]; ?>)">
+						<i class="fa fa-minus"></i>
+					</button>
+				</div>
+
+			</td>			
 			<td>
-			<button type="button" class="btn btn-danger" onClick="borrarp(<?php echo $r["idProducto"]; ?>)">Borrar</button>
+			<button type="button" class="btn btn-danger" onClick="borrarp(<?php echo $producto["idProducto"]; ?>)">Borrar</button>
 			</td>
 			</tr>
 			<?php
@@ -52,6 +64,9 @@ if(isset($_SESSION['tipous'])){
 		?>
 		</tbody>
 		</table>
+		<div class="total-carrito">
+			Total: $<?php echo $total ?>
+		</div>
 		</div>
 		</div>
 		</div>
@@ -67,28 +82,18 @@ if(isset($_SESSION['tipous'])){
 		<script>
 		$(document).ready(function() {
 			$('#dataTables-addControls').dataTable( {
-				language: {
-					"paginate": {
-						"previous": "Anterior",
-						"next": "Siguiente"
-					},
-					"search": "Buscar",
-					"lengthMenu": "Mostrar _MENU_ registros"
-				},
+				paging: false,
+				searching: false,
 				responsive: true
 			} );
 		});
 		
 		function borrarp(id) {
-			location.href = "productos-borrar.php?id=" + id;
+			location.href = "borrar-producto-carrito.php?id=" + id;
 		}
-		
-		function editar(id) {
-			location.href = "productos-editar.php?id=" + id;
-		}
-		
-		function nueva(id) {
-			location.href = "productos-nueva.php";
+
+		function cambiarCantidad(operacion, id) {
+			location.href = "cambiar-cantidad.php?operacion=" + operacion + '&id=' + id;
 		}
 		
 		</script>

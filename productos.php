@@ -75,7 +75,7 @@ $rs1 = mysqli_query($db, $sql1);
 							<p id="tituloprod">Precio Lista: $ <?php echo $r["precioLista"];}}?></p>
 							
 							<p style="text-align:right"><a class="btn btn-primary" href="producto.php?prod=<?php echo $r['idProducto']; ?>">+ Info</a></p>
-								<?php if($_SESSION['tipous']==2){ 
+								<?php if(isset($_SESSION['tipous']) && $_SESSION['tipous']==2){ 
 										if($r["stock"] > 0) {?>
 											<p style="text-align:right"><a class="btn btn-primary" href="agregar-carrito.php?prod=<?php echo $r['idProducto']; ?>">Agregar al Carrito</a></p>
 										<?php } else { ?>
