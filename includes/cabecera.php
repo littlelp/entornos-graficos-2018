@@ -290,7 +290,16 @@ $activo = end($url);
 									if($_SESSION['tipous']>0){
 
 									?>
-									<li class="nav-item dropdown cerrar-sesion">
+									<?php if(count($_SESSION['carrito']) > 0){ 
+										$cantidad = 0;
+										foreach($_SESSION['carrito'] as $i => $producto) {
+											$cantidad = $cantidad + $producto['cantidad'];
+										}?>
+										<li class="nav-item carrito" style="margin-top: 6px;">
+											<a class="fa fa-shopping-cart icon-carrito" href="listar-carrito.php"><a class="number-carrito"><?php echo $cantidad ?></a></a>
+										</li>										
+									<?php } ?>	
+									<li class="nav-item dropdown cerrar-sesion">																			
 										<a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hola, <?php echo $_SESSION['nombre'];?> </a>
 										<div class="dropdown-menu" aria-labelledby="dropdownMenu1">
 											<?php if($_SESSION['tipous']>1){ ?>

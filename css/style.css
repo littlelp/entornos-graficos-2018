@@ -188,3 +188,16 @@
 #modal-comprar .modal-content h3 {
 	padding-bottom: 15px;
 }
+
+.carrito{
+    margin-top: 6px;
+}
+
+.icon-carrito{    
+    font-size: 25px;
+}
+
+.number-carrito{    
+    margin-left: 10px;
+    font-size: 20px;
+}
