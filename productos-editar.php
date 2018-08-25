@@ -86,6 +86,12 @@ if(isset($_SESSION['tipous'])){
 								<input value="<?php  echo $rp["precioLista"]; ?>" type="number" id="PrecioLista" name="PrecioLista" class="form-control validate" maxlength="10">
 								<label for="Precio4">Precio Lista:</label>
 						</div>
+
+						<div class="md-form">
+								<i class="fa  fa-stop  prefix"></i>
+								<input value="<?php  echo $rp["stock"]; ?>" type="number" id="Stock" name="Stock" class="form-control validate" maxlength="10">
+								<label for="Stock">Stock:</label>
+						</div>
 					
 							<div class="file-field">
 								<div class="btn btn-primary">
@@ -101,6 +107,7 @@ if(isset($_SESSION['tipous'])){
 								<input type="checkbox" id="Destacado" name="Destacado" <?php if($rp["destacado"]=='on'){echo'checked="checked"';}?>>
 								<label for="Destacado">Producto Destacado</label>
 							</fieldset>
+							
 							
 							<?php }?>						
 				

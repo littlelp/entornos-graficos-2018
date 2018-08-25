@@ -38,12 +38,13 @@ if($_SESSION['tipous']==1){
 											<th>Precio Lista</th>
 											<th>Precio Mano de Obra</th>
 											<th>Destacado</th>
+											<th>Stock</th>
                                             <th>Borrar</th>
                                         </tr>
                                     </thead>
                                     <tbody>
 																								<?php
-																							$sql = "select p.nombre as 'nombre', p.caracteristicas as 'caracteristicas', p.descripcion as 'descripcion', p.dimensiones as 'dimensiones', p.especificaciones as 'especificaciones', p.idProducto as 'idProducto', p.imagen as 'imagen', p.video as 'video', c.nombre as 'categoria', p.precio1 as 'precio1', p.precio2 as 'precio2', p.precio3 as 'precio3', p.precio4 as 'precio4', p.precioLista as 'precioLista', p.destacado as 'destacado'
+																							$sql = "select p.nombre as 'nombre', p.caracteristicas as 'caracteristicas', p.descripcion as 'descripcion', p.dimensiones as 'dimensiones', p.especificaciones as 'especificaciones', p.idProducto as 'idProducto', p.imagen as 'imagen', p.video as 'video', c.nombre as 'categoria', p.precio1 as 'precio1', p.precio2 as 'precio2', p.precio3 as 'precio3', p.precio4 as 'precio4', p.precioLista as 'precioLista', p.destacado as 'destacado', p.stock as 'stock'
 																									from producto p
 																									inner join categoria c on
 																									p.idCategoria=c.idCategoria
@@ -59,8 +60,9 @@ if($_SESSION['tipous']==1){
                                             <td><?php  echo $r["nombre"]; ?></td>
 											<td><?php  echo $r["categoria"]; ?></td>
 											<td><?php  echo $r["precioLista"]; ?></td>
-											<td><?php  echo $r["precio1"]; ?></td>
+											<td><?php  echo $r["precio1"]; ?></td>											
 											<td><?php  if($r["destacado"]=='on'){echo'SI';} else{echo 'NO';} ?></td>
+											<td><?php  echo $r["stock"]; ?></td>
 
                                             <td>
                                             	<button type="button" class="btn btn-danger" onClick="borrarp(<?php echo $r["idProducto"]; ?>)">Borrar</button>

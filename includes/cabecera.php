@@ -271,6 +271,7 @@ $activo = end($url);
 										<a class="dropdown-item" href="listar-productos.php">Productos</a>
 										<a class="dropdown-item" href="listar-categorias.php">Categorias</a>
 										<a class="dropdown-item" href="listar-usuarios.php">Usuarios</a>
+										<a class="dropdown-item" href="listar-mis-pedidos.php">Pedidos</a>
 										<a class="dropdown-item" href="listar-consultas-mayoristas.php">Consultas Mayoristas</a>
 										<a class="dropdown-item" href="contenidoweb.php">Contenido Web</a>
 
@@ -294,6 +295,7 @@ $activo = end($url);
 										<div class="dropdown-menu" aria-labelledby="dropdownMenu1">
 											<?php if($_SESSION['tipous']>1){ ?>
 											<a class="dropdown-item" href="listar-consultas-mayoristas.php">Mis Consultas</a>
+											<a class="dropdown-item" href="listar-mis-pedidos.php">Mis Pedidos</a>
 											<?php } ?>
 											<a class="dropdown-item" href="mi-perfil.php">Mi Perfil</a>
 											<a class="dropdown-item" href="cerrar-sesion.php">Cerrar Sesion</a>

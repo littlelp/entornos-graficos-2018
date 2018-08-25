@@ -13,14 +13,14 @@ if ($_FILES) {
 	move_uploaded_file($_FILES['Imagen']['tmp_name'], $destino) ;}
 	
 if(isset($_POST["Destacado"])){		
-$sql = "INSERT INTO producto (destacado, nombre, descripcion, idCategoria, precioLista, precio1, imagen)
+$sql = "INSERT INTO producto (destacado, nombre, descripcion, idCategoria, precioLista, precio1, imagen, stock)
 		VALUES ('". $_POST["Destacado"]. "','". $_POST["Nombre"]. "','". $_POST["Descripcion"]. "','". $_POST["selCat"]. "','". $_POST["PrecioLista"]. "','". $_POST["Precio1"]. "',
-		'".$destino."')";
+		'".$destino."','". $_POST["Stock"]. "')";
 }
 else{
-	$sql = "INSERT INTO producto (nombre, descripcion, idCategoria, precioLista, precio1, imagen)
+	$sql = "INSERT INTO producto (nombre, descripcion, idCategoria, precioLista, precio1, imagen, stock)
 		VALUES ('". $_POST["Nombre"]. "','". $_POST["Descripcion"]. "','". $_POST["selCat"]. "','". $_POST["PrecioLista"]. "','". $_POST["Precio1"]. "',
-		'".$destino."')";
+		'".$destino."','". $_POST["Stock"]. "')";
 }
 $rs = mysqli_query($db, $sql);
 
