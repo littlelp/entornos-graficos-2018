@@ -171,7 +171,20 @@
 }
 
 .total-carrito {
-	font-size: 16px;
+	font-size: 24px;
 	font-weight: 600;
 	float: right;
+	margin-right: 15px;
+}
+
+.comprar-btn {
+	margin-top: 15px;
+}
+
+#modal-comprar .modal-content {
+	padding: 15px;
+}
+
+#modal-comprar .modal-content h3 {
+	padding-bottom: 15px;
 }

@@ -60,12 +60,14 @@ if(isset($_SESSION['tipous'])){
 			</td>
 			</tr>
 			<?php
-		}														
+		}
 		?>
 		</tbody>
 		</table>
 		<div class="total-carrito">
 			Total: $<?php echo $total ?>
+			<br>
+			<button type="button" class="btn btn-success comprar-btn" onClick="comprar()">Comprar</button>
 		</div>
 		</div>
 		</div>
@@ -73,6 +75,8 @@ if(isset($_SESSION['tipous'])){
 		
 		</div>
 		
+		<div class="modal fade modal-ext" id="modal-comprar" tabindex="-1" role="dialog" aria-hidden="true">
+		</div>
 		
 		<script src="js/plugins/dataTables/jquery.dataTables.js"></script>
 		<script src="js/plugins/dataTables/dataTables.bootstrap4.js"></script>
@@ -83,8 +87,9 @@ if(isset($_SESSION['tipous'])){
 		$(document).ready(function() {
 			$('#dataTables-addControls').dataTable( {
 				paging: false,
+				bInfo : false,
 				searching: false,
-				responsive: true
+				responsive: true,
 			} );
 		});
 		
@@ -95,6 +100,13 @@ if(isset($_SESSION['tipous'])){
 		function cambiarCantidad(operacion, id) {
 			location.href = "cambiar-cantidad.php?operacion=" + operacion + '&id=' + id;
 		}
+
+		function comprar() {
+				$.get("modal-comprar.php", function(data){
+					$("#modal-comprar").html(data);
+					$('#modal-comprar').modal('show');
+				});
+			};
 		
 		</script>
 		
