@@ -9,16 +9,17 @@ $email = $_POST["Email"];
 
 //--------------------------------------------------------------------------------
 
-$sqll = "SELECT email FROM clientes WHERE email = '$email' LIMIT 1";
+$sqll = "SELECT email FROM usuario WHERE email = '$email' LIMIT 1";
 
-$res = mysqli_query($link, $sqll) or die(mysql_error());
+$res = mysqli_query($db, $sqll) or die(mysql_error());
 
 if (mysqli_num_rows($res) > 0) {
 	echo '
 	  <script type="text/javascript" language="javascript">
-	      window.alert("Ya existe un usuario registrado con ese email.\n");
-	      window.location.replace("../cabecera.php");
+	      window.alert("Ya existe un usuario registrado con ese email.");
+	      window.location.replace("usuarios-nueva.php");
 	  </script> ';
+	  //header('Location:usuarios-nueva.php');
 }
 else {
 		
@@ -28,9 +29,9 @@ else {
 			
 	$rs = mysqli_query($db, $sql);
 
-
 	//}}
 	//else {echo'<script>window.location="index.php"</script>;';}
 	header('Location:listar-usuarios.php');
+}
 
-	?>
+?>
