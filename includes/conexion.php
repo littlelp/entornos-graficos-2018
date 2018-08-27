@@ -1,7 +1,7 @@
 <?php
 define('DB_HOST','localhost');
 define('DB_USER','root');
-define('DB_PASS','root');
+define('DB_PASS','');
 define('DB_NAME','postres_php');
 
 // La extensión mysqli (mysql improved) permite acceder a la funcionalidad proporcionada por MySQL 4.1 y posterior.
