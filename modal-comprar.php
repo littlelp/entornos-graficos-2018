@@ -13,7 +13,7 @@ include("includes/conexion.php");
                     <input  type="text" name="direccion" id="direccion" class="form-control validate" maxlength="50" required>
                     <label for="direccion">Dirección Envío:</label>
                 </div>
-			    <button type="submit" class="btn btn-success comprar-btn" >Comprar</button>
+			    <button id="btnFormComprar" class="btn btn-success comprar-btn" type="submit">Comprar</button>
             </form>
 		</div>
 		<!--/.Content-->

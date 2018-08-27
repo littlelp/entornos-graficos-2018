@@ -67,7 +67,7 @@ if(isset($_SESSION['tipous'])){
 		<div class="total-carrito">
 			Total: $<?php echo $total ?>
 			<br>
-			<button type="button" class="btn btn-success comprar-btn" onClick="comprar()">Comprar</button>
+			<button type="button" class="btn btn-success comprar-btn" id="botonComprar" onClick="comprar()">Comprar</button>
 		</div>
 		</div>
 		</div>
@@ -91,6 +91,7 @@ if(isset($_SESSION['tipous'])){
 				searching: false,
 				responsive: true,
 			} );
+
 		});
 		
 		function borrarp(id) {
@@ -105,6 +106,7 @@ if(isset($_SESSION['tipous'])){
 				$.get("modal-comprar.php", function(data){
 					$("#modal-comprar").html(data);
 					$('#modal-comprar').modal('show');
+					validarCompra();
 				});
 			};
 		
