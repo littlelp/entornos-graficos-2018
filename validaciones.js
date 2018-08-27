@@ -161,13 +161,15 @@ function checkFormRegistro() {
 	var errores=[];
 
 	if(!$(inputNombre).val().match(namePattern)) {
+		event.preventDefault();
 		bandera=0;
-		errores[errores.length] = "Nombre incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+		errores[errores.length] = "Nombre incorrecto. Debe tener una longitud entre 2 y 30 caracteres. Solo letras y espacios";
 	}
 
 	if(!$(inputApellido).val().match(namePattern)) {
+		event.preventDefault();
 		bandera=0;
-		errores[errores.length] = "Apellido incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+		errores[errores.length] = "Apellido incorrecto. Debe tener una longitud entre 2 y 30 caracteres. Solo letras y espacios";
 	}
 
 	if(!$(inputEmail).val().match(emailPattern)) {
@@ -216,13 +218,13 @@ function validarModificarPerfil() {
 
 	if(!$(inputNombre).val().match(namePattern)) {
 		bandera=0;
-		errores[errores.length] = "Nombre incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+		errores[errores.length] = "Nombre incorrecto. Debe tener una longitud entre 2 y 30 caracteres. Solo letras y espacios";
 	}
 
 		
 	if(!$(inputApellido).val().match(namePattern)) {
 		bandera=0;
-		errores[errores.length] = "Apellido incorrecto. Debe tener una longitud entre 2 y 30 caracteres.";
+		errores[errores.length] = "Apellido incorrecto. Debe tener una longitud entre 2 y 30 caracteres. Solo letras y espacios";
 	}
 
 	if(!$(inputEmail).val().match(emailPattern)) {

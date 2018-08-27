@@ -290,7 +290,7 @@ $activo = end($url);
 									if($_SESSION['tipous']>0){
 
 									?>
-									<?php if(count($_SESSION['carrito']) > 0){ 
+									<?php if(isset($_SESSION['carrito']) && count($_SESSION['carrito']) > 0) { 
 										$cantidad = 0;
 										foreach($_SESSION['carrito'] as $i => $producto) {
 											$cantidad = $cantidad + $producto['cantidad'];
