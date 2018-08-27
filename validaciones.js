@@ -52,6 +52,13 @@ $('#btnModificarPerfil').on('click', function() {
 	validarModificarPerfil();
 });
 
+// $('#modal-comprar').on('show', function() {
+// 	validarCompra();
+// })
+// $('#botonComprar').on('click', function() {
+// 	validarCompra();
+// });
+
 function borrarErrores() {
 	$('div.alert-danger').remove();
 }
@@ -124,26 +131,27 @@ function checkFormLogin () {
 	});
 }
 
-// function validarNuevoUsu () {
 
-// 	var btnForm = $('#btnFormNuevoUsu');
+function validarCompra() {
 
-// 	$('#btnFormNuevoUsu').prop("disabled",true);
-
-// 	$('#formNuevoUsu').on("change keydown", function() {
-
-// 		if (checkInput("#Nombre") && checkInput("#Apellido") && checkPattern("#Email") && checkInput("#user") && checkInput("#pass")) {
-
-// 			enableSubmit(btnForm);
-
-// 		} else {
-
-// 			disableSubmit(btnForm);
-// 		}
-// 	});
-// }
+	var btnForm = $('#btnFormComprar');
 
 
+	$('#btnFormComprar').prop("disabled",true);
+
+	$('#formComprar').on("change keydown", function() {
+
+		if (checkInput("#direccion")) {
+
+			enableSubmit(btnForm);
+
+		} else {
+
+			disableSubmit(btnForm);
+		}
+	});
+
+}
 
 function checkFormRegistro() {
 
