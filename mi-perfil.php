@@ -37,7 +37,7 @@ $r = mysqli_fetch_array($rs1);
                     </div>
                     <div class="md-form">
                         <i class="fa fa-key prefix"></i>
-                        <input type="password" id="contrasena" name="contrasena" value="<?php  echo $r["contrasena"]; ?>" class="form-control validate" maxlength="20" required>
+                        <input type="password" id="contrasena" name="contrasena" class="form-control validate" maxlength="20" required>
                         <label for="contrasena">Contraseña:</label>
                     </div>
                     <p style="text-align:center" ><button type="submit" id="btnModificarPerfil"class="btn btn-default btn-rounded">Modificar</button></p>																	

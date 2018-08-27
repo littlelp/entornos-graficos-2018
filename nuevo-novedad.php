@@ -15,8 +15,8 @@ if ($_FILES) {
 }
 	
 
-$sql = "INSERT INTO novedades (titulo, parrafo1, parrafo2, parrafo3, imagen, fechaAlta)
-		VALUES ('". $_POST["titulo"]. "','". $_POST["parrafo1"]. "','". $_POST["parrafo2"]. "','". $_POST["parrafo3"]. "','".$destino."' , now())";
+$sql = "INSERT INTO novedades (titulo, parrafo1, parrafo2, imagen, fechaAlta)
+		VALUES ('". $_POST["titulo"]. "','". $_POST["parrafo1"]. "','". $_POST["parrafo2"]. "','".$destino."' , now())";
 
 		
 $rs = mysqli_query($db, $sql);

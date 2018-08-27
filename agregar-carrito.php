@@ -6,11 +6,12 @@ include("includes/conexion.php");
 $id = $_GET["prod"];
 
 $x = false;
-
-foreach ($_SESSION['carrito'] as $i => $producto) {
-	if($producto['idProducto'] == $id){
-		$_SESSION['carrito'][$i]['cantidad'] = $producto['cantidad'] + 1;	
-		$x = true;
+if (isset($_SESSION['carrito'] )) {
+	foreach ($_SESSION['carrito'] as $i => $producto) {
+		if($producto['idProducto'] == $id){
+			$_SESSION['carrito'][$i]['cantidad'] = $producto['cantidad'] + 1;	
+			$x = true;
+		}
 	}
 }
 

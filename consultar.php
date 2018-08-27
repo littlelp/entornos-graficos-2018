@@ -54,7 +54,7 @@ header("Location: consulta_enviada.php");?>
         $comentario= "
             \n
             $asunto\n\n
-            Apellido y nombre: $_POST[Nombre]\n
+            Apellido y nombre: $_POST[Apellido] $_POST[Nombre]\n
             Email: $_POST[Email]\n
             Teléfono de Contacto: $_POST[Tel]\n
             Mensaje: $_POST[Consulta]\n

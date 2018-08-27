@@ -13,7 +13,7 @@ $usuario = $_POST["usuario"];
 $sqlEmail = "SELECT email FROM usuario WHERE email = '$email' LIMIT 1";
 $sqlUser = "SELECT usuario FROM usuario WHERE usuario = '$usuario' LIMIT 1";
 
-
+$res = mysqli_query($db, $sqlEmail) or die(mysql_error());
 $res2 = mysqli_query($db, $sqlUser) or die(mysql_error());
 $registros= mysqli_num_rows($res);
 $registros2= mysqli_num_rows($res2);

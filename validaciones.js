@@ -52,6 +52,13 @@ $('#btnModificarPerfil').on('click', function() {
 	validarModificarPerfil();
 });
 
+// $('#modal-comprar').on('show', function() {
+// 	validarCompra();
+// })
+// $('#botonComprar').on('click', function() {
+// 	validarCompra();
+// });
+
 function borrarErrores() {
 	$('div.alert-danger').remove();
 }
@@ -73,14 +80,15 @@ function mostrarErrores(selector, errores) {
 	selector.after(divError);
 }
 
-var namePattern = "^[a-z A-Z]{2,30}$";
+var namePattern = "^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]{2,30}$";
 var emailPattern = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$";
 var telPattern = "^[0-9]{7,10}";
 var usuarioPattern = "([a-zA-Z0-9]*(_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$";
 //var clavePattern = "/^[a-zA-Z0-9]{6,20}$/g";
 var clavePattern = "[a-zA-Z0-9]{6,20}$";
 var consultaPattern = "([a-zA-Z0-9]*(_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$";
-var productoPattern = "^[a-z A-Z]{2,25}$";
+var productoPattern ="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]{2,25}";
+//var productoPattern = "^[a-z A-Z]{2,25}$";
 var descripcionPattern = "/^[a-zA-Z0-9]{4,160}$/g";
 var precioPattern  = "^[0-9]{1,4}";
 
@@ -123,26 +131,27 @@ function checkFormLogin () {
 	});
 }
 
-// function validarNuevoUsu () {
 
-// 	var btnForm = $('#btnFormNuevoUsu');
+function validarCompra() {
 
-// 	$('#btnFormNuevoUsu').prop("disabled",true);
-
-// 	$('#formNuevoUsu').on("change keydown", function() {
-
-// 		if (checkInput("#Nombre") && checkInput("#Apellido") && checkPattern("#Email") && checkInput("#user") && checkInput("#pass")) {
-
-// 			enableSubmit(btnForm);
-
-// 		} else {
-
-// 			disableSubmit(btnForm);
-// 		}
-// 	});
-// }
+	var btnForm = $('#btnFormComprar');
 
 
+	$('#btnFormComprar').prop("disabled",true);
+
+	$('#formComprar').on("change keydown", function() {
+
+		if (checkInput("#direccion")) {
+
+			enableSubmit(btnForm);
+
+		} else {
+
+			disableSubmit(btnForm);
+		}
+	});
+
+}
 
 function checkFormRegistro() {
 
