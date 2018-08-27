@@ -73,14 +73,15 @@ function mostrarErrores(selector, errores) {
 	selector.after(divError);
 }
 
-var namePattern = "^[a-z A-Z]{2,30}$";
+var namePattern = "^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]{2,30}$";
 var emailPattern = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$";
 var telPattern = "^[0-9]{7,10}";
 var usuarioPattern = "([a-zA-Z0-9]*(_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$";
 //var clavePattern = "/^[a-zA-Z0-9]{6,20}$/g";
 var clavePattern = "[a-zA-Z0-9]{6,20}$";
 var consultaPattern = "([a-zA-Z0-9]*(_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$";
-var productoPattern = "^[a-z A-Z]{2,25}$";
+var productoPattern ="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]{2,25}";
+//var productoPattern = "^[a-z A-Z]{2,25}$";
 var descripcionPattern = "/^[a-zA-Z0-9]{4,160}$/g";
 var precioPattern  = "^[0-9]{1,4}";
 
