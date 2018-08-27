@@ -108,7 +108,32 @@ if(isset($_SESSION['tipous'])){
 					$('#modal-comprar').modal('show');
 					validarCompra();
 				});
-			};
+			}
+
+		function validarCompra() {
+			var btnForm = $('#btnFormComprar');
+			$('#btnFormComprar').prop("disabled",true);
+			$('#direccion').tooltip({ boundary: 'window', title:'Debe tener al menos 5 caracteres' })
+			$('#formComprar').on("change keydown", function() {
+				if(checkInput("#direccion")) {
+					enableSubmit(btnForm);
+				}else {
+					disableSubmit(btnForm);
+				}
+			});
+		}
+
+		function checkInput(idInput) {
+			return $(idInput).val().length > 4 ? true : false;
+		}
+
+		function enableSubmit (btnForm) {
+			$(btnForm).prop("disabled",false);
+		}
+
+		function disableSubmit (btnForm) {
+			$(btnForm).prop("disabled",true);
+		}
 		
 		</script>
 		

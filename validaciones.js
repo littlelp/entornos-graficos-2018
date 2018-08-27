@@ -131,28 +131,6 @@ function checkFormLogin () {
 	});
 }
 
-
-function validarCompra() {
-
-	var btnForm = $('#btnFormComprar');
-
-
-	$('#btnFormComprar').prop("disabled",true);
-
-	$('#formComprar').on("change keydown", function() {
-
-		if (checkInput("#direccion")) {
-
-			enableSubmit(btnForm);
-
-		} else {
-
-			disableSubmit(btnForm);
-		}
-	});
-
-}
-
 function checkFormRegistro() {
 
 	var form = $('#formRegistrarse');
