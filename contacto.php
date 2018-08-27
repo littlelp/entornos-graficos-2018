@@ -52,7 +52,7 @@ include_once ("includes/cabecera.php");
 
 							<div class="md-form">
 								<i class="fa fa-phone prefix"></i>
-								<input type="tel" id="Tel" name="Tel" class="form-control validate" maxlength="15" required>
+								<input type="number" id="Tel" name="Tel" class="form-control validate" maxlength="15" required>
 								<label for="Tel">Tel:</label>
 							</div>		
 		
