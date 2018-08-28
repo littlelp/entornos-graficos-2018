@@ -28,7 +28,7 @@ if($_SESSION['tipous']>1){
 						<label for="Consulta"><i class="fa fa-birthday-cake"></i> Productos a consultar:</label>
 						<div class="md-form" id="productosAConsultar">
 							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-								<select class="mdb-select col-xs-12 col-sm-12 col-md-10 col-lg-10" name="productos[]" style="display: inline;margin: 5%;" required>
+								<select class="mdb-select col-xs-12 col-sm-12 col-md-10 col-lg-10" id="productos" name="productos[]" style="display: inline;margin: 5%;" required>
 									<option value="" disabled selected>Seleccione:</option>	
 										<?php	
 													
@@ -45,7 +45,7 @@ if($_SESSION['tipous']>1){
 								</select>	
 							</div>					
 							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-								<input type="number" name="cantidadProducto[]" placeholder="Cantidad a consultar del producto" class="form-control col-xs-12 col-sm-12 col-md-6 col-lg-6" max="100" min=0>
+								<input type="number" id="cantidadProducto" name="cantidadProducto[]" placeholder="Cantidad a consultar del producto" class="form-control col-xs-12 col-sm-12 col-md-6 col-lg-6" max="100" min=0>
 							</div>
 							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="padding: 3%;">
 								Agregar
@@ -53,7 +53,7 @@ if($_SESSION['tipous']>1){
 							</div>														
 						</div>							
 			
-						<button type="submit" class="btn btn-default">Enviar</button>
+						<button type="submit" id="btnEnviarConsulta" class="btn btn-default">Enviar</button>
 			</div>				
 				
 		</div>
