@@ -6,6 +6,7 @@ include_once ("includes/cabecera.php");
     
     
     <h5 style="text-align:center" >Ahora puede loguearse a través del botón Acceder</h5>
+    <h5 style="text-align:center" >Se le ha enviado un email a su casilla con sus datos de acceso</h5>
     <h5 style="text-align:center" ><strong>La Chocolatería</strong></h5>
 
 </div>		

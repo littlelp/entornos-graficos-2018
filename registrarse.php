@@ -45,6 +45,21 @@ else {
 	 
 			$rs = mysqli_query($db, $sql);
 
+			$destino= $_POST['Email'];
+			$asunto="Nuevo registro de usuario - La Chocolateria.";
+			$desde= "lachocolateria00@gmail.com";
+
+			$comentario= "
+					\n
+					$asunto\n\n
+					Usted se ha registrado exitosamente !
+					Apellido y nombre: $_POST[Apellido] $_POST[Nombre]\n
+					Email: $_POST[Email]\n
+					Contrasena: $_POST[contrasena]\n
+					Enviado el $fecha a las $hora\n";
+			
+					mail($destino,$asunto,$comentario,$desde);
+
 			header('Location:registro-exitoso.php');
 		}
 	}	
