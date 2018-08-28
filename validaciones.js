@@ -52,6 +52,10 @@ $('#btnModificarPerfil').on('click', function() {
 	validarModificarPerfil();
 });
 
+
+$('#btnEnviarConsulta').on('click', function() {
+	validarConsultaPrecio();
+});
 // $('#modal-comprar').on('show', function() {
 // 	validarCompra();
 // })
@@ -780,6 +784,45 @@ function validarModificarNovedad() {
 		form.submit();
 	}
 
+}
+
+function validarConsultaPrecio() {
+
+	var form = $('#formularioPrecioMayorista');
+	
+	var inputConsulta = $('#consulta');
+	var selProductos = $('#productos');
+	var inputCantProducto = $('#cantidadProducto');
+
+	var bandera = 1 ;
+
+	borrarErrores();
+
+	var errores=[];
+
+
+	if (!$(inputConsulta).val().length > 0) {
+		bandera=0;
+		errores[errores.length] = "La consulta no puede estar vacia.";
+	}
+
+
+	if($(selProductos).val() == null) {
+		bandera=0;
+		errores[errores.length] = "Debe seleccionar un producto.";
+	}
+
+	if(!$(inputCantProducto).val().match(precioPattern)) {
+		bandera=0;
+		errores[errores.length] = "Cantidad incorrecta. Revise el formato.";
+	}
+
+
+	if(bandera==0) {
+		mostrarErrores(form,errores);
+	} else {
+		form.submit();
+	}
 }
 });
 
