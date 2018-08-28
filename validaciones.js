@@ -91,11 +91,11 @@ var usuarioPattern = "([a-zA-Z0-9]*(_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$";
 //var clavePattern = "/^[a-zA-Z0-9]{6,20}$/g";
 var clavePattern = "[a-zA-Z0-9]{6,20}$";
 var consultaPattern = "([a-zA-Z0-9]*(_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$";
-var productoPattern ="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]{2,25}";
+var productoPattern ="[a-zA-ZñÑáéíóúÁÉÍÓÚ ]{2,25}";
 //var productoPattern = "^[a-z A-Z]{2,25}$";
 var descripcionPattern = "/^[a-zA-Z0-9]{4,160}$/g";
-var precioPattern  = "^[0-9]{1,4}";
-var stockPattern  = "^[0-9]{1,10}";
+var precioPattern  = "^[0-9]{1,4}$";
+var stockPattern  = "^[0-9]{1,10}$";
 
 
 function enableSubmit (btnForm) {
@@ -347,37 +347,44 @@ function validarNuevoProd() {
 
 
 	if(!$(inputProducto).val().match(productoPattern)) {
+		event.preventDefault();
 		bandera=0;
-		errores[errores.length] = "Nombre de Producto incorrecto. Debe tener una longitud entre 2 y 25 caracteres.";
+		errores[errores.length] = "Nombre de Producto incorrecto. Debe tener una longitud entre 2 y 25 caracteres. Solo letras.";
 	}
 
 	if($(selCategoria).val() == null) {
+		event.preventDefault();
 		bandera=0;
 		errores[errores.length] = "Debe seleccionar una categoria";
 	}
 
 	if (!$(inputDescripcion).val().length > 0) {
+		event.preventDefault();
 		bandera=0;
 		errores[errores.length] = "Descripción incorrecta. Debe tener un máximo de 160 caracteres y no puede estar vacía.";
 	}
 
 	if(!$(inputPrecio1).val().match(precioPattern)) {
+		event.preventDefault();
 		bandera=0;
 		errores[errores.length] = "Precio incorrecto.Se admiten hasta 4 digitos. Revise el formato.";
 	}
 
 	if(!$(inputPrecioLista).val().match(precioPattern)) {
+		event.preventDefault();
 		bandera=0;
 		errores[errores.length] = "Precio incorrecto. Se admiten hasta 4 digitos. Revise formato.";
 	}
 
 	if(!$(inputStock).val().match(stockPattern)) {
+		event.preventDefault();
 		bandera=0;
 		errores[errores.length] = "Stock incorrecto. Se admiten hasta 10 digitos. Revise formato.";
 	}
 
 
 	if($(inputImagen).val() == '') {
+		event.preventDefault();
 		bandera=0;
 		errores[errores.length] = "Debe subir una imagen del producto";
 	}
@@ -463,6 +470,12 @@ function validarModificarProd() {
 			errores[errores.length] = "Precio incorrecto. Se admiten hasta 4 digitos. Revise formato.";
 		}
 	// });
+
+	if(!$(Stock).val().match(stockPattern)) {
+		event.preventDefault();
+		bandera=0;
+		errores[errores.length] = "Stock incorrecto. Se admiten hasta 10 digitos. Revise formato.";
+	}
 
 	if (bandera == 0) {
 		mostrarErrores(form,errores);
@@ -571,27 +584,32 @@ function validarNuevoUsu() {
 
 
 	if(!$(inputNombre).val().match(namePattern)) {
+		event.preventDefault();
 		bandera=0;
 		errores[errores.length] = "Nombre incorrecto. Debe tener una longitud entre 2 y 30 caracteres. No se admiten números";
 	}
 
 	if(!$(inputApellido).val().match(namePattern)) {
+		event.preventDefault();
 		bandera=0;
 		errores[errores.length] = "Apellido incorrecto. Debe tener una longitud entre 2 y 30 caracteres. No se admiten números";
 	}
 
 	if($(selTipoUsu).val() == null) {
+		event.preventDefault();
 		bandera=0;
 		errores[errores.length] = "Debe seleccionar un Tipo de Usuario.";
 	}
 
 	if(!$(inputEmail).val().match(emailPattern)) {
+		event.preventDefault();
 		bandera=0;
 		errores[errores.length] = "Email incorrecto. Revise el formato.";
 	}
 
 
 	if(!$(inputUsuario).val().match(usuarioPattern)) {
+		event.preventDefault();
 		bandera=0;
 		errores[errores.length] = "Usuario incorrecto. No puede estar vacio y debe tener un maximo de 15 caracteres.";
 	}
