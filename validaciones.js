@@ -91,6 +91,7 @@ var productoPattern ="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]{2,25}";
 //var productoPattern = "^[a-z A-Z]{2,25}$";
 var descripcionPattern = "/^[a-zA-Z0-9]{4,160}$/g";
 var precioPattern  = "^[0-9]{1,4}";
+var stockPattern  = "^[0-9]{1,10}";
 
 
 function enableSubmit (btnForm) {
@@ -316,6 +317,7 @@ function validarNuevoProd() {
 	var inputDescripcion = $('#descripcion');
 	var inputPrecio1 = $('#Precio1');
 	var inputPrecioLista = $('#PrecioLista');
+	var inputStock = $('#Stock');
 	var inputImagen = $('input[name=Imagen]');
 
 	
@@ -350,12 +352,17 @@ function validarNuevoProd() {
 
 	if(!$(inputPrecio1).val().match(precioPattern)) {
 		bandera=0;
-		errores[errores.length] = "Precio incorrecto. Revise el formato.";
+		errores[errores.length] = "Precio incorrecto.Se admiten hasta 4 digitos. Revise el formato.";
 	}
 
 	if(!$(inputPrecioLista).val().match(precioPattern)) {
 		bandera=0;
-		errores[errores.length] = "Precio incorrecto. Revise formato.";
+		errores[errores.length] = "Precio incorrecto. Se admiten hasta 4 digitos. Revise formato.";
+	}
+
+	if(!$(inputStock).val().match(stockPattern)) {
+		bandera=0;
+		errores[errores.length] = "Stock incorrecto. Se admiten hasta 10 digitos. Revise formato.";
 	}
 
 
@@ -383,6 +390,7 @@ function validarModificarProd() {
 	var inputDescripcion = $('#descripcion');
 	var inputPrecio1 = $('#Precio1');
 	var inputPrecioLista = $('#PrecioLista');
+	var inputStock = $('#Stock');
 	var inputImagen = $('#txtImagen');
 
 	
@@ -419,24 +427,30 @@ function validarModificarProd() {
 			bandera=0;
 			errores[errores.length] = "Descripción incorrecta. Debe tener un máximo de 160 caracteres y no puede estar vacía.";
 		}
+
+		if(!$(inputStock).val().match(stockPattern)) {
+			event.preventDefault();
+			bandera=0;
+			errores[errores.length] = "Stock incorrecto. Se admiten hasta 10 digitos. Revise formato.";
+		}
 	// });
 
 	// inputPrecio1.on('Input', function() {
 
-		// if(!$(inputPrecio1).val().match(precioPattern)) {
-		// 	event.preventDefault();
-		// 	bandera=0;
-		// 	errores[errores.length] = "Precio incorrecto. Revise el formato.";
-		// }
+		if(!$(inputPrecio1).val().match(precioPattern)) {
+			event.preventDefault();
+			bandera=0;
+			errores[errores.length] = "Precio incorrecto. Se admiten hasta 4 digitos. Revise el formato.";
+		}
 	// });
 
 	// inputPrecioLista.on('Input', function() {
 
-		// if(!$(inputPrecioLista).val().match(precioPattern)) {
-		// 	event.preventDefault();
-		// 	bandera=0;
-		// 	errores[errores.length] = "Precio incorrecto. Revise formato.";
-		// }
+		if(!$(inputPrecioLista).val().match(precioPattern)) {
+			event.preventDefault();
+			bandera=0;
+			errores[errores.length] = "Precio incorrecto. Se admiten hasta 4 digitos. Revise formato.";
+		}
 	// });
 
 	if (bandera == 0) {
