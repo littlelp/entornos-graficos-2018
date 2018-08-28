@@ -32,7 +32,7 @@ $r = mysqli_fetch_array($rs1);
                     </div>
                     <div class="md-form">
                         <i class="fa fa-user prefix"></i>
-                        <input type="text" id="usuario" name="usuario" value="<?php  echo $r["user"]; ?>" class="form-control validate" maxlength="15" required>
+                        <input type="text" id="usuario" name="usuario" value="<?php  echo $r["user"]; ?>" class="form-control validate" maxlength="20" required>
                         <label for="Usuario">Usuario:</label>
                     </div>
                     <div class="md-form">
