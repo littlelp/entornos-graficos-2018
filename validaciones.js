@@ -56,12 +56,11 @@ $('#btnModificarPerfil').on('click', function() {
 $('#btnEnviarConsulta').on('click', function() {
 	validarConsultaPrecio();
 });
-// $('#modal-comprar').on('show', function() {
-// 	validarCompra();
-// })
-// $('#botonComprar').on('click', function() {
-// 	validarCompra();
-// });
+
+$('#btnReestablecerPass').on('click', function() {
+	validarReestablecerPass();
+});
+
 
 function borrarErrores() {
 	$('div.alert-danger').remove();
@@ -190,6 +189,36 @@ function checkFormRegistro() {
 
 
 }
+
+function validarReestablecerPass() {
+
+	var form = $('#formReestablecerPass');
+
+	var inputClave = $('#passReestablecer');
+
+	var bandera = 1 ;
+
+	borrarErrores();
+
+	var errores=[];
+
+
+	if(!$(inputClave).val().match(clavePattern)){
+		event.preventDefault();
+		bandera=0;
+		errores[errores.length] = "Contraseña incorrecta: Mínimo 6 caracteres y máximo 20. Solo letras y números.";
+	 }
+
+
+	if (bandera==0) {
+		mostrarErrores(form,errores);
+	} else {
+		form.submit();
+	}
+
+
+}
+
 
 
 function validarModificarPerfil() {

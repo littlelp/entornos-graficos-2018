@@ -22,20 +22,20 @@ if($_SESSION['tipous']==1){
 	
 				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3" >
 
-						<form action="contra.php?id=<?php  echo $r; ?>" method="post">
+						<form id="formReestablecerPass" action="contra.php?id=<?php  echo $r; ?>" method="post">
 							
 							
 							
 		
 							<div class="md-form">
 								<i class="fa fa-key prefix"></i>
-								<input type="password" name="pass" class="form-control validate" maxlength="20" required>
+								<input type="password" id="passReestablecer" name="pass" class="form-control validate" maxlength="20" required>
 								<label for="pass">Nueva Contraseña:</label>
 							</div>                                 
 
 				
 							<p style="text-align:center" ><a href="listar-usuarios.php" class="btn btn-success btn-rounded">Volver</a></p>	
-							<p style="text-align:center" ><button type="submit" class="btn btn-default btn-rounded">Modificar</button></p>																	
+							<p style="text-align:center" ><button type="submit" id="btnReestablecerPass" class="btn btn-default btn-rounded">Modificar</button></p>																	
                        </form>            
 					</div>
 				
