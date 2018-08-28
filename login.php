@@ -19,6 +19,7 @@ if($cant==1){
 	$_SESSION['apellido']=$r['apellido'];
 	$_SESSION['mail']=$r['email'];
 	$_SESSION['idUsuario']=$r['idUsuario'];
+	$_SESSION['user']=$r['usuario'];
 	
 	header('Location:index.php');
 }

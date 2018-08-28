@@ -19,6 +19,7 @@ if($_SESSION['tipous']==1){
 						
 </div>	
 			<?php
+			
 			settype($_GET["id"], "integer");
 				$sql1 = "select u.idUsuario as 'idUsuario', u.nombre as 'nombre', u.apellido as 'apellido', u.usuario as 'user', u.contrasena as 'contrasena',
 				u.email as 'email', u.fechaAlta as 'fechaAlta', tu.descripcion as 'tipou', u.tipous as 'tipouse'
@@ -30,6 +31,8 @@ if($_SESSION['tipous']==1){
 				$rs1 = mysqli_query($db, $sql1);
 				
 					while ($r = mysqli_fetch_array($rs1) ) {
+						$_SESSION['usuario_editado'] = $r["user"];
+						$_SESSION['mail_editado'] = $r["email"];
 				?>
 					
 				<br /><br />
@@ -68,7 +71,7 @@ if($_SESSION['tipous']==1){
 											
 											else {$sel='"> ';}?>
 											
-											<option value="<?php  echo $tipou["idTipoUsuario"].$sel.$tipou['descripcion'];?>"</option>;
+											<option value="<?php  echo $tipou["idTipoUsuario"].$sel.$tipou['descripcion'];?></option>;
 												
 																						<?php	}}?>
 									
