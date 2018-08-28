@@ -155,7 +155,7 @@ $activo = end($url);
                     </div>
                     <div class="md-form">
                         <i class="fa fa-user prefix"></i>
-                        <input type="text" name="usuario" class="form-control validate" maxlength="15" required>
+                        <input type="text" name="usuario" class="form-control validate" maxlength="20" required>
                         <label for="Usuario">Usuario:</label>
                     </div>
                     <div class="md-form">
