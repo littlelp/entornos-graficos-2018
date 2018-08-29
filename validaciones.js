@@ -829,7 +829,7 @@ function validarModificarNovedad() {
 }
 
 function validarConsultaPrecio() {
-
+	event.preventDefault();
 	var form = $('#formularioPrecioMayorista');
 	
 	var inputConsulta = $('#consulta');
