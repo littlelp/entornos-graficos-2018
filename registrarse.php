@@ -55,8 +55,7 @@ else {
 					Usted se ha registrado exitosamente !
 					Apellido y nombre: $_POST[Apellido] $_POST[Nombre]\n
 					Email: $_POST[Email]\n
-					Contrasena: $_POST[contrasena]\n
-					Enviado el $fecha a las $hora\n";
+					Contrasena: $_POST[contrasena]\n";
 			
 					mail($destino,$asunto,$comentario,$desde);
 
