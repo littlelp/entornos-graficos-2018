@@ -500,11 +500,6 @@ function validarModificarProd() {
 		}
 	// });
 
-	if(!$(Stock).val().match(stockPattern)) {
-		event.preventDefault();
-		bandera=0;
-		errores[errores.length] = "Stock incorrecto. Se admiten hasta 10 digitos. Revise formato.";
-	}
 
 	if (bandera == 0) {
 		mostrarErrores(form,errores);
